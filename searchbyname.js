@@ -4,30 +4,26 @@ function searchByName() {
 
     var searchResults = [];
 
-    var h3Elements = document.querySelectorAll("h3");
+    var links = document.querySelectorAll("a");
 
-    h3Elements.forEach(function(h3) {
-        var h3Text = h3.innerText.trim();
-        var links = h3.nextElementSibling.querySelectorAll("a");
+    links.forEach(function(link) {
+        var linkText = link.innerText.trim().toLowerCase();
+        var href = link.getAttribute("href");
+        var resolutionNumber = linkText.match(/\d+\/\d+/)[0]; // Extraer el número de resolución del texto del enlace
+        var h3Text = link.closest("ul").previousElementSibling.innerText.trim(); // Obtener el texto del h3 más cercano al enlace
 
-        links.forEach(function(link) {
-            var linkText = link.innerText.trim().toLowerCase();
-            var href = link.getAttribute("href");
-            var resolutionNumber = linkText.match(/\d+\/\d+/)[0]; // Extraer el número de resolución del texto del enlace
+        if (h3Text.toLowerCase().includes(searchTerm) || resolutionNumber.startsWith(searchTerm)) { // Comprobar si el término de búsqueda está incluido en el nombre de la carrera o si coincide con el número de resolución
+            var resultLink = document.createElement("a");
+            resultLink.href = href;
+            resultLink.textContent = resolutionNumber; // Mostrar el número de resolución como texto del enlace
+            resultLink.target = "_blank";
 
-            if (h3Text.toLowerCase().includes(searchTerm)) { // Comprobamos si el nombre de la carrera incluye el término de búsqueda
-                var resultLink = document.createElement("a");
-                resultLink.href = href;
-                resultLink.textContent = resolutionNumber; // Mostrar el número de resolución como texto del enlace
-                resultLink.target = "_blank";
+            var resultItem = document.createElement("p");
+            resultItem.innerHTML = "<strong>" + h3Text + ": </strong>"; // Mostrar solo el nombre de la carrera
+            resultItem.appendChild(resultLink);
 
-                var resultItem = document.createElement("p");
-                resultItem.innerHTML = "<strong>" + h3Text + ": </strong>"; // Mostrar solo el nombre de la carrera
-                resultItem.appendChild(resultLink);
-
-                searchResults.push(resultItem);
-            }
-        });
+            searchResults.push(resultItem);
+        }
     });
 
     var searchResultsElement = document.getElementById("searchResultsByName");
