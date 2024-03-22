@@ -38,3 +38,7 @@ function search() {
         searchResultsElement.innerHTML = "<p>No se encontraron resultados.</p>";
     }
 }
+
+function clearResultsByResolution() {
+    document.getElementById("searchResultsByResolution").innerHTML = "";
+}
