@@ -2,7 +2,7 @@ function search() {
     var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
     if (!searchTerm) return;
 
-    searchTerm = removeAccents(searchTerm);
+    searchTerm = normalizeText(searchTerm);
 
     var sections = document.querySelectorAll("section");
     var searchResults = [];
@@ -14,7 +14,7 @@ function search() {
             var href = link.getAttribute("href");
             var h3Text = link.closest("ul").previousElementSibling.innerText.trim();
 
-            var normalizedLinkText = removeAccents(linkText);
+            var normalizedLinkText = normalizeText(linkText);
 
             if (normalizedLinkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
                 var resultLink = document.createElement("a");
@@ -43,6 +43,6 @@ function search() {
     }
 }
 
-function removeAccents(text) {
+function normalizeText(text) {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
