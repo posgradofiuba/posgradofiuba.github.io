@@ -39,9 +39,4 @@ function searchByName() {
     } else {
         searchResultsElement.innerHTML = "<p>No se encontraron resultados.</p>";
     }
-
-    // Función para borrar los resultados de búsqueda por nombre de carrera
-    function clearResultsByName() {
-        document.getElementById("searchResultsByName").innerHTML = "";
-    }
 }
