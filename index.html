@@ -22,8 +22,10 @@
 <script>
     function toggleContent() {
         var content = document.getElementById("contentToHide");
+        // Obtener el valor de la propiedad 'display' calculada
+        var displayValue = window.getComputedStyle(content).getPropertyValue('display');
         // Cambiar el contenido entre mostrar y ocultar con un solo clic
-        if (content.style.display === "none" || content.style.display === "") {
+        if (displayValue === "none") {
             content.style.display = "block";
         } else {
             content.style.display = "none";
@@ -53,10 +55,8 @@
 	<script src="searchByName.js" defer></script>
 	    
     </header>
-	
     	<hr>
 	<div id="contentToHide">
-	
 	<section>
     	<h2><font size="5"><u>Decanato</u></font></h2>
 	<h3>Especialización en Industrias y Sistemas Aeroespaciales</h3>
