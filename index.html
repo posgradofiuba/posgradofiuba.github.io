@@ -13,25 +13,23 @@
         background-color: black;
         margin: 20px 0;
     }
-</style>
-<style>
     #contentToHide {
-        display: none;
-        background-color: lightblue;
+        /* background-color: lightblue; */
         padding: 10px;
         margin-top: 10px;
     }
 </style>
-    <script>
+<script>
     function toggleContent() {
         var content = document.getElementById("contentToHide");
-        if (content.style.display === "none") {
+        // Cambiar el contenido entre mostrar y ocultar con un solo clic
+        if (content.style.display === "none" || content.style.display === "") {
             content.style.display = "block";
         } else {
             content.style.display = "none";
         }
     }
-      </script>
+</script>
 
 </head>
 <body style="font-family: sans-serif;">
@@ -43,8 +41,8 @@
     	<button onclick="window.location.reload();">Refrescar página</button>
 	</div>
 	<div style="position: fixed; top: 60px; right: 20px;">
-        <button onclick="toggleContent()">Mostrar/Ocultar Contenido</button>
-        </div>
+    	<button onclick="toggleContent()">Mostrar/Ocultar Contenido</button>
+	</div>
  
         <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()">
         <div id="searchResults"></div>
