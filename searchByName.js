@@ -1,29 +1,31 @@
 function searchByName() {
-    var searchTerm = normalize(document.getElementById("searchByNameInput").value.trim().toLowerCase());
+    var searchTerm = document.getElementById("searchByNameInput").value.trim().toLowerCase(); // Convertir el término de búsqueda a minúsculas
     if (!searchTerm) return;
 
     var sections = document.querySelectorAll("section");
     var searchResults = [];
 
     sections.forEach(function(section) {
-        var h3Text = normalize(section.querySelector("h3").innerText.trim().toLowerCase());
+        var h3 = section.querySelectorAll("h3");
+        h3.forEach(function(h3Element) {
+            var h3Text = h3Element.innerText.trim().toLowerCase(); // Convertir el texto del h3 a minúsculas
+            if (h3Text.includes(searchTerm)) {
+                var links = h3Element.nextElementSibling.querySelectorAll("a");
+                links.forEach(function(link) {
+                    var href = link.getAttribute("href");
+                    var linkText = link.innerText.trim().toLowerCase(); // Convertir el texto del enlace a minúsculas
+                    
+                    var resultLink = document.createElement("a");
+                    resultLink.href = href;
+                    resultLink.textContent = linkText; // Mantener el texto del enlace en minúsculas
+                    resultLink.target = "_blank";
 
-        var links = section.querySelectorAll("a");
-        links.forEach(function(link) {
-            var linkText = normalize(link.innerText.trim().toLowerCase());
-            var href = link.getAttribute("href");
+                    var resultItem = document.createElement("p");
+                    resultItem.innerHTML = "<strong>" + h3Element.innerText.trim() + ": </strong>"; // Usar el texto original del h3
+                    resultItem.appendChild(resultLink);
 
-            if (linkText.includes(searchTerm)) {
-                var resultLink = document.createElement("a");
-                resultLink.href = href;
-                resultLink.textContent = linkText;
-                resultLink.target = "_blank";
-
-                var resultItem = document.createElement("p");
-                resultItem.innerHTML = "<strong>" + h3Text + ": </strong>";
-                resultItem.appendChild(resultLink);
-
-                searchResults.push(resultItem);
+                    searchResults.push(resultItem);
+                });
             }
         });
     });
@@ -37,9 +39,4 @@ function searchByName() {
     } else {
         searchResultsElement.innerHTML = "<p>No se encontraron resultados.</p>";
     }
-}
-
-// Función para normalizar una cadena de texto conservando las tildes
-function normalize(text) {
-    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
