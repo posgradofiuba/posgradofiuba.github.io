@@ -23,6 +23,9 @@
 	<div style="position: fixed; top: 20px; right: 20px;">
     	<button onclick="window.location.reload();">Refrescar página</button>
 	</div>
+	<div style="position: fixed; top: 60px; right: 20px;">
+    	<button onclick="toggleContent()">Mostrar/Ocultar Contenido</button>
+	</div>
  
         <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()">
         <div id="searchResults"></div>
@@ -36,6 +39,7 @@
     </header>
 	
     	<hr>
+	<div id="contentToHide">
 	<section>
     	<h2><font size="5"><u>Decanato</u></font></h2>
 	<h3>Especialización en Industrias y Sistemas Aeroespaciales</h3>
@@ -403,7 +407,14 @@
     	</ul>
 	<hr>
     	</section>
+	</div>
 	<button onclick="scrollToTop()" id="scrollBtn" title="Ir arriba">↑</button>
     	<script src="script.js"></script>
+	<script>
+   	function toggleContent() {
+        var contentToHide = document.getElementById("contentToHide");
+        contentToHide.classList.toggle("hidden");
+    	}
+	</script>
 </body>
 </html>
