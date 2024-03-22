@@ -2,7 +2,7 @@ function search() {
     var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
     if (!searchTerm) return;
 
-    searchTerm = unorm.nfd(searchTerm);
+    searchTerm = removeAccents(searchTerm);
 
     var sections = document.querySelectorAll("section");
     var searchResults = [];
@@ -14,9 +14,9 @@ function search() {
             var href = link.getAttribute("href");
             var h3Text = link.closest("ul").previousElementSibling.innerText.trim();
 
-            linkText = unorm.nfd(linkText);
+            var normalizedLinkText = removeAccents(linkText);
 
-            if (linkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
+            if (normalizedLinkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
                 var resultLink = document.createElement("a");
                 resultLink.href = href;
                 resultLink.textContent = link.innerText;
@@ -41,4 +41,8 @@ function search() {
     } else {
         searchResultsElement.innerHTML = "<p>No se encontraron resultados.</p>";
     }
+}
+
+function removeAccents(text) {
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
