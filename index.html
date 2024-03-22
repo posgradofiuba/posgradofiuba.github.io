@@ -24,8 +24,8 @@
     	<button onclick="window.location.reload();">Refrescar página</button>
 	</div>
 	<div style="position: fixed; top: 60px; right: 20px;">
-    	<button onclick="toggleContent()">Mostrar/Ocultar Contenido</button>
-	</div>
+        <button onclick="toggleContent()">Mostrar/Ocultar Contenido</button>
+        </div>
  
         <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()">
         <div id="searchResults"></div>
@@ -35,11 +35,10 @@
 	<div id="searchResultsByName"></div>
 	<script src="searchByName.js" defer></script>
 
-
+	<div id="contentToHide"> 
     </header>
 	
     	<hr>
-	<div id="contentToHide">
 	<section>
     	<h2><font size="5"><u>Decanato</u></font></h2>
 	<h3>Especialización en Industrias y Sistemas Aeroespaciales</h3>
@@ -160,7 +159,7 @@
         <li><a href="https://drive.google.com/file/d/1eU3fQ2mQg04vyMbr4p5S-Hg7lRICsIXk/view" target="_blank">3688/96</a></li>
         <li><a href="https://drive.google.com/file/d/10oz4iSBHLRP840oWouegtR5dYUSJ_NrP/view" target="_blank">6587/97</a></li>
 	<li><a href="https://drive.google.com/file/d/1nTnyR8kVOaV2rVn5Q-uixTDDHqoWaBYT/view" target="_blank">6325/13</a></li>
-       </ul>
+       	</ul>
     	<h3>Especialización en Gas Natural</h3>
     	<ul>
          <li><a href="https://drive.google.com/file/d/1nUx3m2iN-f1ZQ1rlWFyYznh5Wt5VsgBE/view" target="_blank">2773/15</a></li>
@@ -411,10 +410,14 @@
 	<button onclick="scrollToTop()" id="scrollBtn" title="Ir arriba">↑</button>
     	<script src="script.js"></script>
 	<script>
-        document.getElementById("toggleContentButton").addEventListener("click", function() {
-            var contentToHide = document.getElementById("contentToHide");
-            contentToHide.classList.toggle("hidden");
-        });
-	</script>
+        function toggleContent() {
+            var content = document.getElementById("contentToHide");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    	</script>
 </body>
 </html>
