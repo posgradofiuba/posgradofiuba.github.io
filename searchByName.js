@@ -2,28 +2,32 @@ function searchByName() {
     var searchTerm = document.getElementById("searchByNameInput").value.trim().toLowerCase();
     if (!searchTerm) return;
 
+    var sections = document.querySelectorAll("section");
     var searchResults = [];
 
-    var links = document.querySelectorAll("a");
+    sections.forEach(function(section) {
+        var h3 = section.querySelectorAll("h3");
+        h3.forEach(function(h3Element) {
+            var h3Text = h3Element.innerText.trim().toLowerCase();
+            if (h3Text.includes(searchTerm)) {
+                var links = h3Element.nextElementSibling.querySelectorAll("a");
+                links.forEach(function(link) {
+                    var href = link.getAttribute("href");
+                    var linkText = link.innerText.trim();
+                    
+                    var resultLink = document.createElement("a");
+                    resultLink.href = href;
+                    resultLink.textContent = linkText;
+                    resultLink.target = "_blank";
 
-    links.forEach(function(link) {
-        var linkText = link.innerText.trim().toLowerCase();
-        var href = link.getAttribute("href");
-        var resolutionNumber = linkText.match(/\d+\/\d+/)[0]; // Extraer el número de resolución del texto del enlace
-        var h3Text = link.closest("ul").previousElementSibling.innerText.trim(); // Obtener el texto del h3 más cercano al enlace
+                    var resultItem = document.createElement("p");
+                    resultItem.innerHTML = "<strong>" + h3Text + ": </strong>";
+                    resultItem.appendChild(resultLink);
 
-        if (h3Text.toLowerCase().includes(searchTerm) || resolutionNumber.startsWith(searchTerm)) { // Comprobar si el término de búsqueda está incluido en el nombre de la carrera o si coincide con el número de resolución
-            var resultLink = document.createElement("a");
-            resultLink.href = href;
-            resultLink.textContent = resolutionNumber; // Mostrar el número de resolución como texto del enlace
-            resultLink.target = "_blank";
-
-            var resultItem = document.createElement("p");
-            resultItem.innerHTML = "<strong>" + h3Text + ": </strong>"; // Mostrar solo el nombre de la carrera
-            resultItem.appendChild(resultLink);
-
-            searchResults.push(resultItem);
-        }
+                    searchResults.push(resultItem);
+                });
+            }
+        });
     });
 
     var searchResultsElement = document.getElementById("searchResultsByName");
