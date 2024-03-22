@@ -14,7 +14,17 @@
             margin: 20px 0;
         }
     </style>
-	
+    <script>
+    function toggleContent() {
+        var content = document.getElementById("contentToHide");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+      </script>
+
 </head>
 <body style="font-family: sans-serif;">
     <header style="text-align: center;">
@@ -34,11 +44,10 @@
 	<input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera" oninput="searchByName()">
 	<div id="searchResultsByName"></div>
 	<script src="searchByName.js" defer></script>
-
-	<div id="contentToHide"> 
     </header>
 	
     	<hr>
+	<div id="contentToHide">
 	<section>
     	<h2><font size="5"><u>Decanato</u></font></h2>
 	<h3>Especialización en Industrias y Sistemas Aeroespaciales</h3>
@@ -409,15 +418,5 @@
 	</div>
 	<button onclick="scrollToTop()" id="scrollBtn" title="Ir arriba">↑</button>
     	<script src="script.js"></script>
-	<script>
-        function toggleContent() {
-            var content = document.getElementById("contentToHide");
-            if (content.style.display === "none") {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
-        }
-    	</script>
 </body>
 </html>
