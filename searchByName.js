@@ -1,5 +1,9 @@
+function normalizeText(text) {
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 function searchByName() {
-    var searchTerm = document.getElementById("searchByNameInput").value.trim().toLowerCase(); // Convertir el término de búsqueda a minúsculas
+    var searchTerm = normalizeText(document.getElementById("searchByNameInput").value.trim()); // Normalizar el término de búsqueda
     var searchResultsElement = document.getElementById("searchResultsByName");
 
     // Limpiar los resultados si el campo de búsqueda está vacío
@@ -14,16 +18,16 @@ function searchByName() {
     sections.forEach(function(section) {
         var h3 = section.querySelectorAll("h3");
         h3.forEach(function(h3Element) {
-            var h3Text = h3Element.innerText.trim().toLowerCase(); // Convertir el texto del h3 a minúsculas
+            var h3Text = normalizeText(h3Element.innerText.trim()); // Normalizar el texto del h3
             if (h3Text.includes(searchTerm)) {
                 var links = h3Element.nextElementSibling.querySelectorAll("a");
                 links.forEach(function(link) {
                     var href = link.getAttribute("href");
-                    var linkText = link.innerText.trim().toLowerCase(); // Convertir el texto del enlace a minúsculas
+                    var linkText = normalizeText(link.innerText.trim()); // Normalizar el texto del enlace
                     
                     var resultLink = document.createElement("a");
                     resultLink.href = href;
-                    resultLink.textContent = linkText; // Mantener el texto del enlace en minúsculas
+                    resultLink.textContent = linkText; // Mantener el texto del enlace
                     resultLink.target = "_blank";
 
                     var resultItem = document.createElement("p");
