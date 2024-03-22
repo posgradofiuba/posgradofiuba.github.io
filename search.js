@@ -2,7 +2,7 @@ function search() {
     var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
     if (!searchTerm) return;
 
-    searchTerm = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    searchTerm = unorm.nfd(searchTerm);
 
     var sections = document.querySelectorAll("section");
     var searchResults = [];
@@ -14,7 +14,7 @@ function search() {
             var href = link.getAttribute("href");
             var h3Text = link.closest("ul").previousElementSibling.innerText.trim();
 
-            linkText = linkText.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            linkText = unorm.nfd(linkText);
 
             if (linkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
                 var resultLink = document.createElement("a");
