@@ -23,10 +23,14 @@
         <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()">
         <div id="searchResults"></div>
         <script src="search.js" defer></script>
+	<button onclick="clearResultsByResolution()">Borrar resultados de búsqueda</button>
+	<div id="searchResultsByResolution"></div>
 
 	<input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera" oninput="searchByName()">
 	<div id="searchResultsByName"></div>
-	 <script src="searchByName.js" defer></script>
+	<script src="searchByName.js" defer></script>
+	<button onclick="clearResultsByName()">Borrar resultados de búsqueda</button>
+	<div id="searchResultsByName"></div>
 
     </header>
 	
