@@ -2,8 +2,6 @@ function search() {
     var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
     if (!searchTerm) return;
 
-    searchTerm = normalizeText(searchTerm);
-
     var sections = document.querySelectorAll("section");
     var searchResults = [];
 
@@ -14,12 +12,10 @@ function search() {
             var href = link.getAttribute("href");
             var h3Text = link.closest("ul").previousElementSibling.innerText.trim();
 
-            var normalizedLinkText = normalizeText(linkText);
-
-            if (normalizedLinkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
+            if (startsWithCaseInsensitive(linkText, searchTerm)) {
                 var resultLink = document.createElement("a");
                 resultLink.href = href;
-                resultLink.textContent = link.innerText;
+                resultLink.textContent = linkText;
                 resultLink.target = "_blank";
 
                 var trimmedH3Text = h3Text.replace("Laboratorio de Sistemas Embebidos (LSE) - ", "");
@@ -43,6 +39,9 @@ function search() {
     }
 }
 
-function normalizeText(text) {
-    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+function startsWithCaseInsensitive(text, search) {
+    // Normalizamos los textos antes de comparar
+    var normalizedText = unorm.nfd(text).toLowerCase();
+    var normalizedSearch = unorm.nfd(search).toLowerCase();
+    return normalizedText.startsWith(normalizedSearch);
 }
