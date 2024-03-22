@@ -39,7 +39,7 @@ function searchByName() {
     }
 }
 
-// Función para eliminar las tildes de una cadena de texto
+// Función para normalizar una cadena de texto conservando las tildes
 function normalize(text) {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
