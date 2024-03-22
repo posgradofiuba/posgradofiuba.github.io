@@ -12,7 +12,7 @@ function search() {
             var href = link.getAttribute("href");
             var h3Text = link.closest("ul").previousElementSibling.innerText.trim();
 
-            if (linkText === searchTerm) {
+            if (linkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
                 var resultLink = document.createElement("a");
                 resultLink.href = href;
                 resultLink.textContent = linkText;
