@@ -1,5 +1,5 @@
 function searchByName() {
-    var searchTerm = document.getElementById("searchByNameInput").value.trim();
+    var searchTerm = document.getElementById("searchByNameInput").value.trim().toLowerCase(); // Convertir el término de búsqueda a minúsculas
     if (!searchTerm) return;
 
     var sections = document.querySelectorAll("section");
@@ -8,20 +8,20 @@ function searchByName() {
     sections.forEach(function(section) {
         var h3 = section.querySelectorAll("h3");
         h3.forEach(function(h3Element) {
-            var h3Text = h3Element.innerText.trim();
+            var h3Text = h3Element.innerText.trim().toLowerCase(); // Convertir el texto del h3 a minúsculas
             if (h3Text.includes(searchTerm)) {
                 var links = h3Element.nextElementSibling.querySelectorAll("a");
                 links.forEach(function(link) {
                     var href = link.getAttribute("href");
-                    var linkText = link.innerText.trim();
+                    var linkText = link.innerText.trim().toLowerCase(); // Convertir el texto del enlace a minúsculas
                     
                     var resultLink = document.createElement("a");
                     resultLink.href = href;
-                    resultLink.textContent = linkText;
+                    resultLink.textContent = linkText; // Mantener el texto del enlace en minúsculas
                     resultLink.target = "_blank";
 
                     var resultItem = document.createElement("p");
-                    resultItem.innerHTML = "<strong>" + h3Text + ": </strong>";
+                    resultItem.innerHTML = "<strong>" + h3Element.innerText.trim() + ": </strong>"; // Usar el texto original del h3
                     resultItem.appendChild(resultLink);
 
                     searchResults.push(resultItem);
