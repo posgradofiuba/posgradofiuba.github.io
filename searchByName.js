@@ -1,6 +1,12 @@
 function searchByName() {
     var searchTerm = document.getElementById("searchByNameInput").value.trim().toLowerCase(); // Convertir el término de búsqueda a minúsculas
-    if (!searchTerm) return;
+    var searchResultsElement = document.getElementById("searchResultsByName");
+
+    // Limpiar los resultados si el campo de búsqueda está vacío
+    if (!searchTerm) {
+        searchResultsElement.innerHTML = "";
+        return;
+    }
 
     var sections = document.querySelectorAll("section");
     var searchResults = [];
@@ -30,7 +36,6 @@ function searchByName() {
         });
     });
 
-    var searchResultsElement = document.getElementById("searchResultsByName");
     searchResultsElement.innerHTML = "";
     if (searchResults.length > 0) {
         searchResults.forEach(function(result) {
