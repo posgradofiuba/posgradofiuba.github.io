@@ -1,5 +1,5 @@
 function searchByName() {
-    var searchTerm = document.getElementById("searchByNameInput").value.trim().toLowerCase();
+    var searchTerm = document.getElementById("searchByNameInput").value.trim();
     if (!searchTerm) return;
 
     var sections = document.querySelectorAll("section");
@@ -8,7 +8,7 @@ function searchByName() {
     sections.forEach(function(section) {
         var h3 = section.querySelectorAll("h3");
         h3.forEach(function(h3Element) {
-            var h3Text = h3Element.innerText.trim().toLowerCase();
+            var h3Text = h3Element.innerText.trim();
             if (h3Text.includes(searchTerm)) {
                 var links = h3Element.nextElementSibling.querySelectorAll("a");
                 links.forEach(function(link) {
