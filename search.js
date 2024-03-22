@@ -1,6 +1,12 @@
 function search() {
     var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
-    if (!searchTerm) return;
+    var searchResultsElement = document.getElementById("searchResults");
+
+    // Limpiar los resultados si el campo de búsqueda está vacío
+    if (!searchTerm) {
+        searchResultsElement.innerHTML = "";
+        return;
+    }
 
     var sections = document.querySelectorAll("section");
     var searchResults = [];
@@ -28,7 +34,6 @@ function search() {
         });
     });
 
-    var searchResultsElement = document.getElementById("searchResults");
     searchResultsElement.innerHTML = "";
     if (searchResults.length > 0) {
         searchResults.forEach(function(result) {
