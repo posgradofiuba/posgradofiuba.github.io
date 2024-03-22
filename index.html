@@ -411,10 +411,10 @@
 	<button onclick="scrollToTop()" id="scrollBtn" title="Ir arriba">↑</button>
     	<script src="script.js"></script>
 	<script>
-   	function toggleContent() {
-        var contentToHide = document.getElementById("contentToHide");
-        contentToHide.classList.toggle("hidden");
-    	}
+        document.getElementById("toggleContentButton").addEventListener("click", function() {
+            var contentToHide = document.getElementById("contentToHide");
+            contentToHide.classList.toggle("hidden");
+        });
 	</script>
 </body>
 </html>
