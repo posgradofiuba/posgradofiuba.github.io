@@ -12,26 +12,18 @@
         padding: 10px;
         margin-top: 10px;
     	}
-	</style>
-	
-	<style>
 	.container {
     	flex-direction: column;
 	}
-
 	.box {
     	border: 1px solid black;
     	padding: 10px;
     	margin-bottom: 20px;
 	}
-
 	.box-h3 {
     	background-color: #bfbfbf;
     	margin-bottom: 0;
 	}
-	</style>
-
-    	<style>
         ul {
             list-style-type: circle;
         }
@@ -41,7 +33,6 @@
     	function toggleContent() {
         var content = document.getElementById("contentToHide");
         var toggleButton = document.getElementById("toggleButton");
-
         var displayValue = window.getComputedStyle(content).getPropertyValue('display');
         if (displayValue === "none") {
             content.style.display = "block";
@@ -63,7 +54,6 @@
     	<button id="toggleButton" onclick="toggleContent()">Ocultar resoluciones</button>
 	</div>
 
-    	<hr class="separator">
 	<div>
     	<div>
         <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()" style="width: 250px; margin-bottom: 10px;">
