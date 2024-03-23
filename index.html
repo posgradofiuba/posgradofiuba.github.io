@@ -45,10 +45,10 @@
         var displayValue = window.getComputedStyle(content).getPropertyValue('display');
         if (displayValue === "none") {
             content.style.display = "block";
-            toggleButton.textContent = "Ocultar contenido";
+            toggleButton.textContent = "Ocultar resoluciones";
         } else {
             content.style.display = "none";
-            toggleButton.textContent = "Mostrar contenido";
+            toggleButton.textContent = "Mostrar resoluciones";
         }
     }
 </script>
@@ -60,7 +60,7 @@
         <h1><u>Resoluciones de Posgrado</u></h1>
 
 	<div style="position: fixed; top: 20px; right: 20px;">
-    	<button id="toggleButton" onclick="toggleContent()">Ocultar contenido</button>
+    	<button id="toggleButton" onclick="toggleContent()">Ocultar resoluciones</button>
 	</div>
  
 	<input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()" style="width: 250px; margin-bottom: 10px;">
