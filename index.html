@@ -26,10 +26,10 @@
         var displayValue = window.getComputedStyle(content).getPropertyValue('display');
         if (displayValue === "none") {
             content.style.display = "block";
-            toggleButton.textContent = "Ocultar Contenido";
+            toggleButton.textContent = "Ocultar contenido";
         } else {
             content.style.display = "none";
-            toggleButton.textContent = "Mostrar Contenido";
+            toggleButton.textContent = "Mostrar contenido";
         }
     }
 </script>
@@ -44,7 +44,7 @@
     	<button onclick="window.location.reload();">Refrescar página</button>
 	</div>
 	<div style="position: fixed; top: 60px; right: 20px;">
-    	<button id="toggleButton" onclick="toggleContent()">Ocultar Contenido</button>
+    	<button id="toggleButton" onclick="toggleContent()">Ocultar contenido</button>
 	</div>
  
         <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()">
