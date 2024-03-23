@@ -62,26 +62,41 @@
 	<div style="position: fixed; top: 20px; right: 20px;">
     	<button id="toggleButton" onclick="toggleContent()">Ocultar resoluciones</button>
 	</div>
- 
-	<div>
-    		<div>
-        		<input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()" style="width: 250px; margin-bottom: 10px;">
-        		<div id="searchResults"></div>
-        		<script src="search.js" defer></script>
-    		</div>
-		<hr class="separator">
-    		<div>
-        		<input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera" oninput="searchByName()" style="width: 250px; margin-bottom: 10px;">
-        		<div id="searchResultsByName"></div>
-        		<script src="searchByName.js" defer></script>
-    		</div>
+
+	<hr class="separator">
+	    
+	<div class="search-container">
+    	<div class="search-group">
+        <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()" style="width: 250px; margin-bottom: 10px;">
+        <div id="searchResults"></div>
+        <script src="search.js" defer></script>
+    	</div>
+
+	<hr class="separator">	
+	
+    	<div class="search-group">
+        <input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera" oninput="searchByName()" style="width: 250px; margin-bottom: 10px;">
+        <div id="searchResultsByName"></div>
+        <script src="searchByName.js" defer></script>
+    	</div>
 	</div>
 
 
+
 	<style>
-       	.separator {
-    		width: 250px;
-    		margin: 20px auto;
+       	.search-container {
+    	display: flex;
+    	justify-content: center;
+    	align-items: flex-start; /* Para alinear los elementos al principio del contenedor */
+	}
+
+	.search-group {
+    	margin-right: 20px; /* Espacio entre los grupos de búsqueda */
+	}
+
+	.separator {
+   	 width: 100%; /* Ancho completo del contenedor */
+    	margin: 20px 0; /* Márgenes superiores e inferiores */
 	}
     	</style>
 
