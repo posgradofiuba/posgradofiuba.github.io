@@ -1,20 +1,4 @@
-function applySystemThemePreference() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark-mode');
-    } else {
-        document.body.classList.remove('dark-mode');
-    }
-}
-
-window.onload = function() {
-    applySystemThemePreference();
-
-    window.onscroll = function() {
-        scrollFunction();
-    };
-};
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemThemePreference);
+window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -25,6 +9,11 @@ function scrollFunction() {
 }
 
 function scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0; // Para Safari
+    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+}
+
+// Verificar si el navegador o el sistema operativo del usuario tiene configurado el modo oscuro
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark-mode'); // Aplicar modo oscuro al cuerpo del documento
 }
