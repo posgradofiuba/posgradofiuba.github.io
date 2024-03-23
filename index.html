@@ -14,7 +14,6 @@
         margin: 20px 0;
     }
     #contentToHide {
-        /* background-color: lightblue; */
         padding: 10px;
         margin-top: 10px;
     }
@@ -22,13 +21,15 @@
 <script>
     function toggleContent() {
         var content = document.getElementById("contentToHide");
-        // Obtener el valor de la propiedad 'display' calculada
+        var toggleButton = document.getElementById("toggleButton");
+
         var displayValue = window.getComputedStyle(content).getPropertyValue('display');
-        // Cambiar el contenido entre mostrar y ocultar con un solo clic
         if (displayValue === "none") {
             content.style.display = "block";
+            toggleButton.textContent = "Ocultar Contenido";
         } else {
             content.style.display = "none";
+            toggleButton.textContent = "Mostrar Contenido";
         }
     }
 </script>
@@ -43,7 +44,7 @@
     	<button onclick="window.location.reload();">Refrescar página</button>
 	</div>
 	<div style="position: fixed; top: 60px; right: 20px;">
-    	<button onclick="toggleContent()">Mostrar/Ocultar Contenido</button>
+    	<button id="toggleButton" onclick="toggleContent()">Mostrar/Ocultar Contenido</button>
 	</div>
  
         <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()">
