@@ -16,10 +16,3 @@
 #scrollBtn:hover {
     background-color: rgba(128, 128, 128, 0.7);
 }
-.dark-mode #scrollBtn {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.dark-mode #scrollBtn:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
