@@ -46,12 +46,12 @@ ul {
     border-radius: 25px;
     padding: 8px 15px;
     font-size: 16px;
-    color: #1da1f2;
+    color: #bfbfbf;
     outline: none;
     width: 250px;
     margin-bottom: 10px;
 }
 
 .buscador-res:focus {
-    border-color: #1da1f2;
+    border-color: #bfbfbf;
 }
