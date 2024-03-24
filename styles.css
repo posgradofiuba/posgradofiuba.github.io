@@ -36,7 +36,20 @@
 ul {
     list-style-type: circle;
 }
-	.separator {
+.separator {
     width: 250px;
     margin: 20px auto;
+}
+.buscador-search {
+    border: none;
+    border-bottom: 1px solid #ccd6dd;
+    padding: 8px 15px;
+    font-size: 16px;
+    outline: none;
+    width: 300px;
+}
+
+.buscador-search:focus {
+    border-color: #1da1f2; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
 }
