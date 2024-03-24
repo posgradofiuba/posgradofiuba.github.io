@@ -58,3 +58,7 @@ ul {
 .buscador-res:focus {
     border-color: #333;
 }
+@font-face {
+    font-family: 'Exo 2';
+    src: url('fonts/Exo2-Regular.woff') format('woff');
+}
