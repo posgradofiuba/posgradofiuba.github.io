@@ -63,9 +63,3 @@ ul {
     src: url('fonts/Exo2-Regular.woff') format('woff');
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-h2, h3 {
-    font-family: 'Open Sans';
-}
-
