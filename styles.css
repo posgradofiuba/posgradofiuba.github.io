@@ -16,3 +16,27 @@
 #scrollBtn:hover {
     background-color: rgba(128, 128, 128, 0.7);
 }
+
+#contentToHide {
+    padding: 10px;
+    margin-top: 10px;
+}
+.container {
+    flex-direction: column;
+}
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.box-h3 {
+    background-color: #bfbfbf;
+    margin-bottom: 0;
+}
+ul {
+    list-style-type: circle;
+}
+	.separator {
+    width: 250px;
+    margin: 20px auto;
+}
