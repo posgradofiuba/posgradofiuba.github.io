@@ -9,17 +9,21 @@
 	
 	<script>
     	function toggleContent() {
-        var content = document.getElementById("contentToHide");
-        var toggleButton = document.getElementById("toggleButton");
-        var displayValue = window.getComputedStyle(content).getPropertyValue('display');
-        if (displayValue === "none") {
+    	var content = document.getElementById("contentToHide");
+    	var toggleButton = document.getElementById("toggleButton");
+    	var toggleIcon = document.getElementById("toggleIcon");
+    	var displayValue = window.getComputedStyle(content).getPropertyValue('display');
+    
+    	if (displayValue === "none") {
         content.style.display = "block";
-        toggleButton.textContent = "Ocultar resoluciones";
-        } else {
+        toggleIcon.src = "https://i.imgur.com/SqonsjV.png";
+        toggleButton.setAttribute("aria-label", "Ocultar Resoluciones");
+    	} else {
         content.style.display = "none";
-        toggleButton.textContent = "Mostrar resoluciones";
-        }
+        toggleIcon.src = "https://i.imgur.com/lnHhdlc.png";
+        toggleButton.setAttribute("aria-label", "Mostrar Resoluciones");
     	}
+	}
 	</script>
 
 </head>
@@ -39,8 +43,11 @@
 
 
 	<div style="position: fixed; top: 20px; right: 20px;">
-    	<button id="toggleButton" onclick="toggleContent()">Ocultar resoluciones</button>
+    	<button id="toggleButton" onclick="toggleContent()">
+        <img id="toggleIcon" src="https://i.imgur.com/SqonsjV.png" alt="Ocultar Resoluciones">
+    	</button>
 	</div>
+
 		
         <div>
         <div>
