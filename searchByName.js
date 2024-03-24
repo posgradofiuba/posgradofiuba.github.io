@@ -1,8 +1,10 @@
 function normalizeText(text) {
+    console.log("Normalized text: ", text);
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
 function searchByName() {
+    console.log("searchByName() function called");
     var searchTerm = normalizeText(document.getElementById("searchByNameInput").value.trim()); // Normalizar el término de búsqueda
     var searchResultsElement = document.getElementById("searchResultsByName");
 
