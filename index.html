@@ -24,28 +24,31 @@
 
 </head>
 <body style="font-family: sans-serif;">
-    	<header style="text-align: center;">
-	    
-        <h1>Resoluciones de Posgrado</h1>
-
-	<div style="position: fixed; top: 20px; right: 20px;">
-    	<button id="toggleButton" onclick="toggleContent()">Ocultar resoluciones</button>
-	</div>
-
-	<div>
-    	<div>
-	<input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()" class="buscador-res" style="margin-top: 20px;">
-	<div id="searchResults"></div>
-	<script src="search.js" defer></script>
-    	</div>
-   	<div>
-	<input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera" oninput="searchByName()" class="buscador-res" style="margin-top: 20px;">
+    	<header style="text-align: center; position: relative;">
+    	<div style="background-color: #007bff; height: 50px; width: 100%; position: absolute; top: 0; left: 0;"></div>
+    	<div style="position: relative; z-index: 1;">
+        <h1 style="margin-top: 20px;">Resoluciones de Posgrado</h1>
+        <div style="position: fixed; top: 20px; right: 20px;">
+        <button id="toggleButton" onclick="toggleContent()">Ocultar resoluciones</button>
+        </div>
+		
+        <div>
+        <div>
+        <input type="text" id="searchInput" placeholder="Buscar por número de resolución" oninput="search()" class="buscador-res" style="margin-top: 20px;">
+        <div id="searchResults"></div>
+        <script src="search.js" defer></script>
+        </div>
+        <div>
+        <input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera" oninput="searchByName()" class="buscador-res" style="margin-top: 20px;">
         <div id="searchResultsByName"></div>
         <script src="searchByName.js" defer></script>
-    	</div>
-	</div>
+        </div>
+        </div>
 		
-    	</header>
+    	</div>
+		
+	</header>
+	
 	<div id="contentToHide">
 	<hr>
 	<section>
