@@ -25,23 +25,17 @@ function searchByName() {
                 links.forEach(function(link) {
                     var href = link.getAttribute("href");
                     var linkText = normalizeText(link.innerText.trim());
+                    
+                    var resultLink = document.createElement("a");
+                    resultLink.href = href;
+                    resultLink.textContent = linkText;
+                    resultLink.target = "_blank";
 
-                    // Obtener el número de resolución
-                    var resolutionNumber = linkText.match(/\d+/);
+                    var resultItem = document.createElement("p");
+                    resultItem.innerHTML = "<strong>" + h3Element.innerText.trim() + ": </strong>";
+                    resultItem.appendChild(resultLink);
 
-                    // Verificar si el número de resolución contiene el año de búsqueda
-                    if (resolutionNumber && resolutionNumber[0].endsWith(searchTerm)) {
-                        var resultLink = document.createElement("a");
-                        resultLink.href = href;
-                        resultLink.textContent = linkText; // Mantener el texto del enlace
-                        resultLink.target = "_blank";
-
-                        var resultItem = document.createElement("p");
-                        resultItem.innerHTML = "<strong>" + h3Element.innerText.trim() + ": </strong>";
-                        resultItem.appendChild(resultLink);
-
-                        searchResults.push(resultItem);
-                    }
+                    searchResults.push(resultItem);
                 });
             }
         });
