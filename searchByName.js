@@ -1,4 +1,4 @@
-searchbyname.js, function normalizeText(text) {
+function normalizeText(text) {
     console.log("Normalized text: ", text);
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
