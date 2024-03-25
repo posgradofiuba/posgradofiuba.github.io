@@ -3,7 +3,6 @@ function search() {
     if (!searchTerm) return;
     var searchResultsElement = document.getElementById("searchResults");
 
-    // Limpiar los resultados si el campo de búsqueda está vacío
     if (!searchTerm) {
         searchResultsElement.innerHTML = "";
         return;
@@ -17,7 +16,8 @@ function search() {
             var linkText = link.innerText.trim().toLowerCase();
             var href = link.getAttribute("href");
             var h3Text = link.closest("ul").previousElementSibling.innerText.trim();
-            if (linkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
+            
+            if (linkText.includes(searchTerm)) {
                 var resultLink = document.createElement("a");
                 resultLink.href = href;
                 resultLink.textContent = linkText;
