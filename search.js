@@ -1,6 +1,12 @@
-function search() {
-    var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
-    var searchResultsElement = document.getElementById("searchResults");
+function normalizeText(text) {
+    console.log("Normalized text: ", text);
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+function searchByName() {
+    console.log("searchByName() function called");
+    var searchTerm = normalizeText(document.getElementById("searchByNameInput").value.trim()); // Normalizar el término de búsqueda
+    var searchResultsElement = document.getElementById("searchResultsByName");
 
     // Limpiar los resultados si el campo de búsqueda está vacío
     if (!searchTerm) {
@@ -12,24 +18,29 @@ function search() {
     var searchResults = [];
 
     sections.forEach(function(section) {
-        var links = section.querySelectorAll("a");
-        links.forEach(function(link) {
-            var linkText = link.innerText.trim().toLowerCase();
-            var href = link.getAttribute("href");
-            var h3Text = link.closest("ul").previousElementSibling.innerText.trim();
+        var h3 = section.querySelectorAll("h3");
+        h3.forEach(function(h3Element) {
+            var h3Text = normalizeText(h3Element.innerText.trim()); // Normalizar el texto del h3
+            if (h3Text.includes(searchTerm)) {
+                var links = h3Element.nextElementSibling.querySelectorAll("a");
+                links.forEach(function(link) {
+                    var href = link.getAttribute("href");
+                    var linkText = normalizeText(link.innerText.trim()); // Normalizar el texto del enlace
 
-            if (linkText.startsWith(searchTerm)) { // Utilizamos startsWith para buscar por aproximación
-                var resultLink = document.createElement("a");
-                resultLink.href = href;
-                resultLink.textContent = linkText;
-                resultLink.target = "_blank";
+                    // Verificar si el texto del enlace contiene el año de búsqueda
+                    if (linkText.includes(searchTerm)) {
+                        var resultLink = document.createElement("a");
+                        resultLink.href = href;
+                        resultLink.textContent = linkText; // Mantener el texto del enlace
+                        resultLink.target = "_blank";
 
-                var trimmedH3Text = h3Text.replace("Laboratorio de Sistemas Embebidos (LSE) - ", "");
-                var resultItem = document.createElement("p");
-                resultItem.innerHTML = "<strong>" + trimmedH3Text + ": </strong>";
-                resultItem.appendChild(resultLink);
+                        var resultItem = document.createElement("p");
+                        resultItem.innerHTML = "<strong>" + h3Element.innerText.trim() + ": </strong>"; // Usar el texto original del h3
+                        resultItem.appendChild(resultLink);
 
-                searchResults.push(resultItem);
+                        searchResults.push(resultItem);
+                    }
+                });
             }
         });
     });
