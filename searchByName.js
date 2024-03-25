@@ -5,10 +5,9 @@ function normalizeText(text) {
 
 function searchByName() {
     console.log("searchByName() function called");
-    var searchTerm = normalizeText(document.getElementById("searchByNameInput").value.trim()); // Normalizar el término de búsqueda
+    var searchTerm = normalizeText(document.getElementById("searchByNameInput").value.trim());
     var searchResultsElement = document.getElementById("searchResultsByName");
 
-    // Limpiar los resultados si el campo de búsqueda está vacío
     if (!searchTerm) {
         searchResultsElement.innerHTML = "";
         return;
@@ -20,23 +19,29 @@ function searchByName() {
     sections.forEach(function(section) {
         var h3 = section.querySelectorAll("h3");
         h3.forEach(function(h3Element) {
-            var h3Text = normalizeText(h3Element.innerText.trim()); // Normalizar el texto del h3
+            var h3Text = normalizeText(h3Element.innerText.trim());
             if (h3Text.includes(searchTerm)) {
                 var links = h3Element.nextElementSibling.querySelectorAll("a");
                 links.forEach(function(link) {
                     var href = link.getAttribute("href");
-                    var linkText = normalizeText(link.innerText.trim()); // Normalizar el texto del enlace
-                    
-                    var resultLink = document.createElement("a");
-                    resultLink.href = href;
-                    resultLink.textContent = linkText; // Mantener el texto del enlace
-                    resultLink.target = "_blank";
+                    var linkText = normalizeText(link.innerText.trim());
 
-                    var resultItem = document.createElement("p");
-                    resultItem.innerHTML = "<strong>" + h3Element.innerText.trim() + ": </strong>"; // Usar el texto original del h3
-                    resultItem.appendChild(resultLink);
+                    // Obtener el número de resolución
+                    var resolutionNumber = linkText.match(/\d+/);
 
-                    searchResults.push(resultItem);
+                    // Verificar si el número de resolución contiene el año de búsqueda
+                    if (resolutionNumber && resolutionNumber[0].endsWith(searchTerm)) {
+                        var resultLink = document.createElement("a");
+                        resultLink.href = href;
+                        resultLink.textContent = linkText; // Mantener el texto del enlace
+                        resultLink.target = "_blank";
+
+                        var resultItem = document.createElement("p");
+                        resultItem.innerHTML = "<strong>" + h3Element.innerText.trim() + ": </strong>";
+                        resultItem.appendChild(resultLink);
+
+                        searchResults.push(resultItem);
+                    }
                 });
             }
         });
