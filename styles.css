@@ -23,6 +23,7 @@ body, html {
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: auto;
+  background-position: center;
 }
 
 .banner-derecha {
@@ -32,4 +33,5 @@ body, html {
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
+  background-position: center;
 }
