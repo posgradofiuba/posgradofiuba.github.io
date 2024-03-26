@@ -37,3 +37,10 @@ body, html {
   margin-left: auto;
   background-position: top center;
 }
+a {
+  color: #adc910;
+}
+
+a:hover {
+  color: #8b9e00;
+}
