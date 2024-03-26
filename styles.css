@@ -4,7 +4,7 @@ body, html {
 }
 
 .banner {
-  background-color: #adc910
+  background-color: #adc910;
   color: white;
   padding: 20px;
   text-align: center;
@@ -12,5 +12,5 @@ body, html {
 
 .contenido {
   padding: 20px;
-  font-family: Exo 2;
+  font-family: 'Exo 2';
 }
