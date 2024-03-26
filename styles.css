@@ -1,0 +1,15 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-color: #007bff; /* Celeste */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.contenido {
+  padding: 20px;
+}
