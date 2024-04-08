@@ -72,20 +72,28 @@ a:hover { /* links */
   margin-bottom: 4px;
 }
 
+.caja ul { /* caja */
+  margin: 0;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #adc910;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.caja li { /* caja */
+  margin: 0;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #adc910;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
 .texto { /* texto */
   padding: 10px;
   font-family: 'Exo 2';
   font-size: 18px;
-}
-
-.caja ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: disc;
-}
-
-.caja li {
-  margin-left: 20px;
 }
 
 
