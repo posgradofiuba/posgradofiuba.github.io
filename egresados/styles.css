@@ -63,24 +63,6 @@ a:hover { /* links */
   color: #8b9e00;
 }
 
-.caja p { /* caja */
-  margin: 0;
-  background-color: #f2f2f2;
-  border-bottom: 2px solid #adc910;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 4px;
-}
-
-.caja ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: disc;
-}
-
-.caja li {
-  margin-left: 20px;
-}
 
 .texto { /* texto */
   padding: 10px;
@@ -89,10 +71,24 @@ a:hover { /* links */
 }
 
 
-.justificar { /* justificar texto */
+.caja {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #adc910;
+  border-radius: 10px;
+}
+
+.texto {
+  padding: 10px;
+  font-family: 'Exo 2';
+  font-size: 18px;
+}
+
+.justificar {
   text-align: justify;
 }
 
-.negrita { /* negrita */
+.negrita {
   font-weight: bold;
 }
