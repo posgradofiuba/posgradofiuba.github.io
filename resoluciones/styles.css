@@ -74,13 +74,18 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .indice li {
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .indice li:last-child {
   margin-right: 0;
 }
 
+.barra {
+  margin: 0 5px;
+}
