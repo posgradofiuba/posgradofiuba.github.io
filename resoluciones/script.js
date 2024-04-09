@@ -10,12 +10,6 @@ function scrollFunction() {
     }
 }
 
-function scrollToTop() {
-    // Eliminar el numeral del enlace cuando se hace clic en el botón de subir
-    const enlaces = document.querySelectorAll('.indice a');
-    enlaces.forEach(function(enlace) {
-        enlace.href = enlace.href.replace(/#.*$/, '');
-    });
 
     // Hacer scroll hasta arriba de la página
     document.body.scrollTop = 0; // Para Safari
