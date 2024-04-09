@@ -4,6 +4,12 @@ body, html {
   padding: 0;
 }
 
+body { /* body */
+  background-color: rgba(0, 148, 218, 0.8);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 /* Estilos del banner */
 .banner {
   background-color: #adc910;
