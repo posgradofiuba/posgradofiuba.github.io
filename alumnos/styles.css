@@ -68,10 +68,10 @@ a:hover {
 .caja {
   margin: 0;
   background-color: #f2f2f2;
-  border-bottom: 2px solid #adc910;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 4px;
+  border-bottom: 4px solid #adc910;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 8px;
 }
 
 /* Estilos del texto */
