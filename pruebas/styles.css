@@ -3,6 +3,13 @@ body, html {
   padding: 0;
 }
 
+body {
+  background-color: rgba(0, 148, 218, 0.8); /* Ajusta el color de fondo de la web */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el padding predeterminado del body */
+}
+
+
 .container {
   margin: 20px auto; /* Ajusta el margen superior e inferior y centra horizontalmente */
   max-width: 800px; /* Limita el ancho del contenedor */
