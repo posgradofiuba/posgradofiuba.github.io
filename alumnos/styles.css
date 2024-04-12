@@ -1,4 +1,5 @@
-body, html {  /* body */
+/* Estilos generales */
+body, html {
   margin: 0;
   padding: 0;
 }
@@ -9,7 +10,8 @@ body { /* body */
   background-size: auto;
 }
 
-.banner { /* banner */
+/* Estilos del banner */
+.banner {
   background-color: #adc910;
   color: white;
   padding: 20px;
@@ -20,7 +22,7 @@ body { /* body */
   position: relative;
 }
 
-.banner::after { /* banner */
+.banner::after {
   content: "";
   position: absolute;
   left: 0;
@@ -31,39 +33,39 @@ body { /* body */
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
 }
 
-.banner-izquierda { /* banner */
+.banner-izquierda, .banner-derecha {
   width: 208px;
   height: 64px;
-  background-image: url('https://i.imgur.com/b5YNnWL.png');
   background-size: cover;
   background-repeat: no-repeat;
-  margin-right: auto;
   background-position: top;
 }
 
-.banner-derecha { /* banner */
-  width: 208px;
-  height: 64px;
-  background-image: url('https://i.imgur.com/yF79tKg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  background-position: top center;
+.banner-izquierda {
+  background-image: url('https://i.imgur.com/b5YNnWL.png');
+  margin-right: auto;
 }
 
-.banner h1 { /* banner */
+.banner-derecha {
+  background-image: url('https://i.imgur.com/yF79tKg.png');
+  margin-left: auto;
+}
+
+.banner h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-a { /* links */
+/* Estilos de los enlaces */
+a {
   color: #adc910;
 }
 
-a:hover { /* links */
+a:hover {
   color: #8b9e00;
 }
 
-.caja p { /* caja */
+/* Estilos de las cajas */
+.caja {
   margin: 0;
   background-color: #f2f2f2;
   border-bottom: 2px solid #adc910;
@@ -72,20 +74,24 @@ a:hover { /* links */
   margin-bottom: 4px;
 }
 
-.texto { /* texto */
+/* Estilos del texto */
+.texto {
   padding: 10px;
-  font-family: 'Exo 2';
+  font-family: 'Exo 2', sans-serif;
   font-size: 18px;
 }
 
-.justificar { /* justificar texto */
+/* Estilos de justificación */
+.justificar {
   text-align: justify;
 }
 
-.negrita { /* negrita */
+/* Estilos de texto en negrita */
+.negrita {
   font-weight: bold;
 }
 
+/* Estilos de la fuente Exo 2 */
 .exo-2 {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
