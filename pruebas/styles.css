@@ -18,15 +18,16 @@ body {
   border-radius: 10px; /* Añade bordes redondeados al contenedor */
 }
 
-@media (min-width: 768px) {
-  .container {
-    margin: 20px auto; /* Ajusta el margen superior e inferior y centra horizontalmente */
-    max-width: 800px; /* Limita el ancho del contenedor */
-    background-color: rgba(242, 242, 242, 0.8); /* Ajusta el color de fondo */
-    padding: 20px; /* Añade un poco de espacio alrededor del contenido */
-    border-radius: 10px; /* Añade bordes redondeados al contenedor */
-  }
+.caja {
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #adc910;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-left: 20px; /* Establece el margen izquierdo según tus necesidades */
+  margin-right: 20px; /* Establece el margen derecho según tus necesidades */
 }
+
 
 .banner {
   background-color: #adc910;
