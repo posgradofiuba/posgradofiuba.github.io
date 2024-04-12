@@ -41,7 +41,7 @@ a:hover {
 
 .caja {
   max-width: 1000px; /* Ajusta el ancho máximo del contenedor según tus necesidades */
-  margin: 10px 20px; /* Centra horizontalmente y agrega margen superior e inferior */
+  margin: 10px auto; /* Centra horizontalmente y agrega margen superior e inferior */
   padding: 1px 20px;
   border-radius: 10px; /* Añade bordes redondeados */
   background-color: #f2f2f2;
