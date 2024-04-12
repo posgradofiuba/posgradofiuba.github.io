@@ -74,3 +74,15 @@ a:hover {
   margin-left: 20px;
   line-height: 1.6;
 }
+
+.footer {
+  background-color: #3c3c3b;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
