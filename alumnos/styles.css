@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: left;
   position: relative;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 .banner::after {
@@ -33,7 +33,6 @@ body {
 .banner h1 {
   margin-left: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 20px;
 }
 
 a {
