@@ -91,3 +91,18 @@ a:hover { /* links */
   font-weight: 400;
   font-style: normal;
 }
+
+.lista {
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+.lista ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista ul li {
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
