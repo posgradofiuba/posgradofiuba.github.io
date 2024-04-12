@@ -1,20 +1,12 @@
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-color: rgba(0, 148, 218, 0.8); /* Ajusta el color de fondo de la web */
-  margin: 0; /* Elimina el margen predeterminado del body */
-  padding: 0; /* Elimina el padding predeterminado del body */
 }
 
-
 .container {
-  margin: 20px auto; /* Ajusta el margen superior e inferior y centra horizontalmente */
   max-width: 800px; /* Limita el ancho del contenedor */
-  background-color: rgba(242, 242, 242, 0.8); /* Ajusta el color de fondo */
+  margin: 20px auto; /* Ajusta el margen superior e inferior y centra horizontalmente */
   padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+  background-color: rgba(242, 242, 242, 0.8); /* Ajusta el color de fondo */
   border-radius: 10px; /* Añade bordes redondeados al contenedor */
 }
 
@@ -24,43 +16,6 @@ body {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 4px;
-  margin-left: 20px; /* Establece el margen izquierdo según tus necesidades */
-  margin-right: 20px; /* Establece el margen derecho según tus necesidades */
-}
-
-
-.banner {
-  background-color: #adc910;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-family: "Exo 2";
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.banner::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 4px;
-  background-color: #89a609;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-}
-
-.banner h1 {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-a {
-  color: #adc910;
-}
-
-a:hover {
-  color: #8b9e00;
 }
 
 .texto {
