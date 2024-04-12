@@ -5,7 +5,6 @@ body {
   background-image:  radial-gradient(#ffffff 1.35px, transparent 1.35px), radial-gradient(#ffffff 1.35px, #0094DA 1.35px);
   background-size: 54px 54px;
   background-position: 0 0,27px 27px;
-  font-size: 4px;
 }
 
 .banner {
@@ -17,7 +16,7 @@ body {
   display: flex;
   align-items: left;
   position: relative;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .banner::after {
