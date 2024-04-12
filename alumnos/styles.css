@@ -1,7 +1,11 @@
 body {
-  background-color: rgba(0, 148, 218, 1);
   margin: 0;
   padding: 0;
+  background-color: #0094DA;
+  opacity: 0.8;
+  background-image:  radial-gradient(#ffffff 1.35px, transparent 1.35px), radial-gradient(#ffffff 1.35px, #0094DA 1.35px);
+  background-size: 54px 54px;
+  background-position: 0 0,27px 27px;
 }
 
 .banner {
