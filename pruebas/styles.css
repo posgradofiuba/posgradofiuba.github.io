@@ -88,3 +88,7 @@ a:hover {
   margin-left: 20px;
   line-height: 1.6;
 }
+
+.parrafo {
+  margin-bottom: 20px; /* Agrega espacio entre párrafos */
+}
