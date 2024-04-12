@@ -28,11 +28,12 @@ body {
 
 .caja {
   max-width: 800px; /* Limita el ancho del contenedor */
-  margin: 20px auto; /* Ajusta el margen superior e inferior y centra horizontalmente */
+  margin: 20px; /* Establece un margen uniforme de 20px */
   padding: 20px; /* Añade un poco de espacio alrededor del contenido */
   background-color: rgba(242, 242, 242, 0.8); /* Ajusta el color de fondo */
   border-radius: 10px; /* Añade bordes redondeados al contenedor */
 }
+
 
 .caja .parrafo {
   margin-bottom: 20px; /* Añade espacio entre párrafos */
