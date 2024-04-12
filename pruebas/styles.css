@@ -4,7 +4,11 @@ body, html {
 }
 
 .container {
-  margin: 20px; /* Ajusta el margen exterior según sea necesario */
+  margin: 20px auto; /* Ajusta el margen exterior según sea necesario */
+  max-width: 800px; /* Limita el ancho del contenedor */
+  background-color: rgba(242, 242, 242, 0.8); /* Ajusta el color de fondo */
+  padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+  border-radius: 10px; /* Añade bordes redondeados al contenedor */
 }
 
 .banner {
@@ -61,33 +65,13 @@ a:hover {
   color: #8b9e00;
 }
 
-.caja {
-  margin: 0;
-  background-color: #f2f2f2;
-  border-bottom: 2px solid #adc910;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 4px;
-}
-
 .texto {
-  padding: 10px;
   font-family: 'Exo 2', sans-serif;
   font-size: 18px;
 }
 
 .justificar {
   text-align: justify;
-}
-
-.negrita {
-  font-weight: bold;
-}
-
-.exo-2 {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .lista {
@@ -101,6 +85,6 @@ a:hover {
 }
 
 .lista ul li {
-  margin-left: 20px; /* Espacio entre el marcador y el texto */
-  line-height: 1.6; /* Espacio entre las líneas */
+  margin-left: 20px;
+  line-height: 1.6;
 }
