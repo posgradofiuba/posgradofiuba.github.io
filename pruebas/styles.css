@@ -26,6 +26,19 @@ body {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
+.banner h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos de los enlaces */
+a {
+  color: #adc910;
+}
+
+a:hover {
+  color: #8b9e00;
+}
+
 .caja {
   max-width: 1000px; /* Ajusta el ancho máximo del contenedor según tus necesidades */
   margin: 20px auto; /* Centra horizontalmente y agrega margen superior e inferior */
