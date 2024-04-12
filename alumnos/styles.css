@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: left;
   position: relative;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .banner::after {
@@ -86,6 +86,7 @@ a:hover {
   padding: 20px;
   text-align: left;
   font-family: "Exo 2";
+  font-size: 8px;
 }
 
 .footer-info p {
