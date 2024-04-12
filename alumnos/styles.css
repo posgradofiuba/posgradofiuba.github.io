@@ -5,6 +5,7 @@ body {
   background-image:  radial-gradient(#ffffff 1.35px, transparent 1.35px), radial-gradient(#ffffff 1.35px, #0094DA 1.35px);
   background-size: 54px 54px;
   background-position: 0 0,27px 27px;
+  font-size: 14px;
 }
 
 .banner {
@@ -16,7 +17,7 @@ body {
   display: flex;
   align-items: left;
   position: relative;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .banner h1 {
@@ -46,7 +47,6 @@ a:hover {
 
 .texto {
   font-family: 'Exo 2', sans-serif;
-  font-size: 8px;
 }
 
 .justificar {
