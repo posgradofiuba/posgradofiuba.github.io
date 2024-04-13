@@ -123,6 +123,7 @@ a:hover {
   font-family: "Exo 2";
   font-size: 15px;
   position: relative;
+  min-width: 800px;
 }
 
 .footer-info p {
@@ -132,9 +133,27 @@ a:hover {
 .footer-logo {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 50px;
   transform: translateY(-50%);
   height: 60px;
+  margin-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    min-width: auto;
+  }
+
+  .footer-logo {
+    position: static; 
+    top: auto;
+    right: auto;
+    transform: none;
+    height: auto; 
+    margin-left: 0;
+    text-align: center;
+    padding: 20px 0;
+  }
 }
 
 .exo-2 {
