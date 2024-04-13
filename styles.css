@@ -90,6 +90,7 @@ a:hover {
   border-radius: 10px;
   background-color: #ffffff;
   border-bottom: 5px solid #adc910;
+  border-top: 5px solid #adc910;
 }
 
 .button {
