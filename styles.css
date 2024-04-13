@@ -22,6 +22,12 @@ body {
   position: relative;
 }
 
+.logo {
+  float: left;
+  margin-right: 20px;
+  height: 50px;
+}
+
 .bottom-gradient {
   position: absolute;
   bottom: 0;
@@ -42,12 +48,21 @@ body {
   position: relative;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
 .menu a {
   display: block;
   padding: 10px;
   text-decoration: none;
   color: white;
   font-size: 20px;
+}
+
+.menu {
+  margin-left: auto;
 }
 
 .banner h1 {
