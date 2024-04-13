@@ -78,6 +78,10 @@ a:hover {
   color: #0094DA;
 }
 
+.alt a:hover {
+  color:#4e4d4d;
+}
+
 .botones-container {
   display: flex;
   justify-content: center;
