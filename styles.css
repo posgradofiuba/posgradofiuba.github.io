@@ -252,3 +252,11 @@ a:hover {
   background-color: transparent;
   z-index: -1;
 }
+
+header.banner {
+  margin-bottom: 50px;
+}
+
+footer.footer {
+  margin-top: 50px;
+}
