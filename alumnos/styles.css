@@ -135,6 +135,10 @@ a:hover {
   margin-right: auto;
 }
 
+.texto-blanco {
+  color: white;
+}
+
 .alumnos-caja {
   position: relative;
   width: 100%;
