@@ -144,13 +144,16 @@ a:hover {
   width: 100%;
   max-width: 1000px;
   height: 500px;
-  background-color: #0094DA;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  background-color: #0094DA;
+  opacity: 1;
+  background-image: radial-gradient(#adc910 2px, #0094DA 2px);
+  background-size: 120px 120px;
 }
 
 .alumnos-texto {
