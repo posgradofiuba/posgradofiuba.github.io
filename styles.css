@@ -146,3 +146,26 @@ a:hover {
 .texto-blanco {
   color: white;
 }
+
+.posgrado-caja {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  background-color: #0094DA;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posgrado-texto {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 72px;
+  color: white;
+}
+
+.centrado {
+  display: block;
+  text-align: center;
+}
