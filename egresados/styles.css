@@ -162,6 +162,13 @@ a:hover {
   font-style: normal;
 }
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .caja img {
   width: 100%;
   height: auto;
