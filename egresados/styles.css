@@ -86,7 +86,11 @@ a:hover {
 }
 
 .alt a:hover {
-  color:#4e4d4d;
+  color:#727272;
+}
+
+.alt2 a:hover {
+  color:#adc910;
 }
 
 .caja {
