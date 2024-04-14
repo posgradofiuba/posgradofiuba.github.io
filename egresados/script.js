@@ -54,7 +54,7 @@ particlesJS("particles-js", {
       },
       "move": {
         "enable": true,
-        "speed": 1, // Modifica este valor para cambiar la velocidad
+        "speed": 1,
         "direction": "none",
         "random": false,
         "straight": false,
