@@ -230,7 +230,7 @@ a:hover {
   white-space: nowrap;
   border-right: 3px solid transparent;
   display: inline-block;
-  animation: typing 1s steps(30) forwards;
+  animation: typing 3s steps(60) forwards;
 }
 
 @keyframes typing {
@@ -239,7 +239,7 @@ a:hover {
     border-right-color: white;
   }
   to {
-    width: 35%;
+    width: 100%;
     border-right-color: transparent;
   }
 }
