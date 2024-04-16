@@ -3,10 +3,8 @@ body {
   padding: 0;
   background-color: #0094DA;
   opacity: 1;
-  background-image:  linear-gradient(135deg, #005689 25%, transparent 25%), linear-gradient(225deg, #005689 25%, transparent 25%), linear-gradient(45deg, #005689 25%, transparent 25%), linear-gradient(315deg, #005689 25%, #0094DA 25%);
-  background-position:  40px 0, 40px 0, 0 0, 0 0;
-  background-size: 80px 80px;
-  background-repeat: repeat;
+  background-image: radial-gradient(circle at center center, #ffffff, #0094DA), repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
   font-size: 18px;
 }
 
