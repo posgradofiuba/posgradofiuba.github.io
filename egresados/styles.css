@@ -3,7 +3,7 @@ body {
   padding: 0;
   background-color: #0094DA;
   opacity: 1;
-  background-image: radial-gradient(circle at center center, #ffffff, #0094DA), repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 10px, transparent 20px, transparent 10px);
+  background-image: radial-gradient(circle at center center, #ffffff, #0094DA), repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 4px, transparent 8px, transparent 4px);
   background-blend-mode: multiply;
   font-size: 18px;
 }
