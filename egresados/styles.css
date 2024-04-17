@@ -219,6 +219,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
   background: radial-gradient(#0094DA, #005A9E);
 }
 
