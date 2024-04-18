@@ -81,6 +81,7 @@ a {
 
 a:hover {
   color: #0094DA;
+  transform: translateY(-3px);
 }
 
 .alt a:hover {
