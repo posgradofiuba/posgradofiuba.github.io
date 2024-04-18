@@ -86,10 +86,12 @@ a:hover {
 
 .alt a:hover {
   color:#727272;
+  transform: translateY(-3px);
 }
 
 .alt2 a:hover {
   color:#adc910;
+  transform: translateY(-3px);
 }
 
 .caja {
