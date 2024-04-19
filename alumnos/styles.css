@@ -268,10 +268,9 @@ footer.footer {
 }
 
 #imagen {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 600px;
-      height: 600px;
-      border: none;
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 50%; /* Cambia esto según tus preferencias */
+  height: auto;
+}
