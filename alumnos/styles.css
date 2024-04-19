@@ -266,3 +266,12 @@ header.banner {
 footer.footer {
   margin-top: 50px;
 }
+
+#imagen {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 600px;
+      height: 600px;
+      border: none;
+  }
