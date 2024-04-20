@@ -243,8 +243,8 @@ a:hover {
             align-items: center;
         }
         .container img {
-            width: 50%;
-            height: auto;
+            height: 50%;     
+            width: auto;
             margin-right: 5px; /* Espacio entre la imagen y el párrafo */
         }
 .container p {
