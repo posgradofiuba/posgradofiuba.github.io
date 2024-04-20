@@ -245,10 +245,10 @@ a:hover {
         .container img {
             width: 10%; 
             height: auto;
-            margin-right: 0px; /* Espacio entre la imagen y el párrafo */
+            margin-right: 5px; /* Espacio entre la imagen y el párrafo */
         }
         .container p {
-            width: 100%; 
+            width: 200%; 
             height: auto;     
             margin-top: 0;
             margin-bottom: 0;
