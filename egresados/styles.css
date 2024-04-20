@@ -238,6 +238,15 @@ a:hover {
   display: inline-block;
   animation: typing 3s steps(60) forwards;
 }
+.container {
+            display: flex;
+            align-items: center;
+        }
+        .container img {
+            width: 50%;
+            height: auto;
+            margin-right: 20px; /* Espacio entre la imagen y el párrafo */
+        }
 
 @keyframes typing {
   from {
