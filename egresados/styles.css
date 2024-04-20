@@ -245,7 +245,7 @@ a:hover {
         .container img {
             width: 50%;
             height: auto;
-            margin-right: 20px; /* Espacio entre la imagen y el párrafo */
+            margin-right: 5px; /* Espacio entre la imagen y el párrafo */
         }
 .container p {
             width: 20%;     
