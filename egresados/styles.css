@@ -284,7 +284,7 @@ footer.footer {
 
 .image-container {
   display: none;
-  position: center;
+  position: justify;
   margin-top: 10px;
 }
 
