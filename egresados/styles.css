@@ -279,8 +279,10 @@ footer.footer {
 
 .image-container {
   display: none;
-  position: justify;
+  position: relative;
   margin-top: 10px;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .image-container img {
