@@ -77,23 +77,18 @@ body {
 
 a {
   color: #adc910;
-  transition: transform 0.3s ease;
-  transform: translateY(-3px);
 }
 
 a:hover {
   color: #0094DA;
-  transform: translateY(-3px);
 }
 
 .alt a:hover {
   color:#727272;
-  transform: translateY(-3px);
 }
 
 .alt2 a:hover {
   color:#adc910;
-  transform: translateY(-3px);
 }
 
 .caja {
@@ -286,6 +281,8 @@ footer.footer {
   display: none;
   position: justify;
   margin-top: 10px;
+  height: auto;
+  max-width: 100%;
 }
 
 .hover-text:hover + .image-container {
