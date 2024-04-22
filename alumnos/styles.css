@@ -274,3 +274,8 @@ footer.footer {
   max-width: 25%;
   height: 25%;
 }
+
+.botones-container {
+  display: flex;
+  justify-content: center;
+}
