@@ -281,10 +281,14 @@ footer.footer {
   display: none;
   position: justify;
   margin-top: 10px;
-  height: auto;
+}
+
+.image-container img {
   max-width: 100%;
+  height: auto;
 }
 
 .hover-text:hover + .image-container {
   display: block;
 }
+
