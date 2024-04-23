@@ -317,7 +317,10 @@ footer.footer {
 .botones-container {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 .button {
   border: none;
   border-radius: 8px;
