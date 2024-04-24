@@ -76,19 +76,23 @@ body {
 }
 
 a {
-  color: #005A9E;
-}
-
-a:hover {
   color: #0094DA;
 }
 
-.alt a:hover {
-  color:#005A9E;
+a:hover {
+  color: #727272;
+}
+
+.alt a {
+  color:#adc910;
 }
 
 .alt2 a:hover {
-  color:#005A9E;
+  color:#adc910;
+}
+
+.altfooter a:hover {
+  color:#0094DA;
 }
 
 .caja {
@@ -272,7 +276,7 @@ footer.footer {
 }
 
 .hover-text {
-  color: #005A9E;
+  color: #0094DA;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -310,6 +314,7 @@ footer.footer {
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 #scrollBtn:hover {
     background-color: rgba(0, 148, 218, 1);
 }
