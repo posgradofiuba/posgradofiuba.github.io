@@ -1,7 +1,9 @@
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (scrollPosition > 20 && (scrollPosition + window.innerHeight) < document.documentElement.scrollHeight) {
         document.getElementById("scrollBtn").style.display = "block";
     } else {
         document.getElementById("scrollBtn").style.display = "none";
