@@ -76,21 +76,24 @@ body {
 }
 
 a {
-  color: #adc910;
-}
-
-a:hover {
   color: #0094DA;
 }
 
-.alt a:hover {
-  color:#727272;
+a:hover {
+  color: #727272;
+}
+
+.alt a {
+  color:#adc910;
 }
 
 .alt2 a:hover {
   color:#adc910;
 }
 
+.altfooter a:hover {
+  color:#0094DA;
+}
 .botones-container {
   display: flex;
   justify-content: center;
