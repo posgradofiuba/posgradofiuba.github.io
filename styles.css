@@ -99,7 +99,6 @@ a:hover {
   justify-content: center;
 }
 
-
 .caja {
   max-width: 1000px;
   margin: 10px auto 10px auto;
@@ -130,6 +129,7 @@ a:hover {
 
 .texto {
   font-family: 'Exo 2', sans-serif;
+  line-height: 1.4;
 }
 
 .justificar {
