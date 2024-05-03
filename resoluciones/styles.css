@@ -1,3 +1,11 @@
+body {
+  font-family: 'Exo 2';
+  overflow-y: scroll;
+  }
+  #container {
+  max-width: 800px;
+  margin: 0 auto;
+  }
 #scrollBtn {
     display: none;
     position: fixed;
@@ -45,22 +53,23 @@ ul {
     border: 1px solid #ccd6dd;
     border-radius: 25px;
     padding: 8px 15px;
-    font-size: 16px;
+    font-size: 15px;
     color: #333;
     outline: none;
-    width: 250px;
+    width: 260px;
     margin-bottom: 10px;
+    font-family: "montserrat";
 }
 .buscador-res:focus {
     border-color: #333;
 }
-
-@font-face {
-    font-family: 'Exo 2';
-    src: url('fonts/Exo2-Regular.woff') format('woff');
-}
 .exo-2 {
   font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -93,4 +102,26 @@ a:visited {
 a:hover {
   color: #0056b3;
   text-decoration: underline;
+}
+h1 {
+  background-color: #0094DA;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  border: 2px solid black;
+  font-family: 'montserrat';
+}
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+}
+.button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
