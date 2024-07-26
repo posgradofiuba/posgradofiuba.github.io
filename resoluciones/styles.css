@@ -125,3 +125,8 @@ h1 {
   top: 20px;
   right: 20px;
 }
+
+.modo-oscuro {
+  background-color: black;
+  color: white;
+}
