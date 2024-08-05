@@ -29,3 +29,21 @@ function toggleContent() {
     toggleButton.setAttribute("aria-label", "Mostrar Resoluciones");
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var infoText = document.getElementById('info-text');
+    var infoBox = document.getElementById('info-box');
+    var closeBtn = document.getElementById('close-btn');
+
+    infoText.addEventListener('click', function () {
+        infoBox.classList.remove('hidden');
+        infoBox.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', function () {
+        infoBox.classList.add('hidden');
+        infoBox.style.display = 'none';
+    });
+});
+	
