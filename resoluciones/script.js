@@ -14,36 +14,115 @@ function scrollToTop() {
 }
 
 function toggleContent() {
-    var content = document.getElementById("contentToHide");
-    var toggleButton = document.getElementById("toggleButton");
-    var toggleIcon = document.getElementById("toggleIcon");
-    var displayValue = window.getComputedStyle(content).getPropertyValue('display');
+    var contentToHide = document.getElementById('contentToHide');
+    var toggleIcon = document.getElementById('toggleIcon');
 
-    if (displayValue === "none") {
-    content.style.display = "block";
-    toggleIcon.src = "https://i.imgur.com/SqonsjV.png";
-    toggleButton.setAttribute("aria-label", "Ocultar Resoluciones");
+    if (contentToHide.style.display === 'none') {
+        contentToHide.style.display = 'block';
+        toggleIcon.src = 'https://i.imgur.com/SqonsjV.png';
+        localStorage.setItem('resolucionesOcultas', 'false');
     } else {
-    content.style.display = "none";
-    toggleIcon.src = "https://i.imgur.com/lnHhdlc.png";
-    toggleButton.setAttribute("aria-label", "Mostrar Resoluciones");
+        contentToHide.style.display = 'none';
+        toggleIcon.src = 'https://i.imgur.com/SqonsjV.png';
+        localStorage.setItem('resolucionesOcultas', 'true');
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    var infoText = document.getElementById('info-text');
+    var infoBox = document.getElementById('info-box');
+    var closeBtn = document.getElementById('close-btn');
+    var contentToHide = document.getElementById('contentToHide');
+    var toggleIcon = document.getElementById('toggleIcon');
+
+    if (infoText) {
+        infoText.addEventListener('click', function () {
+            infoBox.classList.remove('hidden');
+            infoBox.style.display = 'block';
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            infoBox.classList.add('hidden');
+            infoBox.style.display = 'none';
+        });
+    }
+
+    if (localStorage.getItem('modoOscuro') === 'true') {
+        document.body.classList.add('modo-oscuro');
+    }
+
+    if (localStorage.getItem('resolucionesOcultas') === 'true') {
+        contentToHide.style.display = 'none';
+        toggleIcon.src = 'https://i.imgur.com/SqonsjV.png';
+    } else {
+        contentToHide.style.display = 'block';
+        toggleIcon.src = 'https://i.imgur.com/SqonsjV.png';
+    }
+});
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-7Z988QYX9W');
+
+function showMessage(id) {
+  var messageBox = document.getElementById(id + '-message');
+  if (messageBox.style.display === 'none' || messageBox.style.display === '') {
+      messageBox.style.display = 'block';
+  } else {
+      messageBox.style.display = 'none';
+  }
+}
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-7Z988QYX9W');
+
+function showMessage(id) {
+  var messageBox = document.getElementById(id + '-message');
+  if (messageBox.style.display === 'none' || messageBox.style.display === '') {
+      messageBox.style.display = 'block';
+  } else {
+      messageBox.style.display = 'none';
+  }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     var infoText = document.getElementById('info-text');
     var infoBox = document.getElementById('info-box');
     var closeBtn = document.getElementById('close-btn');
 
-    infoText.addEventListener('click', function () {
-        infoBox.classList.remove('hidden');
-        infoBox.style.display = 'block';
-    });
+    if (infoText) {
+        infoText.addEventListener('click', function () {
+            infoBox.classList.remove('hidden');
+            infoBox.style.display = 'block';
+        });
+    }
 
-    closeBtn.addEventListener('click', function () {
-        infoBox.classList.add('hidden');
-        infoBox.style.display = 'none';
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            infoBox.classList.add('hidden');
+            infoBox.style.display = 'none';
+        });
+    }
+
+    if (localStorage.getItem('modoOscuro') === 'true') {
+        document.body.classList.add('modo-oscuro');
+    }
 });
-	
+
+function modooscuro() {
+    var element = document.body;
+    element.classList.toggle("modo-oscuro");
+
+    if (element.classList.contains('modo-oscuro')) {
+        localStorage.setItem('modoOscuro', 'true');
+    } else {
+        localStorage.setItem('modoOscuro', 'false');
+    }
+}
