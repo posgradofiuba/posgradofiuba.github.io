@@ -1,8 +1,6 @@
 body {
   font-family: 'Exo 2';
   overflow-y: scroll;
-  }
-  #container {
   max-width: 800px;
   margin: 0 auto;
   }
@@ -89,7 +87,7 @@ ul {
   margin-right: 0;
 }
 .barra {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 a:link {
   color: #007bff;
@@ -124,4 +122,22 @@ h1 {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+h2 {
+  cursor: pointer;
+}
+.modo-oscuro {
+  background-color: #243447;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.modo-oscuro .message-box {
+	background-color: #2c3e50;
+	border: 1px solid black;
+}
+.message-box {
+	display: none;
+	background-color: #ecf0f1;
+	border: 1px solid black;
 }
