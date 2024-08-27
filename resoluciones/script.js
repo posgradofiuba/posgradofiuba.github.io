@@ -23,7 +23,7 @@ function toggleContent() {
         localStorage.setItem('resolucionesOcultas', 'false');
     } else {
         contentToHide.style.display = 'none';
-        toggleIcon.src = 'https://i.imgur.com/SqonsjV.png';
+        toggleIcon.src = 'https://i.imgur.com/lnHhdlc.png';
         localStorage.setItem('resolucionesOcultas', 'true');
     }
 }
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (localStorage.getItem('resolucionesOcultas') === 'true') {
         contentToHide.style.display = 'none';
-        toggleIcon.src = 'https://i.imgur.com/SqonsjV.png';
+        toggleIcon.src = 'https://i.imgur.com/lnHhdlc.png';
     } else {
         contentToHide.style.display = 'block';
         toggleIcon.src = 'https://i.imgur.com/SqonsjV.png';
