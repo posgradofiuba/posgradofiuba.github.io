@@ -126,3 +126,24 @@ function modooscuro() {
         localStorage.setItem('modoOscuro', 'false');
     }
 }
+
+function previewDocument(fileId) {
+    var previewFrame = document.getElementById('previewFrame');
+    var previewContainer = document.getElementById('previewContainer');
+    previewFrame.src = 'https://drive.google.com/file/d/' + fileId + '/preview';
+    previewContainer.style.display = 'block';
+}
+
+function previewDocument(fileId) {
+    const previewContainer = document.getElementById('previewContainer');
+    const previewFrame = document.getElementById('previewFrame');
+    
+    previewFrame.src = `https://drive.google.com/file/d/${fileId}/preview`;
+    
+    previewContainer.style.display = 'block';
+}
+
+function closePreview() {
+    const previewContainer = document.getElementById('previewContainer');
+    previewContainer.style.display = 'none';
+}
