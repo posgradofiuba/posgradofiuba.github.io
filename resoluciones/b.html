@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaga Clone</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    canvas {
+      display: block;
+      background-color: black;
+    }
+
+    #score {
+      color: white;
+      font-size: 24px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+  <div id="score">Score: 0</div>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Variables del jugador
+    const player = {
+      x: canvas.width / 2 - 25,
+      y: canvas.height - 60,
+      width: 50,
+      height: 50,
+      speed: 5,
+      dx: 0
+    };
+
+    // Variables del disparo
+    const bullets = [];
+    const enemies = [];
+    let score = 0;
+
+    // Controles del jugador
+    function movePlayer() {
+      player.x += player.dx;
+
+      // Limitar movimiento a los bordes del canvas
+      if (player.x < 0) player.x = 0;
+      if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+    }
+
+    // Dibujar la nave del jugador
+    function drawPlayer() {
+      ctx.fillStyle = "white";
+      ctx.fillRect(player.x, player.y, player.width, player.height);
+    }
+
+    // Crear enemigos
+    function createEnemies() {
+      if (enemies.length < 5) {
+        const enemy = {
+          x: Math.random() * (canvas.width - 50),
+          y: 0,
+          width: 50,
+          height: 50,
+          speed: 2
+        };
+        enemies.push(enemy);
+      }
+    }
+
+    // Dibujar enemigos
+    function drawEnemies() {
+      enemies.forEach((enemy, index) => {
+        ctx.fillStyle = "red";
+        ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+        enemy.y += enemy.speed;
+
+        // Eliminar enemigos si pasan el límite inferior
+        if (enemy.y > canvas.height) {
+          enemies.splice(index, 1);
+        }
+      });
+    }
+
+    // Dibujar los disparos
+    function drawBullets() {
+      bullets.forEach((bullet, index) => {
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+        bullet.y -= bullet.speed;
+
+        // Eliminar el disparo si sale del canvas
+        if (bullet.y + bullet.height < 0) {
+          bullets.splice(index, 1);
+        }
+      });
+    }
+
+    // Detectar colisiones
+    function checkCollisions() {
+      enemies.forEach((enemy, eIndex) => {
+        bullets.forEach((bullet, bIndex) => {
+          if (
+            bullet.x < enemy.x + enemy.width &&
+            bullet.x + bullet.width > enemy.x &&
+            bullet.y < enemy.y + enemy.height &&
+            bullet.y + bullet.height > enemy.y
+          ) {
+            // Eliminar enemigo y disparo al colisionar
+            enemies.splice(eIndex, 1);
+            bullets.splice(bIndex, 1);
+            score += 100;
+            document.getElementById("score").innerText = `Score: ${score}`;
+          }
+        });
+      });
+    }
+
+    // Dibujar elementos
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawPlayer();
+      drawEnemies();
+      drawBullets();
+      checkCollisions();
+    }
+
+    // Actualizar estado del juego
+    function update() {
+      movePlayer();
+      createEnemies();
+      draw();
+      requestAnimationFrame(update);
+    }
+
+    // Controlar las teclas
+    function keyDown(e) {
+      if (e.key === "ArrowRight") {
+        player.dx = player.speed;
+      } else if (e.key === "ArrowLeft") {
+        player.dx = -player.speed;
+      } else if (e.key === " ") {
+        // Crear disparo
+        bullets.push({
+          x: player.x + player.width / 2 - 5,
+          y: player.y,
+          width: 10,
+          height: 20,
+          speed: 7
+        });
+      }
+    }
+
+    function keyUp(e) {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        player.dx = 0;
+      }
+    }
+
+    // Eventos de teclado
+    document.addEventListener("keydown", keyDown);
+    document.addEventListener("keyup", keyUp);
+
+    // Iniciar el juego
+    update();
+  </script>
+</body>
+</html>
