@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.tetris {
+    display: grid;
+    grid-template-columns: repeat(10, 30px); /* 10 columnas de 30px */
+    grid-template-rows: repeat(20, 30px);    /* 20 filas de 30px */
+    gap: 1px;
+    background-color: #ddd;
+    width: 300px;
+    height: 600px;
+    border: 2px solid #333;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+</style>
+<body>
+    <div class="tetris" id="tetris"></div>
+    <script>
+	document.addEventListener('DOMContentLoaded', () => {
+    const tetris = document.getElementById('tetris');
+    const width = 10;
+    const height = 20;
+    let grid = Array.from({ length: height }, () => Array(width).fill(0));
+    const pieces = [
+        { shape: [[1, 1, 1], [0, 1, 0]], color: 'red' },
+        { shape: [[1, 1], [1, 1]], color: 'yellow' },
+        { shape: [[1, 1, 0], [0, 1, 1]], color: 'green' },
+        { shape: [[0, 1, 1], [1, 1, 0]], color: 'blue' },
+        { shape: [[1, 1, 1, 1]], color: 'purple' }
+    ];
+    let currentPiece = getRandomPiece();
+    let gameInterval;
+
+    function getRandomPiece() {
+        const piece = pieces[Math.floor(Math.random() * pieces.length)];
+        return { ...piece, x: 3, y: 0 };
+    }
+
+    function draw() {
+        tetris.innerHTML = '';
+        for (let y = 0; y < height; y++) {
+            for (let x = 0; x < width; x++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                if (grid[y][x] !== 0) {
+                    cell.style.backgroundColor = grid[y][x];
+                }
+                tetris.appendChild(cell);
+            }
+        }
+        drawPiece();
+    }
+
+    function drawPiece() {
+        currentPiece.shape.forEach((row, dy) => {
+            row.forEach((value, dx) => {
+                if (value) {
+                    const x = currentPiece.x + dx;
+                    const y = currentPiece.y + dy;
+                    if (x >= 0 && x < width && y >= 0 && y < height) {
+                        tetris.children[y * width + x].style.backgroundColor = currentPiece.color;
+                    }
+                }
+            });
+        });
+    }
+
+    function movePiece(dx, dy) {
+        if (!collides(currentPiece.x + dx, currentPiece.y + dy, currentPiece.shape)) {
+            currentPiece.x += dx;
+            currentPiece.y += dy;
+            draw();
+        }
+    }
+
+    function rotatePiece() {
+        const rotatedShape = currentPiece.shape[0].map((_, i) => currentPiece.shape.map(row => row[i])).reverse();
+        if (!collides(currentPiece.x, currentPiece.y, rotatedShape)) {
+            currentPiece.shape = rotatedShape;
+            draw();
+        }
+    }
+
+    function collides(x, y, shape) {
+        return shape.some((row, dy) => {
+            return row.some((value, dx) => {
+                if (value) {
+                    const newX = x + dx;
+                    const newY = y + dy;
+                    return newX < 0 || newX >= width || newY >= height || (newY >= 0 && grid[newY][newX] !== 0);
+                }
+                return false;
+            });
+        });
+    }
+
+    function fixPiece() {
+        currentPiece.shape.forEach((row, dy) => {
+            row.forEach((value, dx) => {
+                if (value) {
+                    const x = currentPiece.x + dx;
+                    const y = currentPiece.y + dy;
+                    if (y >= 0) {
+                        grid[y][x] = currentPiece.color;
+                    }
+                }
+            });
+        });
+        clearLines();
+        currentPiece = getRandomPiece();
+        if (collides(currentPiece.x, currentPiece.y, currentPiece.shape)) {
+            alert('Perdiste');
+            clearInterval(gameInterval);
+            grid = Array.from({ length: height }, () => Array(width).fill(0));
+        }
+    }
+
+    function clearLines() {
+        grid = grid.filter(row => row.some(cell => cell === 0));
+        while (grid.length < height) {
+            grid.unshift(Array(width).fill(0));
+        }
+    }
+
+    function dropPiece() {
+        if (!collides(currentPiece.x, currentPiece.y + 1, currentPiece.shape)) {
+            currentPiece.y += 1;
+        } else {
+            fixPiece();
+        }
+        draw();
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') movePiece(-1, 0);
+        if (e.key === 'ArrowRight') movePiece(1, 0);
+        if (e.key === 'ArrowDown') {
+            dropPiece();
+        }
+        if (e.key === 'ArrowUp') rotatePiece();
+    });
+
+    gameInterval = setInterval(dropPiece, 1000);
+    draw();
+});
+	</script>
+</body>
+</html>
