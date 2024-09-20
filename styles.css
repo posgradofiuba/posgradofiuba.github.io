@@ -1,293 +1,235 @@
+/* General */
 body {
-  margin: 0;
-  padding: 0;
-  background: radial-gradient(#0094DA, #005A9E);
-  background-attachment: fixed;
-  font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #0094DA, #005A9E, #002f6c);
+    background-attachment: fixed;
+    font-size: 18px;
 }
 
+.container {
+    text-align: center;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
 .banner {
-  background-color: #3c3c3b;
-  padding: 20px;
-  font-family: "Exo 2";
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  position: relative;
-}
-
-.logo {
-  float: left;
-  margin-right: 20px;
-  height: 50px;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: translateY(-5px);
-}
-
-.bottom-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-image: linear-gradient(to right, #0094DA, #adc910, #0094DA, #adc910, #0094DA, #adc910);
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  display: inline-block;
-  position: relative;
+    background-color: #3c3c3b;
+    padding: 30px; /* Aumenta el padding para mayor grosor */
+    font-family: "Exo 2", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-.menu a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  transition: transform 0.3s ease;
+.logo {
+    margin-right: 20px;
+    height: 50px; /* Aumenta la altura del logo si es necesario */
+    transition: transform 0.3s ease;
 }
 
-.menu a:hover {
-  transform: translateY(-5px);
+.logo:hover {
+    transform: translateY(-5px);
 }
 
-.menu {
-  margin-left: auto;
+.bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px; /* Aumenta el grosor del degradado */
+    background-image: linear-gradient(to right, #0094DA, #adc910, #0094DA, #adc910, #0094DA, #adc910);
 }
 
 .banner h1 {
-  margin-left: 0;
-  font-weight: normal;
+    margin: 0;
+    font-size: 24px; /* Aumenta el tamaño del título */
+    font-weight: bold; /* Cambia el peso de la fuente a negrita */
+    line-height: 1.4; /* Aumenta la altura de línea para más espacio */
+    color: white;
 }
 
-a {
-  color: #0094DA;
-}
-
-a:hover {
-  color: #727272;
-}
-
-.alt a {
-  color:#adc910;
-}
-
-.alt2 a:hover {
-  color:#adc910;
-}
-
-.altfooter a:hover {
-  color:#0094DA;
-}
-.botones-container {
-  display: flex;
-  justify-content: center;
-}
-
-.caja {
-  max-width: 1000px;
-  margin: 10px auto 10px auto;
-  padding: 1px 20px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border-bottom: 5px solid #adc910;
-  border-top: 5px solid #adc910;
-  margin-bottom: 30px;
+/* Botones */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste responsivo */
+    gap: 10px;
+    margin-bottom: 40px;
 }
 
 .button {
-  border: none;
-  border-radius: 8px;
-  background-color: #adc910;
-  color: #ffffff;
-  padding: 20px 30px;
-  cursor: pointer;
-  font-size: 1.2em;
-  margin: 0 10px; 
-  text-decoration: none;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff; /* Color de fondo blanco */
+    color: #000000; /* Color del texto, negro para contraste */
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 0 10px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: salto 0.8s ease-in-out; /* Aplica la animación */
+    position: relative;
+    padding-left: 70px; /* Espacio para los círculos */
+    border-bottom: 5px solid #adc910; /* Borde inferior con color #adc910 */
+    font-family: "Exo 2", sans-serif;
 }
 
-.caja .parrafo {
-  margin-bottom: 20px;
+/* Círculo azul para egresado */
+.button.egresado::before {
+    content: "";
+    position: absolute;
+    left: 10px; /* Posición del círculo azul */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0094DA; /* Azul */
 }
 
-.texto {
-  font-family: 'Exo 2', sans-serif;
-  line-height: 1.4;
+/* Círculo amarillo para alumno actual */
+.button.alumno::after {
+    content: "";
+    position: absolute;
+    left: 30px; /* Posición del círculo amarillo */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #F7E03D; /* Amarillo */
 }
 
-.justificar {
-  text-align: justify;
+/* Ajustar posición para ambos círculos si ambos están presentes */
+.button.egresado.alumno::after {
+    left: 30px; /* Ajustar para el círculo amarillo */
 }
 
-.lista {
-  margin-top: 10px;
+.button:hover {
+    background-color: #adc910;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
 }
 
-.lista ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+@keyframes salto {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.lista ul li {
-  margin-left: 20px;
-  line-height: 1.6;
+/* Añadir retraso progresivo a cada botón */
+.button:nth-child(1) {
+    animation-delay: 0s; /* Primer botón */
 }
 
-.footer {
-  background-color: #3c3c3b;
-  color: white;
-  padding: 20px;
-  text-align: left;
-  font-family: "Exo 2";
-  font-size: 15px;
-  position: relative;
-  min-width: 800px;
+.button:nth-child(2) {
+    animation-delay: 0.1s; /* Segundo botón */
 }
 
-.top-gradient {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  top: 0;
-  background-image: linear-gradient(to right, #0094DA, #adc910, #0094DA, #adc910, #0094DA, #adc910);
+.button:nth-child(3) {
+    animation-delay: 0.2s; /* Tercer botón */
 }
 
-.footer-info p {
-  margin: 5px 0;
+.button:nth-child(4) {
+    animation-delay: 0.3s; /* Cuarto botón */
 }
 
-.footer-logo {
-  position: absolute;
-  top: 50%;
-  right: 50px;
-  transform: translateY(-50%);
-  height: 60px;
-  transition: transform 0.3s ease;
+.button:nth-child(5) {
+    animation-delay: 0.4s; /* Quinto botón */
 }
 
-.footer-logo:hover {
-  transform: translateY(calc(-50% - 5px));
+/* Boton iniciar trámite */
+
+.button-start {
+    border: none;
+    border-radius: 12px; /* Bordes más redondeados */
+    background-color: #adc910; /* Un color verde más intenso */
+    color: #000000; /* Color del texto */
+    padding: 15px 25px; /* Espaciado interno ajustado */
+    cursor: pointer;
+    font-size: 1.2em; /* Tamaño del texto */
+    margin: 0 10px; /* Espaciado entre los botones */
+    text-decoration: none; /* Sin subrayado */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más definida */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Transición suave */
+    font-family: "Exo 2", sans-serif;
 }
 
-@media (max-width: 800px) {
-  .footer {
-    min-width: auto;
-  }
-
-  .footer-logo {
-    position: static; 
-    top: auto;
-    right: auto;
-    transform: none;
-    height: auto; 
-    margin-left: 0;
-    text-align: center;
-    padding: 20px 0;
-  }
+.button-start:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más profunda en hover */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
 }
 
+/* Texto mostrado */
+.texto-mostrado {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 50px;
+    font-family: "Exo-2", sans-serif;
+    text-align: justify;
+}
+
+/* Tipografías */
 .exo-2 {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.caja img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .texto-blanco {
-  color: white;
+    color: white;
 }
 
-.posgrado-caja {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  height: 500px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  background: radial-gradient(#0094DA, #005A9E);
-}
-
-
-.posgrado-texto {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 72px;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid transparent;
-  display: inline-block;
-  animation: typing 3s steps(60) forwards;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-    border-right-color: white;
-  }
-  to {
-    width: 100%;
-    border-right-color: transparent;
-  }
-}
-
-
-.centrado {
-  display: block;
-  text-align: center;
-}
-
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: -1;
-}
-
+/* Margen del header */
 header.banner {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
-footer.footer {
-  margin-top: 50px;
+/* Links */
+a {
+    color: #adc910;
+}
+
+/* Caja de texto para información */
+.caja {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 1px 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-bottom: 5px solid #adc910;
+    border-top: 5px solid #adc910;
+    margin-bottom: 30px;
+}
+.color-explanation {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "Exo 2", sans-serif;
+    font-size: 20px;
 }
