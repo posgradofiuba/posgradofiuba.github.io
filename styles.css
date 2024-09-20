@@ -17,7 +17,7 @@ body {
 /* Header */
 .banner {
     background-color: #3c3c3b;
-    padding: 30px; /* Aumenta el padding para mayor grosor */
+    padding: 30px;
     font-family: "Exo 2", sans-serif;
     display: flex;
     justify-content: space-between;
@@ -32,7 +32,7 @@ body {
 
 .logo {
     margin-right: 20px;
-    height: 50px; /* Aumenta la altura del logo si es necesario */
+    height: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -45,15 +45,15 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 6px; /* Aumenta el grosor del degradado */
+    height: 6px;
     background-image: linear-gradient(to right, #0094DA, #adc910, #0094DA, #adc910, #0094DA, #adc910);
 }
 
 .banner h1 {
     margin: 0;
-    font-size: 24px; /* Aumenta el tamaño del título */
-    font-weight: bold; /* Cambia el peso de la fuente a negrita */
-    line-height: 1.4; /* Aumenta la altura de línea para más espacio */
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
     color: white;
 }
 
@@ -68,8 +68,8 @@ body {
 .button {
     border: none;
     border-radius: 8px;
-    background-color: #ffffff; /* Color de fondo blanco */
-    color: #000000; /* Color del texto, negro para contraste */
+    background-color: #ffffff;
+    color: #000000;
     padding: 20px 30px;
     cursor: pointer;
     font-size: 1.2em;
@@ -78,10 +78,10 @@ body {
     text-decoration: none;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    animation: salto 0.8s ease-in-out; /* Aplica la animación */
+    animation: salto 0.8s ease-in-out;
     position: relative;
-    padding-left: 70px; /* Espacio para los círculos */
-    border-bottom: 5px solid #adc910; /* Borde inferior con color #adc910 */
+    padding-left: 70px;
+    border-bottom: 5px solid #adc910;
     font-family: "Exo 2", sans-serif;
 }
 
@@ -89,7 +89,7 @@ body {
 .button.egresado::before {
     content: "";
     position: absolute;
-    left: 10px; /* Posición del círculo azul */
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
@@ -102,18 +102,18 @@ body {
 .button.alumno::after {
     content: "";
     position: absolute;
-    left: 30px; /* Posición del círculo amarillo */
+    left: 30px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #F7E03D; /* Amarillo */
+    background-color: #F7E03D;
 }
 
 /* Ajustar posición para ambos círculos si ambos están presentes */
 .button.egresado.alumno::after {
-    left: 30px; /* Ajustar para el círculo amarillo */
+    left: 30px;
 }
 
 .button:hover {
@@ -136,45 +136,45 @@ body {
 
 /* Añadir retraso progresivo a cada botón */
 .button:nth-child(1) {
-    animation-delay: 0s; /* Primer botón */
+    animation-delay: 0s;
 }
 
 .button:nth-child(2) {
-    animation-delay: 0.1s; /* Segundo botón */
+    animation-delay: 0.1s;
 }
 
 .button:nth-child(3) {
-    animation-delay: 0.2s; /* Tercer botón */
+    animation-delay: 0.2s;
 }
 
 .button:nth-child(4) {
-    animation-delay: 0.3s; /* Cuarto botón */
+    animation-delay: 0.3s;
 }
 
 .button:nth-child(5) {
-    animation-delay: 0.4s; /* Quinto botón */
+    animation-delay: 0.4s;
 }
 
 /* Boton iniciar trámite */
 
 .button-start {
     border: none;
-    border-radius: 12px; /* Bordes más redondeados */
-    background-color: #adc910; /* Un color verde más intenso */
-    color: #000000; /* Color del texto */
-    padding: 15px 25px; /* Espaciado interno ajustado */
+    border-radius: 12px;
+    background-color: #adc910; 
+    color: #000000;
+    padding: 15px 25px;
     cursor: pointer;
-    font-size: 1.2em; /* Tamaño del texto */
-    margin: 0 10px; /* Espaciado entre los botones */
-    text-decoration: none; /* Sin subrayado */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más definida */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Transición suave */
+    font-size: 1.2em;
+    margin: 0 10px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
     font-family: "Exo 2", sans-serif;
 }
 
 .button-start:hover {
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más profunda en hover */
-    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 /* Texto mostrado */
