@@ -78,7 +78,7 @@ function mostrarTexto(opcion) {
         case 'plan-estudios':
             titulo = 'Plan de Estudios';
             texto = `
-                Para solicitar este certificado, deberá iniciar una solicitud a través del <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">TAD-UBA</a>, filtrar por organismo "Facultad de Ingeniería" e ingresar en la opción "Solicitud de Certificado Académico de Grado y Posgrado a la Facultad de Ingeniería". En esta sección, deberá seleccionar la opción "Plan de Estudios".
+                Para solicitar este certificado, deberá iniciar una solicitud a través del <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">TAD-UBA</a>, filtrar por organismo "Facultad de Ingeniería" e ingresar en la opción "<strong>Solicitud de Certificado Académico de Grado y Posgrado a la Facultad de Ingeniería</strong>". En esta sección, deberá seleccionar la opción "Plan de Estudios".
                 <br><br>
                 La demora del trámite depende del ente que dicte su carrera y del tipo de certificado que usted solicite.
                 <br><br>
