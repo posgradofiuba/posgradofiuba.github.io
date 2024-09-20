@@ -80,9 +80,9 @@ function mostrarTexto(opcion) {
             texto = `
                 Para solicitar este certificado, deberá iniciar una solicitud a través del <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">TAD-UBA</a>, filtrar por organismo "Facultad de Ingeniería" e ingresar en la opción "<strong>Solicitud de Certificado Académico de Grado y Posgrado a la Facultad de Ingeniería</strong>". En esta sección, deberá seleccionar la opción "Plan de Estudios".
                 <br><br>
-                La demora del trámite depende del ente que dicte su carrera y del tipo de certificado que usted solicite.
+                Si es alumno regular de un posgrado, es necesario que indique el lugar exacto (institución, universidad, ente, etc.) y país donde el certificado será presentado y si requiere que esté legalizado por la Dirección de Legalizaciones de la UBA y la Secretaría de Educación, para que pueda ser presentado en el exterior. A su vez, nos pondremos en contacto desde el correo <a href="mailto:posgrado_certificaciones@fi.uba.ar" target="_blank">posgrado_certificaciones@fi.uba.ar</a> y le solicitaremos una copia de su documento de identidad y del Diploma de Grado, para corroborar sus datos o pedir alguna aclaración en caso de ser necesario.
                 <br><br>
-                En caso de que lo requiera legalizado por la UBA y la Secretaría de Educación para poder apostillarlo, debe tener en cuenta que la demora es de varios meses.
+                La demora del trámite depende del ente que dicte su carrera y del tipo de certificado que usted solicite y, en caso de que lo requiera legalizado por la UBA y la Secretaría de Educación para poder apostillarlo, debe tener en cuenta que la demora es de varios meses.
                 <br>
                 <div style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
                     <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">
@@ -96,7 +96,9 @@ function mostrarTexto(opcion) {
             texto = `
             Para solicitar este certificado, deberá iniciar una solicitud a través del <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">TAD-UBA</a>, filtrar por organismo "Facultad de Ingeniería" e ingresar en la opción "<strong>Solicitud de Certificado Académico de Grado y Posgrado a la Facultad de Ingeniería</strong>". En esta sección, deberá seleccionar la opción "Certificado Analítico Parcial".
             <br><br>
-            En caso de ser alumno regular de un posgrado, es necesario que indique el lugar exacto (institución, universidad, ente, etc.) y país donde el certificado será presentado y si requiere que esté legalizado por la Dirección de Legalizaciones de la UBA y la Secretaría de Educación, para que pueda ser presentado en el exterior. A su vez, nos pondremos en contacto desde el correo <a href="mailto:posgrado_certificaciones@fi.uba.ar" target="_blank">posgrado_certificaciones@fi.uba.ar</a> y le solicitaremos una copia de su documento de identidad y del Diploma de Grado, para corroborar sus datos o pedir alguna aclaración en caso de ser necesario.
+            Es necesario que indique el lugar exacto (institución, universidad, ente, etc.) y país donde el certificado será presentado y si requiere que esté legalizado por la Dirección de Legalizaciones de la UBA y la Secretaría de Educación, para que pueda ser presentado en el exterior.
+            <br><br>
+            Una vez que recibamos la solicitud, nos pondremos en contacto desde el correo <a href="mailto:posgrado_certificaciones@fi.uba.ar" target="_blank">posgrado_certificaciones@fi.uba.ar</a> y le solicitaremos una copia de su documento de identidad y del Diploma de Grado, para corroborar sus datos o pedir alguna aclaración en caso de ser necesario.
             <br><br>
             La demora del trámite depende del ente encargado de dictar su carrera o maestría, de la Dirección de Legalizaciones de la UBA y de la Secretaría de Educación de la Nación.
             <br><br>
