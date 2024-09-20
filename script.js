@@ -51,9 +51,9 @@ function mostrarTexto(opcion) {
               <br><br>
               En caso de <u>no contar con DNI argentino</u>, el trámite en la plataforma de Trámites a Distancia deberá comenzarlo a través de un representante con DNI argentino. En caso de no tener un representante designado, deberá contactarse con el <a href="https://fi.uba.ar/posgrado" target="_blank">ente</a> (departamento, escuela o instituto) encargado de dictar su posgrado para que le designen uno.
               <br><br>
-              Transcurridos 15 días de iniciado el trámite de Título vía TAD se podrá realizar el seguimiento en el <a href="https://sietgraduados.rec.uba.ar/" target="_blank">SIET</a>, y la UBA podrá solicitar la confirmación de los datos por este medio, por lo cual se deberá ingresar con asiduidad para consultarlo. En caso de no encontrar la información pasados 15 días tendrá que dirigirse a <a href="mailto:posgrado_titulos@fi.uba.ar" target="_blank">posgrado_titulos@fi.uba.ar</a para consultar al respecto.
+              Transcurridos 15 días de iniciado el trámite de Título vía TAD se podrá realizar el seguimiento en el <a href="https://sietgraduados.rec.uba.ar/" target="_blank">SIET</a>, y la UBA podrá solicitar la confirmación de los datos por este medio, por lo cual se deberá ingresar con asiduidad para consultarlo. En caso de no encontrar la información pasados 15 días, tendrá que dirigirse a <a href="mailto:posgrado_titulos@fi.uba.ar" target="_blank">posgrado_titulos@fi.uba.ar</a para consultar al respecto.
               <br><br>
-              Una vez que el trámite esté finalizado y el Diploma listo para retirar, te enviaremos un mail para infomarte para que entrés en el siguiente <a href="https://forms.gle/cTaEgdxDno83r6Bt6" target="_blank">link</a> y puedas sacar turno para retirarlo.
+              Una vez que el trámite esté finalizado y el Diploma listo para retirar, te enviaremos un mail para infomarte para que entrés en el siguiente <a href="https://forms.gle/cTaEgdxDno83r6Bt6" target="_blank">link</a> y puedas sacar turno para retirarlo en la sede Paseo Colón de la Facultad de Ingeniería.
               <div style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
                   <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">
                       <button class="button-start">Iniciar trámite</button>
@@ -64,12 +64,9 @@ function mostrarTexto(opcion) {
         case 'analitico-final':
             titulo = 'Certificado Analítico Final';
             texto = `
-              Deberá iniciar una solicitud a través del TAD-UBA, filtrar por organismo "Facultad de Ingeniería" e ingresar en la opción "<strong>Solicitud de Certificado Académico de Grado y Posgrado a la Facultad de Ingeniería</strong>". 
-                <br>Es necesario que indique el lugar exacto (institución, universidad, ente, etc. y país) donde debe ser presentado. Nosotros adjuntaremos el certificado que usted solicitó y se lo entregaremos por el mismo sistema.
+              Para solicitar este certificado, deberá iniciar una solicitud a través del <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">TAD-UBA</a>, filtrar por organismo "Facultad de Ingeniería" e ingresar en la opción "<strong>Solicitud de Certificado Académico de Grado y Posgrado a la Facultad de Ingeniería</strong>". En esta sección, deberá seleccionar la opción "Certificado Analítico Final".
                 <br><br>
-                La demora del trámite depende del ente que dicte su carrera y del tipo de certificado que usted solicite.
-                <br><br>
-                En caso de que lo requiera legalizado por la UBA y la Secretaría de Educación para poder apostillarlo, debe tener en cuenta que la demora es de varios meses.
+                La demora del trámite depende del ente encargado de dictar su carrera o maestría, de la Dirección de Legalizaciones de la UBA y de la Secretaría de Educación de la Nación.
                 <br>
                 <div style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
                     <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">
