@@ -3,77 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Posgrado FIUBA | Inicio</title>
+  <title>FIUBA | Posgrado</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/3mmihau.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRRH84JPMD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YRRH84JPMD');
-</script>
 </head>
 <body>
-  <header class="banner">
-    <a href="https://posgradofiuba.github.io/">
-    <img src="https://i.imgur.com/mqEWaS2.png" alt="Logo" class="logo">
-    </a>
-    <h1><span class="texto-blanco montserrat" style="font-size: 20px;">Subsecretaría de Gestión Académica de Posgrado
-        <br>Facultad de Ingeniería - Universidad de Buenos Aires</span></h1>
-    <nav class="menu alt2">
-      <ul>
-        <li><a href="https://posgradofiuba.github.io/">Inicio</a></li>
-        <li><a href="https://posgradofiuba.github.io/alumnos/">Alumnos</a></li>
-        <li><a href="https://posgradofiuba.github.io/egresados/">Egresados</a></li>
-      </ul>
-    </nav>
-    <div class="bottom-gradient"></div>
-  </header>
-  <div class="caja texto justificar">
-    <div class="parrafo"> 
-      <p>
-        <div class="posgrado-caja">
-          <div class="posgrado-texto">
-            <span class="centrado">Posgrado
-              <br>FIUBA</span>
-            <div id="particles-js"></div>
-          </div>
+    <header class="banner">
+        <div class="header-content">
+          <a href="https://posgradofiuba.github.io/">
+            <img src="https://i.imgur.com/mqEWaS2.png" alt="Logo" class="logo">
+          </a>
+          <h1>
+            <span class="texto-blanco montserrat" style="font-size: 20px;">
+              Subsecretaría de Gestión Académica de Posgrado
+              <br>Facultad de Ingeniería - Universidad de Buenos Aires
+            </span>
+          </h1>
         </div>
-        <span class="montserrat"><br>La <b>Subsecretaría de Gestión Académica de Posgrado</b> es la encargada de la coordinación entre los distintos entes para el dictado de los Cursos de Complementación, Formación Continúa, Carreras de Especialización y Maestrías que dependen de la Facultad de Ingeniería de la Universidad de Buenos Aires.
-        <br>En este sitio web vas a encontrar los instructivos necesarios para que puedas iniciar los distintos trámites relacionados a las Carreras de Especialización y Maestrías. 
-        <br>Deberás comprender la diferencia entre ser <b>egresado</b> de un Posgrado o aún ser <b>alumno</b> (regular o no) de uno. 
-        <br>La diferencia radica en haber defendido y aprobado el Trabajo Final y/o la Tesis, según sea el caso.</span>
-        <br>
-        <br>
-        <div class="botones-container">
-          <a href="https://posgradofiuba.github.io/alumnos/" class="button">Alumnos</a>
-          <a href="https://posgradofiuba.github.io/egresados/" class="button">Egresados</a>
-        </div>
-      </p>
+        <div class="bottom-gradient"></div>
+      </header>
+  <div class="container">
+    <p class="color-explanation">
+        Los botones en <b>azul</b> son trámites para egresados de posgrados, 
+        y los botones en <b>amarillo</b> son para alumnos que actualmente están cursando posgrados.
+    </p>    
+    <div class="buttons montserrat">
+        <button class="button egresado" onclick="mostrarTexto('pre-tramite')">Pre-trámite del título</button>
+        <button class="button egresado" onclick="mostrarTexto('titulo')">Trámite del título</button>
+        <button class="button egresado" onclick="mostrarTexto('analitico-final')">Certificado Analítico Final</button>
+        <button class="button egresado alumno" onclick="mostrarTexto('plan-estudios')">Plan de Estudios</button>
+        <button class="button alumno" onclick="mostrarTexto('analitico-parcial')">Certificado Analítico Parcial</button>
+        <button class="button alumno" onclick="mostrarTexto('alumno-regular')">Certificado de Alumno Regular</button>
     </div>
-  </div>
-  <footer class="footer">
-    <div class="top-gradient"></div>
-    <div class="footer-info alt altfooter">
-        <p><b>Facultad de Ingeniería de la Universidad de Buenos Aires</b></p>
-        <span style="color:#a3a3a3;"> 
-            <p><a href="https://maps.app.goo.gl/8z1SRkoPbvpNkrWv6" target="_blank">Av. Paseo Colón 850</a> - Planta Baja - C1063ACV - Buenos Aires - Argentina</p>
-            <p>Subsecretaría de Gestión Académica de Posgrado</p>
-            <p><a href="mailto:posgrado_certificaciones@fi.uba.ar">posgrado_certificaciones@fi.uba.ar</a> / <a href="mailto:posgrado_titulos@fi.uba.ar">posgrado_titulos@fi.uba.ar</a></p>  
-        </span>
-    </div>
-    <a href="https://fi.uba.ar/posgrado">
-      <img src="https://cms.fi.uba.ar/uploads/logo_FIUBA_bco_e004995ae8.png" alt="FIUBA" class="footer-logo">
-    </a>
-</footer>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <div id="texto-mostrado" class="texto-mostrado caja"></div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
