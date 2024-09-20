@@ -214,11 +214,6 @@ header.banner {
     margin-bottom: 50px;
 }
 
-/* Links */
-a {
-    color: #adc910;
-}
-
 /* Caja de texto para información */
 .caja {
     max-width: 1000px;
