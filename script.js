@@ -29,14 +29,14 @@ function mostrarTexto(opcion) {
         case 'titulo':
             titulo = 'Trámite del título';
             texto = `
-              Una vez que reciba la confirmación que el pre-trámite finalizó de forma correcta, ya puede iniciar el trámite de Título a través del TAD-UBA.
+              Una vez que reciba la confirmación que el pre-trámite finalizó de forma correcta, ya puede iniciar el trámite de Título a través del <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">TAD-UBA</a>, filtrando por "Facultad de Ingeniería" y seleccionando "<strong>Solicitud de Expedición de Diplomas de la Facultad de Ingeniería (Requieren Pago trámites iniciados desde el 5.12)</strong>".
               <br><br>
               El inicio del trámite se hace solo de forma virtual y no se toma documentación de forma presencial.
               <br><br>
               Las solicitudes deberán ser acompañadas de:
               <ul>
                   <li>Documento de identidad.</li>
-                  <li>Diploma de Grado en formato papel escaneado o digital.</li>
+                  <li>Diploma de Grado legalizado en formato papel escaneado o digital.</li>
                   <li>Comprobante de pago emitido por el portal de pagos de la UBA que corresponda al arancel de "Pagar trámites diplomas académicos".
                   </li>
               </ul>
@@ -49,7 +49,11 @@ function mostrarTexto(opcion) {
               Al finalizar el trámite, cada egresado recibirá el Diploma impreso en cartulina, firmado y legalizado digitalmente, considerándose este documento como original en los términos del artículo 11 de la ley 25.506.
               Los Diplomas serán firmados digitalmente con dispositivo criptográfico por las autoridades del Rectorado y de la Facultad.
               <br><br>
-              En caso de no contar con DNI argentino, el trámite en la plataforma de Trámites a Distancia deberá comenzarlo a través de un representante con DNI argentino. En caso de no tener un representante designado, deberá contactarse con el ente (departamento, escuela o instituto) encargado de dictar su Posgrado para que le designen uno.
+              En caso de <u>no contar con DNI argentino</u>, el trámite en la plataforma de Trámites a Distancia deberá comenzarlo a través de un representante con DNI argentino. En caso de no tener un representante designado, deberá contactarse con el <a href="https://fi.uba.ar/posgrado" target="_blank">ente</a> (departamento, escuela o instituto) encargado de dictar su posgrado para que le designen uno.
+              <br><br>
+              Transcurridos 15 días de iniciado el trámite de Título vía TAD se podrá realizar el seguimiento en el <a href="https://sietgraduados.rec.uba.ar/" target="_blank">SIET</a>, y la UBA podrá solicitar la confirmación de los datos por este medio, por lo cual se deberá ingresar con asiduidad para consultarlo. En caso de no encontrar la información pasados 15 días tendrá que dirigirse a <a href="mailto:posgrado_titulos@fi.uba.ar" target="_blank">posgrado_titulos@fi.uba.ar</a para consultar al respecto.
+              <br><br>
+              Una vez que el trámite esté finalizado y el Diploma listo para retirar, te enviaremos un mail para infomarte para que entrés en el siguiente <a href="https://forms.gle/cTaEgdxDno83r6Bt6" target="_blank">link</a> y puedas sacar turno para retirarlo.
               <div style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
                   <a href="https://tramitesadistancia.uba.ar/tramitesadistancia/tad-publico" target="_blank">
                       <button class="button-start">Iniciar trámite</button>
