@@ -2,7 +2,6 @@ function mostrarTexto(opcion) {
     let texto;
     let divTextoMostrado = document.getElementById('texto-mostrado');
 
-    // Definir el título basado en la opción seleccionada
     let titulo = '';
     switch (opcion) {
         case 'pre-tramite':
@@ -130,11 +129,10 @@ function mostrarTexto(opcion) {
         default:
             texto = '';
     }
-
-    // Agregar título centrado, en negrita y subrayado
+    
     divTextoMostrado.innerHTML = `
         <h2 style="text-align: center; font-weight: bold; text-decoration: underline; margin-top: 20px;">${titulo}</h2>
         ${texto}
     `;
-    divTextoMostrado.style.display = 'block'; // Siempre mostramos el div
+    divTextoMostrado.style.display = 'block';
 }
