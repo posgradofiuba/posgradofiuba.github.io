@@ -60,7 +60,7 @@ body {
 /* Botones */
 .buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     margin-bottom: 40px;
 }
@@ -155,8 +155,7 @@ body {
     animation-delay: 0.4s;
 }
 
-/* Boton iniciar trámite */
-
+/* Boton de iniciar trámite */
 .button-start {
     border: none;
     border-radius: 12px;
@@ -177,7 +176,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Texto mostrado */
+/* Texto */
 .texto-mostrado {
     display: none;
     background-color: white;
@@ -187,7 +186,7 @@ body {
     text-align: justify;
 }
 
-/* Tipografías */
+/* Fuentes */
 .exo-2 {
     font-family: "Exo 2", sans-serif;
     font-weight: 400;
