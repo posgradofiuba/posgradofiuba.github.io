@@ -1,1748 +1,1754 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resoluciones de Posgrado</title>
-    <link rel="icon" type="image/png" href="https://i.imgur.com/3mmihau.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resoluciones de Posgrado</title>
+	<link rel="icon" type="image/png" href="https://i.imgur.com/3mmihau.png">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
+
 <body style="font-family: 'montserrat'">
-	
-    	<header style="text-align: center; position: relative;">
-    <h1>
-		<img class="logo" src="https://imgur.com/Zhh1ZN7.png" alt="Logo" onclick="modooscuro()">
-
-        Resoluciones de Posgrado
-
-    <div class="button-container">
-        <button id="toggleButton" onclick="toggleContent()" style="background: none; border: none; padding: 0;">
-		<img id="toggleIcon" src="https://i.imgur.com/SqonsjV.png" alt="Ocultar resoluciones." style="width: 24px; height: 24px;">
-        </button>
-    </div>
-    </h1>
-
-    <div>
-    <div>
-    	<input type="text" id="searchInput" placeholder="Buscar por número de resolución." oninput="search()" class="buscador-res" style="margin-top: 20px;">
-    <div id="searchResults"></div>
-        <script src="search.js" defer></script>
-    </div>
-    <div>
-        <input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera." oninput="searchByName()" class="buscador-res" style="margin-top: 20px;">
-    <div id="searchResultsByName"></div>
-    	<script src="searchByName.js" defer></script>
-    </div>
-    </div>
+	<header style="text-align: center; position: relative;">
+		<h1>
+			<img class="logo" src="https://imgur.com/Zhh1ZN7.png" alt="Logo" onclick="modooscuro()">
+			Resoluciones de Posgrado
+			<div class="button-container">
+				<button id="toggleButton" onclick="toggleContent()" style="background: none; border: none; padding: 0;">
+					<img id="toggleIcon" src="https://i.imgur.com/SqonsjV.png" alt="Ocultar resoluciones."
+						style="width: 24px; height: 24px;">
+				</button>
+			</div>
+		</h1>
+		<div>
+			<div>
+				<input type="text" id="searchInput" placeholder="Buscar por número de resolución." oninput="search()"
+					class="buscador-res" style="margin-top: 20px;">
+				<div id="searchResults"></div>
+				<script src="search.js" defer></script>
+			</div>
+			<div>
+				<input type="text" id="searchByNameInput" placeholder="Buscar por nombre de carrera."
+					oninput="searchByName()" class="buscador-res" style="margin-top: 20px;">
+				<div id="searchResultsByName"></div>
+				<script src="searchByName.js" defer></script>
+			</div>
+		</div>
 
 	</header>
 
 	<hr>
+
 	<div id="contentToHide">
 		<ul class="indice">
-		<li><a href="#agrimensura">agrimensura</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#arn">arn</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#balseiro">balseiro</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#caminos">caminos</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#compartidas">compartidas</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#construcciones">construcciones</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#cpic">cpic</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#decanato">decanato</a></li>
-		<li><span class="barra">/</span></li>
-    	<li><a href="#egide">egide</a></li>
-		<li><span class="barra">/</span></li>
-    	<li><a href="#egriet">egriet</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#energia">energía</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#estabilidad">estabilidad</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#ferroviaria">ferroviaria</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#hidraulica">hidráulica</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#hst">hst</a></li>
-		<li><span class="barra">/</span></li>
-    	<li><a href="#igpuba">igpuba</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#industrial">industrial</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#itpn">itpn</a></li>
-		<li><span class="barra">/</span></li>
-    	<li><a href="#lse">lse</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#matematica">matemática</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#metalurgica">metalurgica</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#optoelectronica">optoeletrónica</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#sanitaria">sanitaria</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#secid">secid</a></li>
-		<li><span class="barra">/</span></li>
-		<li><a href="#transporte">transporte</a></li>
-  	</ul>
-	<hr>
-	
-	<div id="previewContainer" style="display: none;">
-		<button id="closeButton" onclick="closePreview()">Cerrar</button>
-		<iframe id="previewFrame" width="100%" height="600px"></iframe>
-	</div>
+			<li><a href="#agrimensura">agrimensura</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#arn">arn</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#balseiro">balseiro</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#caminos">caminos</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#compartidas">compartidas</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#construcciones">construcciones</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#cpic">cpic</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#decanato">decanato</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#egide">egide</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#egriet">egriet</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#energia">energía</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#estabilidad">estabilidad</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#ferroviaria">ferroviaria</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#hidraulica">hidráulica</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#hst">hst</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#igpuba">igpuba</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#industrial">industrial</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#itpn">itpn</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#lse">lse</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#matematica">matemática</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#metalurgica">metalurgica</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#optoelectronica">optoeletrónica</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#sanitaria">sanitaria</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#secid">secid</a></li>
+			<li><span class="barra">/</span></li>
+			<li><a href="#transporte">transporte</a></li>
+		</ul>
 
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-    	<h2 id="lse" onclick="showMessage('lse')"><font size="5">Laboratorio de Sistemas Embebidos (LSE)</font></h2>
-    </div>
-	<div id="lse-message" class="message-box">
-        <ul>
-			<li>
-				<strong>Directores:</strong>
-				<a href="mailto:alutenbg@fi.uba.ar">aluntenb@fi.uba.ar</a> / <a href="mailto:elpablogomez@gmail.com">elpablogomez@gmail.com</a>
-			</li>
-			<li>
-				<strong>Analíticos:</strong>
-				<a href="mailto:titulos.lse@gmail.com">titulos.lse@gmail.com</a>
-			</li>
-			<li>
-				<strong>Página web:</strong>
-				<a href="https://lse.posgrados.fi.uba.ar/">lse.posgrados.fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-		<h3>Especialización en Sistemas Embebidos</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/11Grt2TASWCF6_0YZDS468DJR-RdKNVmd/view" target="_blank">4916/12</a>
-				<button onclick="previewDocument('11Grt2TASWCF6_0YZDS468DJR-RdKNVmd')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/19pmBK1G2dOZdXeuEA36Qo5OzMqA7DRiC/view" target="_blank">2770/15</a>
-				<button onclick="previewDocument('19pmBK1G2dOZdXeuEA36Qo5OzMqA7DRiC')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1S7E7BcXeoXrlhWkYx7DXQf9eNgeic0M7/view" target="_blank">227/18</a>
-				<button onclick="previewDocument('1S7E7BcXeoXrlhWkYx7DXQf9eNgeic0M7')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1iKyx2w5-r2IijGnr8lxXALNsiowEqJ79/view" target="_blank">248/21</a>
-				<button onclick="previewDocument('1iKyx2w5-r2IijGnr8lxXALNsiowEqJ79')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-		</ul>
-		<h3>Especialización en Sistemas Embebidos (a distancia)</h3>
-		<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1wM-kcBmgnYNyIKIRzzmyR-k4mFxWuSBw/view" target="_blank">223/18</a>
-				<button onclick="previewDocument('1wM-kcBmgnYNyIKIRzzmyR-k4mFxWuSBw')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-   		</ul>
-    	<h3>Especialización en Internet de las Cosas</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1c3M5AH9WEYmOcRmWDf6mAUHmQVexZnFn/view" target="_blank">431/21</a>
-				<button onclick="previewDocument('1c3M5AH9WEYmOcRmWDf6mAUHmQVexZnFn')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-   		</ul>
-		<h3>Especialización en Internet de las Cosas (a distancia)</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/16zIHSHqUqqkLYsgs1iFk3Xh5yJ0V9gvB/view" target="_blank">628/21</a>
-				<button onclick="previewDocument('16zIHSHqUqqkLYsgs1iFk3Xh5yJ0V9gvB')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-   		</ul>
-		<h3>Especialización en Inteligencia Artificial (a distancia)</h3>
-		<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/17EBI98HCWnqhZVWvFpgnkV6rMXR6qHEc/view" target="_blank">627/21</a>
-				<button onclick="previewDocument('17EBI98HCWnqhZVWvFpgnkV6rMXR6qHEc')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Sistemas Embebidos</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1Z3ue_AYG_VcVRT4neJ5Frtoxnx8ylg6G/view" target="_blank">4335/16</a>
-				<button onclick="previewDocument('1Z3ue_AYG_VcVRT4neJ5Frtoxnx8ylg6G')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1u-CTtj4kggzRcxB4mxewlkmesmVrK8ly/view" target="_blank">224/18</a>
-				<button onclick="previewDocument('1u-CTtj4kggzRcxB4mxewlkmesmVrK8ly')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/13G7VTKu8q4mp5idSy4atpfmTdcM6jYHY/view" target="_blank">228/18</a>
-				<button onclick="previewDocument('13G7VTKu8q4mp5idSy4atpfmTdcM6jYHY')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1a37_0xMUR0G0JBQQnabhUSLGlktrPZT6/view" target="_blank">249/21</a>
-				<button onclick="previewDocument('1a37_0xMUR0G0JBQQnabhUSLGlktrPZT6')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Computación de Borde (a distancia)</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1yq_6pBbLOrlLZRpN-D4jSBFdOIlwsZjz/view" target="_blank">67/22</a>
-				<button onclick="previewDocument('1yq_6pBbLOrlLZRpN-D4jSBFdOIlwsZjz')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-		</ul>	
-		<h3>Maestría en Inteligencia Artificial Embebida (a distancia)</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1miS4_h_cd3UhOAe78gR3jxfG_9Seg8MO/view" target="_blank">66/22</a>
-				<button onclick="previewDocument('1miS4_h_cd3UhOAe78gR3jxfG_9Seg8MO')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-		</ul>	
-		<h3>Maestría en Internet de las Cosas</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1MoG81e8_BVnhXxqx7nNAE-cBB7_NxpDB/view" target="_blank">432/21</a>
-				<button onclick="previewDocument('1MoG81e8_BVnhXxqx7nNAE-cBB7_NxpDB')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-		</ul>
-		<h3>Maestría en Internet de las Cosas (a distancia)</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1VFe7owMhWECFfnPQRlmuiSltHoVrvlRf/view" target="_blank">629/21</a>
-				<button onclick="previewDocument('1VFe7owMhWECFfnPQRlmuiSltHoVrvlRf')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-		<div class="container">
-		<div class="box box-h3">
-			<h2 id="egriet" onclick="showMessage('egriet')"><font size="5">Escuela de Graduados en Ingeniería Electrónica y Telecomunicaciones (EGRIET)</font></h2>
+		<div id="previewContainer" style="display: none;">
+			<button id="closeButton" onclick="closePreview()">Cerrar</button>
+			<iframe id="previewFrame" width="100%" height="600px"></iframe>
 		</div>
-		<div id="egriet-message" class="message-box">
-			<ul>
-				<li>
-					<strong>Ente:</strong>
-					<a href="mailto:ecomunic@fi.uba.ar">ecomunic@fi.uba.ar</a>
-				</li>
-				<li>
-					<strong>Administrativo:</strong>
-					<a href="mailto:aantunez@fi.uba.ar">aantunez@fi.uba.ar</a>
-				</li>
-			</ul>
-		</div>
-	<div class="box">
-    	<h3>Especialización en Automatización Industrial</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/172yuW20mwrL1pbBvwsmtoD7hZeoBlkLJ/view" target="_blank">367/06</a>
-				<button onclick="previewDocument('172yuW20mwrL1pbBvwsmtoD7hZeoBlkLJ')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1sXdileVdxrc4Awywxbxq7hor4yJK7diu/view" target="_blank">2208/15</a>
-				<button onclick="previewDocument('1sXdileVdxrc4Awywxbxq7hor4yJK7diu')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Especialización en Tecnologías de Telecomunicaciones</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1X1P1NI_21UBOZ-zqpYX4jj178PHKJc0W/view" target="_blank">4990/00</a>
-				<button onclick="previewDocument('1X1P1NI_21UBOZ-zqpYX4jj178PHKJc0W')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/180lwuxVw4xqxg9rUQO93cDhYvKN6gl4y/view" target="_blank">1130/06</a>
-				<button onclick="previewDocument('180lwuxVw4xqxg9rUQO93cDhYvKN6gl4y')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1UXOmKemN93RV4p8Mr3mIeFpz6P-L8HzA/view" target="_blank">3722/15</a>
-				<button onclick="previewDocument('1UXOmKemN93RV4p8Mr3mIeFpz6P-L8HzA')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Especialización en Servicios y Redes de Telecomunicaciones</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1AK3WsLWSk2u6LRWrwx_JNJj6iPi-nWCG/view" target="_blank">1131/06</a>
-				<button onclick="previewDocument('1AK3WsLWSk2u6LRWrwx_JNJj6iPi-nWCG')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1zwcl2hlGPSZrm58-AydUQTgkU8RTW9hP/view" target="_blank">3723/15</a>
-				<button onclick="previewDocument('1zwcl2hlGPSZrm58-AydUQTgkU8RTW9hP')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ingeniería en Telecomunicaciones</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1UTtaze9wHFUIUi1weDNYRKdOZrURv2Ui/view" target="_blank">4991/00</a>
-				<button onclick="previewDocument('1UTtaze9wHFUIUi1weDNYRKdOZrURv2Ui')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Telecomunicaciones</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1VwrZAzFPPpJhAcCJIpXL4SFbIdunOXQ6/view" target="_blank">494/18</a>
-				<button onclick="previewDocument('1VwrZAzFPPpJhAcCJIpXL4SFbIdunOXQ6')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Servicios y Redes de Telecomunicaciones</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1krPN8XdTLtqde0fXK_yIbZProKFM8_wF/view?usp=sharing" target="_blank">1058/19</a>
-				<button onclick="previewDocument('1krPN8XdTLtqde0fXK_yIbZProKFM8_wF')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Automatización Industrial</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1dAEgkjzXK0mSe12zJFzOJ-iI0JAxyM7D/view" target="_blank">2203/15</a>
-				<button onclick="previewDocument('1dAEgkjzXK0mSe12zJFzOJ-iI0JAxyM7D')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	<h3>Equivalencias</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1n7tW3x1ithcoBktuPrasx1Y_UZ89sjs3/view" target="_blank">777/23</a>  Entre Especializaciones en Servicios y Redes de Telecomunicaciones y Tecnología de Telecomunicaciones y la Maestría en Telecomunicaciones
-				
-			</li>
-    	</div>
-	</ul>
-	</ul>
-	</div>
-    </section>
 
-	<hr>		
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="hst" onclick="showMessage('hst')">Higiene y Seguridad en el Trabajo</font></h2>
-    </div>
-	<div id="hst-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Director:</strong>
-				<a href="mailto:crodrigu@fi.uba.ar">crodrigu@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:aperez@fi.uba.ar">aperez@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-    	<h3>Curso de Higiene y Seguridad en el Trabajo</h3>
-    	<ul>
-    		<li>
-				<a href="https://drive.google.com/file/d/11RRapLzKfHLas-mkDGpdxSXig9triRbD/view" target="_blank">162/81</a>
-				<button onclick="previewDocument('11RRapLzKfHLas-mkDGpdxSXig9triRbD')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1RdHrf9Pti7OoX-gV8zmQh8clHgZ3l6zN/view" target="_blank">487/83</a>
-				<button onclick="previewDocument('1RdHrf9Pti7OoX-gV8zmQh8clHgZ3l6zN')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Especialización en Higiene y Seguridad en el Trabajo</h3>
-    	<ul>    	
-    		<li>
-				<a href="https://drive.google.com/file/d/16rVJqUAdGWMK4VLk0AqmEMzYqHkXQtpA/view" target="_blank">1979/91</a>
-				<button onclick="previewDocument('16rVJqUAdGWMK4VLk0AqmEMzYqHkXQtpA')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/17Vt7eEWEErbzd3jDSTCERrDODT9Nv9_m/view" target="_blank">2668/11</a>
-				<button onclick="previewDocument('17Vt7eEWEErbzd3jDSTCERrDODT9Nv9_m')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    		<li>
-				<a href="https://drive.google.com/file/d/1hYXufigeOT67AWVdbW-6gMLDmRkP_SXD/view" target="_blank">247/21</a>
-				<button onclick="previewDocument('1hYXufigeOT67AWVdbW-6gMLDmRkP_SXD')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>	
-	</div>
-    </section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="lse" onclick="showMessage('lse')"><font size="5">Laboratorio de Sistemas Embebidos (LSE)</font></h2>
+				</div>
+				<div id="lse-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Directores:</strong>
+							<a href="mailto:alutenbg@fi.uba.ar">aluntenb@fi.uba.ar</a> / <a
+								href="mailto:elpablogomez@gmail.com">elpablogomez@gmail.com</a>
+						</li>
+						<li>
+							<strong>Analíticos:</strong>
+							<a href="mailto:titulos.lse@gmail.com">titulos.lse@gmail.com</a>
+						</li>
+						<li>
+							<strong>Página web:</strong>
+							<a href="https://lse.posgrados.fi.uba.ar/">lse.posgrados.fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Sistemas Embebidos</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/11Grt2TASWCF6_0YZDS468DJR-RdKNVmd/view" target="_blank">4916/12</a>
+							<button onclick="previewDocument('11Grt2TASWCF6_0YZDS468DJR-RdKNVmd')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/19pmBK1G2dOZdXeuEA36Qo5OzMqA7DRiC/view" target="_blank">2770/15</a>
+							<button onclick="previewDocument('19pmBK1G2dOZdXeuEA36Qo5OzMqA7DRiC')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1S7E7BcXeoXrlhWkYx7DXQf9eNgeic0M7/view" target="_blank">227/18</a>
+							<button onclick="previewDocument('1S7E7BcXeoXrlhWkYx7DXQf9eNgeic0M7')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1iKyx2w5-r2IijGnr8lxXALNsiowEqJ79/view" target="_blank">248/21</a>
+							<button onclick="previewDocument('1iKyx2w5-r2IijGnr8lxXALNsiowEqJ79')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Sistemas Embebidos (a distancia)</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1wM-kcBmgnYNyIKIRzzmyR-k4mFxWuSBw/view" target="_blank">223/18</a>
+							<button onclick="previewDocument('1wM-kcBmgnYNyIKIRzzmyR-k4mFxWuSBw')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Internet de las Cosas</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1c3M5AH9WEYmOcRmWDf6mAUHmQVexZnFn/view" target="_blank">431/21</a>
+							<button onclick="previewDocument('1c3M5AH9WEYmOcRmWDf6mAUHmQVexZnFn')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Internet de las Cosas (a distancia)</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/16zIHSHqUqqkLYsgs1iFk3Xh5yJ0V9gvB/view" target="_blank">628/21</a>
+							<button onclick="previewDocument('16zIHSHqUqqkLYsgs1iFk3Xh5yJ0V9gvB')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Inteligencia Artificial (a distancia)</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/17EBI98HCWnqhZVWvFpgnkV6rMXR6qHEc/view" target="_blank">627/21</a>
+							<button onclick="previewDocument('17EBI98HCWnqhZVWvFpgnkV6rMXR6qHEc')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Sistemas Embebidos</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1Z3ue_AYG_VcVRT4neJ5Frtoxnx8ylg6G/view" target="_blank">4335/16</a>
+							<button onclick="previewDocument('1Z3ue_AYG_VcVRT4neJ5Frtoxnx8ylg6G')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1u-CTtj4kggzRcxB4mxewlkmesmVrK8ly/view" target="_blank">224/18</a>
+							<button onclick="previewDocument('1u-CTtj4kggzRcxB4mxewlkmesmVrK8ly')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/13G7VTKu8q4mp5idSy4atpfmTdcM6jYHY/view" target="_blank">228/18</a>
+							<button onclick="previewDocument('13G7VTKu8q4mp5idSy4atpfmTdcM6jYHY')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1a37_0xMUR0G0JBQQnabhUSLGlktrPZT6/view" target="_blank">249/21</a>
+							<button onclick="previewDocument('1a37_0xMUR0G0JBQQnabhUSLGlktrPZT6')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Computación de Borde (a distancia)</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1yq_6pBbLOrlLZRpN-D4jSBFdOIlwsZjz/view" target="_blank">67/22</a>
+							<button onclick="previewDocument('1yq_6pBbLOrlLZRpN-D4jSBFdOIlwsZjz')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Inteligencia Artificial Embebida (a distancia)</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1miS4_h_cd3UhOAe78gR3jxfG_9Seg8MO/view" target="_blank">66/22</a>
+							<button onclick="previewDocument('1miS4_h_cd3UhOAe78gR3jxfG_9Seg8MO')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Internet de las Cosas</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1MoG81e8_BVnhXxqx7nNAE-cBB7_NxpDB/view" target="_blank">432/21</a>
+							<button onclick="previewDocument('1MoG81e8_BVnhXxqx7nNAE-cBB7_NxpDB')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Internet de las Cosas (a distancia)</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1VFe7owMhWECFfnPQRlmuiSltHoVrvlRf/view" target="_blank">629/21</a>
+							<button onclick="previewDocument('1VFe7owMhWECFfnPQRlmuiSltHoVrvlRf')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="ferroviaria" onclick="showMessage('ferroviaria')">Escuela de Ingeniería Ferroviaria</font></h2>
-    </div>
-	<div id="ferroviaria-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:merubio@fi.uba.ar">merubio@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Director:</strong>
-				<a href="mailto:arosujovsky@fi.uba.ar">arosujovsky@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Ingeniería Ferroviaria</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1QnA2N4rd-I5D-_6s1AizqluiBe60xErl/view" target="_blank">2372/09</a> (Convenio específico)
-				<button onclick="previewDocument('1QnA2N4rd-I5D-_6s1AizqluiBe60xErl')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/18iBltv0kUGIfAt1QaCE2hNn7NaUzpnfs/view" target="_blank">7749/10</a> (Convenio marco)
-				<button onclick="previewDocument('18iBltv0kUGIfAt1QaCE2hNn7NaUzpnfs')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1e9zwms3tIrwYWoL_AyQWO1qW2sVpQ96A/view" target="_blank">2447/11</a>
-				<button onclick="previewDocument('1e9zwms3tIrwYWoL_AyQWO1qW2sVpQ96A')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1-l3lrMKIBxWaWnYqwZ0tbu13K3WUhXty/view" target="_blank">6447/13</a>
-				<button onclick="previewDocument('1-l3lrMKIBxWaWnYqwZ0tbu13K3WUhXty')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="igpuba" onclick="showMessage('igpuba')">Instituto del Gas y del Petróleo (IGPUBA)</font></h2>
-    </div>
-	<div id="igpuba-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Director:</strong>
-				<a href="mailto:jcarbajales@fi.uba.ar">jcarbajales@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:igpuba@fi.uba.ar">igpuba@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:jelgue@fi.uba.ar">jelgue@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Gas</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1sbpKT1DO9X-BbKxR6c0CDjvAus_l028B/view" target="_blank">3688/96</a>
-				<button onclick="previewDocument('1sbpKT1DO9X-BbKxR6c0CDjvAus_l028B')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/10oz4iSBHLRP840oWouegtR5dYUSJ_NrP/view" target="_blank">6587/97</a>
-				<button onclick="previewDocument('10oz4iSBHLRP840oWouegtR5dYUSJ_NrP')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1nTnyR8kVOaV2rVn5Q-uixTDDHqoWaBYT/view" target="_blank">6325/13</a>
-				<button onclick="previewDocument('1nTnyR8kVOaV2rVn5Q-uixTDDHqoWaBYT')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-       	</ul>
-    	<h3>Especialización en Gas Natural</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1nUx3m2iN-f1ZQ1rlWFyYznh5Wt5VsgBE/view" target="_blank">2773/15</a>
-				<button onclick="previewDocument('1nUx3m2iN-f1ZQ1rlWFyYznh5Wt5VsgBE')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Especialización en Petróleo</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1IHfqRCQdepAm07Kpv5F0cE4aOHX_qJAZ/view" target="_blank">6588/97</a>
-				<button onclick="previewDocument('1IHfqRCQdepAm07Kpv5F0cE4aOHX_qJAZ')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1Od7xIaLfy_rYtKwGj9ETJR6VLGrGy-uO/view" target="_blank">5782/12</a>
-				<button onclick="previewDocument('1Od7xIaLfy_rYtKwGj9ETJR6VLGrGy-uO')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Especialización en Petróleo y Derivados</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/15QGdWdo2_1QKsC8JW1UTyYJLEmy9irbY/view" target="_blank">7926/13</a>
-				<button onclick="previewDocument('15QGdWdo2_1QKsC8JW1UTyYJLEmy9irbY')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Especialización en Ingeniería de Reservorios</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1rNflHgw3KX47UAUCRfJSJR4BFtMEvdJE/view" target="_blank">103/80 </a> (Convenio y plan de Carrera)
-				<button onclick="previewDocument('1rNflHgw3KX47UAUCRfJSJR4BFtMEvdJE')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1g3M5PUesjG_UspUaDt4nQFabRLGorlxL/view" target="_blank">4339/16</a>
-				<button onclick="previewDocument('1g3M5PUesjG_UspUaDt4nQFabRLGorlxL')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Especialización en Explotación de Yacimientos - Rama Ingeniería de Reservorio</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1SnHgdApwI-0AKU35X-I7GbIrG1SrDwFW/view" target="_blank">4549/12</a>
-				<button onclick="previewDocument('1SnHgdApwI-0AKU35X-I7GbIrG1SrDwFW')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1XURL5sc2Bck0VOLBM38TWGzSU95QL5uD/view" target="_blank">1675/18</a>
-				<button onclick="previewDocument('1XURL5sc2Bck0VOLBM38TWGzSU95QL5uD')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ingeniería en Petróleo y Gas Natural</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1ZoITlzz63V13UsAgpqv3TmYFXAKFBSqw/view" target="_blank">6714/97</a>
-				<button onclick="previewDocument('1ZoITlzz63V13UsAgpqv3TmYFXAKFBSqw')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="egriet" onclick="showMessage('egriet')"><font size="5">Escuela de Graduados en Ingeniería Electrónica y Telecomunicaciones (EGRIET)</font></h2>
+				</div>
+				<div id="egriet-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ecomunic@fi.uba.ar">ecomunic@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Administrativo:</strong>
+							<a href="mailto:aantunez@fi.uba.ar">aantunez@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Automatización Industrial</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/172yuW20mwrL1pbBvwsmtoD7hZeoBlkLJ/view" target="_blank">367/06</a>
+							<button onclick="previewDocument('172yuW20mwrL1pbBvwsmtoD7hZeoBlkLJ')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1sXdileVdxrc4Awywxbxq7hor4yJK7diu/view" target="_blank">2208/15</a>
+							<button onclick="previewDocument('1sXdileVdxrc4Awywxbxq7hor4yJK7diu')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Tecnologías de Telecomunicaciones</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1X1P1NI_21UBOZ-zqpYX4jj178PHKJc0W/view" target="_blank">4990/00</a>
+							<button onclick="previewDocument('1X1P1NI_21UBOZ-zqpYX4jj178PHKJc0W')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/180lwuxVw4xqxg9rUQO93cDhYvKN6gl4y/view" target="_blank">1130/06</a>
+							<button onclick="previewDocument('180lwuxVw4xqxg9rUQO93cDhYvKN6gl4y')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1UXOmKemN93RV4p8Mr3mIeFpz6P-L8HzA/view" target="_blank">3722/15</a>
+							<button onclick="previewDocument('1UXOmKemN93RV4p8Mr3mIeFpz6P-L8HzA')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Servicios y Redes de Telecomunicaciones</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1AK3WsLWSk2u6LRWrwx_JNJj6iPi-nWCG/view" target="_blank">1131/06</a>
+							<button onclick="previewDocument('1AK3WsLWSk2u6LRWrwx_JNJj6iPi-nWCG')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1zwcl2hlGPSZrm58-AydUQTgkU8RTW9hP/view" target="_blank">3723/15</a>
+							<button onclick="previewDocument('1zwcl2hlGPSZrm58-AydUQTgkU8RTW9hP')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería en Telecomunicaciones</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1UTtaze9wHFUIUi1weDNYRKdOZrURv2Ui/view" target="_blank">4991/00</a>
+							<button onclick="previewDocument('1UTtaze9wHFUIUi1weDNYRKdOZrURv2Ui')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Telecomunicaciones</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1VwrZAzFPPpJhAcCJIpXL4SFbIdunOXQ6/view" target="_blank">494/18</a>
+							<button onclick="previewDocument('1VwrZAzFPPpJhAcCJIpXL4SFbIdunOXQ6')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Servicios y Redes de Telecomunicaciones</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1krPN8XdTLtqde0fXK_yIbZProKFM8_wF/view?usp=sharing" target="_blank">1058/19</a>
+							<button onclick="previewDocument('1krPN8XdTLtqde0fXK_yIbZProKFM8_wF')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Automatización Industrial</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1dAEgkjzXK0mSe12zJFzOJ-iI0JAxyM7D/view" target="_blank">2203/15</a>
+							<button onclick="previewDocument('1dAEgkjzXK0mSe12zJFzOJ-iI0JAxyM7D')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Equivalencias</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1n7tW3x1ithcoBktuPrasx1Y_UZ89sjs3/view" target="_blank">777/23</a> Entre Especializaciones en Servicios y Redes de Telecomunicaciones y Tecnología de Telecomunicaciones y la Maestría en Telecomunicaciones
+						</li>
+				</div>
+				</ul>
+				</ul>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="transporte" onclick="showMessage('transporte')">Departamento de Transporte</font></h2>
-	</div>
-	<div id="transporte-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Administrativo:</strong> 
-				<a href="mailto:lpitton@fi.uba.ar">lpitton@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Maestría en Ingeniería del Transporte ­- Orientación Vial:</strong> 
-				<a href="mailto:mtr.vial@fi.uba.ar">mtr.vial@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Administrativa:</strong> 
-				<a href="mailto:mscasserra@fi.uba.ar">mscasserra@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Ingeniería Portuaria</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1tDisIRPs5tuFtituBUkW6YgBkqOSvdMA/view" target="_blank">6677/01</a>
-				<button onclick="previewDocument('1tDisIRPs5tuFtituBUkW6YgBkqOSvdMA')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1c7AyeRQ94VZ6fShaIaLFwkxJT4jIGW26/view" target="_blank">3210/11</a>
-				<button onclick="previewDocument('1c7AyeRQ94VZ6fShaIaLFwkxJT4jIGW26')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1hAbOjPDpuDihsvNWOVD6uVgcKvITga_Q/view" target="_blank">2772/15</a>
-				<button onclick="previewDocument('1hAbOjPDpuDihsvNWOVD6uVgcKvITga_Q')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Planificación y Gestión del Transporte</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1wgNgaIcErVSzrvN2cgUfGbZ7FLdElvVI/view" target="_blank">7413/13</a>
-				<button onclick="previewDocument('1wgNgaIcErVSzrvN2cgUfGbZ7FLdElvVI')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1TWr_IVPoOCH8h37YeeJTN13NE7seBhL_/view" target="_blank">6391/16</a>
-				<button onclick="previewDocument('1TWr_IVPoOCH8h37YeeJTN13NE7seBhL_')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Maestría en Ingeniería del Transporte ­- Orientación Vial</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1kL7CrEQYde-JDWFbHwXXRZXLv80bl30Y/view" target="_blank">3038/04</a>
-				<button onclick="previewDocument('1kL7CrEQYde-JDWFbHwXXRZXLv80bl30Y')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1By9v6kgICZrvxIxkPpHsepgyepT77Zka/view" target="_blank">1362/06</a>
-				<button onclick="previewDocument('1By9v6kgICZrvxIxkPpHsepgyepT77Zka')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="estabilidad" onclick="showMessage('estabilidad')">Estabilidad</font></h2>
-	</div>
-	<div id="estabilidad-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Coordinador:</strong>
-				<a href="mailto:flopez@fi.uba.ar">flopez@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Maestría en Ciencias de la Ingeniería:</strong>
-				<a href="mailto:mtr.ci@fi.uba.ar">mtr.ci@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Director:</strong>
-				<a href="mailto:rbertero@fi.uba.ar">rbertero@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Ingeniería Geotécnica</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1AkZs8nYgInKcO41V9ngBGQokwr1J4z2d/view" target="_blank">193/21</a>
-				<button onclick="previewDocument('1AkZs8nYgInKcO41V9ngBGQokwr1J4z2d')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ciencias de la Ingeniería</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1m_wHiQslCYOjFh1CR-BMnPq8W1HfjCwZ/view" target="_blank">6938/13</a>
-				<button onclick="previewDocument('1m_wHiQslCYOjFh1CR-BMnPq8W1HfjCwZ')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1UqFLMQyk3LOc263N2pZKJV9TMg9XtK-V/view" target="_blank">286/18</a>
-				<button onclick="previewDocument('1UqFLMQyk3LOc263N2pZKJV9TMg9XtK-V')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-	</div>
-	</div>
-    </section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="hst" onclick="showMessage('hst')"><font size="5">Higiene y Seguridad en el Trabajo</font></h2>
+				</div>
+				<div id="hst-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Director:</strong>
+							<a href="mailto:crodrigu@fi.uba.ar">crodrigu@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:aperez@fi.uba.ar">aperez@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Curso de Higiene y Seguridad en el Trabajo</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/11RRapLzKfHLas-mkDGpdxSXig9triRbD/view" target="_blank">162/81</a>
+							<button onclick="previewDocument('11RRapLzKfHLas-mkDGpdxSXig9triRbD')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1RdHrf9Pti7OoX-gV8zmQh8clHgZ3l6zN/view" target="_blank">487/83</a>
+							<button onclick="previewDocument('1RdHrf9Pti7OoX-gV8zmQh8clHgZ3l6zN')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Higiene y Seguridad en el Trabajo</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/16rVJqUAdGWMK4VLk0AqmEMzYqHkXQtpA/view" target="_blank">1979/91</a>
+							<button onclick="previewDocument('16rVJqUAdGWMK4VLk0AqmEMzYqHkXQtpA')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/17Vt7eEWEErbzd3jDSTCERrDODT9Nv9_m/view" target="_blank">2668/11</a>
+							<button onclick="previewDocument('17Vt7eEWEErbzd3jDSTCERrDODT9Nv9_m')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1hYXufigeOT67AWVdbW-6gMLDmRkP_SXD/view" target="_blank">247/21</a>
+							<button onclick="previewDocument('1hYXufigeOT67AWVdbW-6gMLDmRkP_SXD')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="energia" onclick="showMessage('energia')">Departamento de Energía</font></h2>
-	</div>
-	<div id="energia-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en "Estudios de Tecnologías Urbanas Sostenibles"</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1BtkgBETFhcD66Nq4-5MvBjmy_yfwc1dA/view" target="_blank">2513/11</a>
-				<button onclick="previewDocument('1BtkgBETFhcD66Nq4-5MvBjmy_yfwc1dA')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/10ZUGniA_0ni5VGH8FbuxKpUNPUunsgN5/view" target="_blank">5494/12</a>
-				<button onclick="previewDocument('10ZUGniA_0ni5VGH8FbuxKpUNPUunsgN5')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Especialización en Tecnologías Urbanas Sostenibles</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1SKtvmddgDiSDFoAojpEDi7pDK4YDMfgb/view" target="_blank">460/14</a>
-				<button onclick="previewDocument('1SKtvmddgDiSDFoAojpEDi7pDK4YDMfgb')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Tecnologías Urbanas Sostenibles</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1kRHZEpZsJqCYlZCX2Wjxl4tAx3CB7Elp/view" target="_blank">457/14</a>
-				<button onclick="previewDocument('1kRHZEpZsJqCYlZCX2Wjxl4tAx3CB7Elp')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC/view" target="_blank">5223/16</a>
-				<button onclick="previewDocument('1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
-		
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="egide" onclick="showMessage('egide')">Escuela de Graduados en Ingeniería en Dirección Empresaria (EGIDE)</font></h2>
-	</div>
-	<div id="egide-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:egide@fi.uba.ar">egide@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    	<div class="box">
-    	<h3>Especialización en Gestión de Servicios</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1hkI65Ihgap4uPbaE0PmFaNAPFiK2toKR/view" target="_blank">5393/12</a>
-				<button onclick="previewDocument('1hkI65Ihgap4uPbaE0PmFaNAPFiK2toKR')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Especialización en Gestión del Parque de Equipos en Empresas Constructoras</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1LQlaVkuXnuskKLS2sAxNysuY_S0XSWQ7/view" target="_blank">460/20</a>
-				<button onclick="previewDocument('1LQlaVkuXnuskKLS2sAxNysuY_S0XSWQ7')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Dirección Industrial</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/19dwGjj-eyPefUEj-JNxwDJH2n5tnC52g/view" target="_blank">3845/04</a>
-				<button onclick="previewDocument('19dwGjj-eyPefUEj-JNxwDJH2n5tnC52g')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC/view" target="_blank">5821/16</a>
-				<button onclick="previewDocument('1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="arn" onclick="showMessage('arn')">Autoridad Regulatoria Nuclear (ARN)</font></h2>
-	</div>
-	<div id="arn-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:xmartinez@arn.gob.ar">xmartinez@arn.gob.ar</a>
-			</li>
-			<li>
-				<strong>Directora:</strong>
-				<a href="mailto:cmatteo@fi.uba.ar">cmatteo@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Protección Radiológica y Seguridad de las Fuentes de Radiación</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1KdQB_QgZMfDG4RU8-JBwp62908Wge8W-/view" target="_blank">4915/11</a>
-				<button onclick="previewDocument('1KdQB_QgZMfDG4RU8-JBwp62908Wge8W-')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1_tyqc_GObF9v8ekV0HWO8fjRBvfUplT-/view" target="_blank">709/21</a>
-				<button onclick="previewDocument('1_tyqc_GObF9v8ekV0HWO8fjRBvfUplT-')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-    	<h3>Especialización en Seguridad Nuclear</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1dIU7UAFLJaMSZz75e78EzmaEVFfD3mU4/view" target="_blank">8028/13</a>
-				<button onclick="previewDocument('1dIU7UAFLJaMSZz75e78EzmaEVFfD3mU4')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1mSO9X6wu4JYTf91sF1ETP4Mi_ZRny_Z6/view" target="_blank">631/21</a>
-				<button onclick="previewDocument('11mSO9X6wu4JYTf91sF1ETP4Mi_ZRny_Z6')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="ferroviaria" onclick="showMessage('ferroviaria')"><font size="5">Escuela de Ingeniería Ferroviaria</font></h2>
+				</div>
+				<div id="ferroviaria-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:merubio@fi.uba.ar">merubio@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Director:</strong>
+							<a href="mailto:arosujovsky@fi.uba.ar">arosujovsky@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Ingeniería Ferroviaria</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1QnA2N4rd-I5D-_6s1AizqluiBe60xErl/view" target="_blank">2372/09</a> (Convenio específico)
+							<button onclick="previewDocument('1QnA2N4rd-I5D-_6s1AizqluiBe60xErl')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/18iBltv0kUGIfAt1QaCE2hNn7NaUzpnfs/view" target="_blank">7749/10</a> (Convenio marco)
+							<button onclick="previewDocument('18iBltv0kUGIfAt1QaCE2hNn7NaUzpnfs')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1e9zwms3tIrwYWoL_AyQWO1qW2sVpQ96A/view" target="_blank">2447/11</a>
+							<button onclick="previewDocument('1e9zwms3tIrwYWoL_AyQWO1qW2sVpQ96A')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1-l3lrMKIBxWaWnYqwZ0tbu13K3WUhXty/view" target="_blank">6447/13</a>
+							<button onclick="previewDocument('1-l3lrMKIBxWaWnYqwZ0tbu13K3WUhXty')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-			<h2 id="caminos" onclick="showMessage('caminos')">Escuela de Graduados en Ingeniería de Caminos</font></h2>
-	</div>
-	<div id="caminos-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-		<h3>Especialización en "Ingeniería de Caminos - Orientación Construcciones y Proyectos"</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1Fs_0TIFIaOYSCNE40DaAOuGTvsoPvUSf/view" target="_blank">3211/11</a>
-				<button onclick="previewDocument('1Fs_0TIFIaOYSCNE40DaAOuGTvsoPvUSf')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1aOhVcU_LmBxBhclfb2gqVJkUnVItg8I2/view" target="_blank">6735/13</a>
-				<button onclick="previewDocument('1aOhVcU_LmBxBhclfb2gqVJkUnVItg8I2')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-		</ul>
-		<h3>Especialización en Ingeniería de Caminos Orientación Planeamiento y Proyecto</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1xDXDKZIPYfnwoejm7wM-8j2sfwCx7ori/view" target="_blank">7845/13</a>
-				<button onclick="previewDocument('1xDXDKZIPYfnwoejm7wM-8j2sfwCx7ori')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="hidraulica" onclick="showMessage('hidraulica')">Escuela de Graduados de Ingeniería Hidráulica</font></h2>
-	</div>
-	<div id="hidraulica-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Hidráulica Urbana</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1px66ctjZseawRXIx85EPzst2OBczgMEG/view" target="_blank">5666/09</a>
-				<button onclick="previewDocument('1px66ctjZseawRXIx85EPzst2OBczgMEG')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ingeniería de la Hidráulica Urbana</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1Q-T_D_nIk5C2zUtcjpPLIY94pYDb55iQ/view" target="_blank">392/10</a>
-				<button onclick="previewDocument('1Q-T_D_nIk5C2zUtcjpPLIY94pYDb55iQ')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-	</section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="igpuba" onclick="showMessage('igpuba')"><font size="5">Instituto del Gas y del Petróleo (IGPUBA)</font></h2>
+				</div>
+				<div id="igpuba-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Director:</strong>
+							<a href="mailto:jcarbajales@fi.uba.ar">jcarbajales@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:igpuba@fi.uba.ar">igpuba@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:jelgue@fi.uba.ar">jelgue@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Gas</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1sbpKT1DO9X-BbKxR6c0CDjvAus_l028B/view" target="_blank">3688/96</a>
+							<button onclick="previewDocument('1sbpKT1DO9X-BbKxR6c0CDjvAus_l028B')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/10oz4iSBHLRP840oWouegtR5dYUSJ_NrP/view" target="_blank">6587/97</a>
+							<button onclick="previewDocument('10oz4iSBHLRP840oWouegtR5dYUSJ_NrP')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1nTnyR8kVOaV2rVn5Q-uixTDDHqoWaBYT/view" target="_blank">6325/13</a>
+							<button onclick="previewDocument('1nTnyR8kVOaV2rVn5Q-uixTDDHqoWaBYT')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Gas Natural</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1nUx3m2iN-f1ZQ1rlWFyYznh5Wt5VsgBE/view" target="_blank">2773/15</a>
+							<button onclick="previewDocument('1nUx3m2iN-f1ZQ1rlWFyYznh5Wt5VsgBE')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Petróleo</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1IHfqRCQdepAm07Kpv5F0cE4aOHX_qJAZ/view" target="_blank">6588/97</a>
+							<button onclick="previewDocument('1IHfqRCQdepAm07Kpv5F0cE4aOHX_qJAZ')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1Od7xIaLfy_rYtKwGj9ETJR6VLGrGy-uO/view" target="_blank">5782/12</a>
+							<button onclick="previewDocument('1Od7xIaLfy_rYtKwGj9ETJR6VLGrGy-uO')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Petróleo y Derivados</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/15QGdWdo2_1QKsC8JW1UTyYJLEmy9irbY/view" target="_blank">7926/13</a>
+							<button onclick="previewDocument('15QGdWdo2_1QKsC8JW1UTyYJLEmy9irbY')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Ingeniería de Reservorios</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1rNflHgw3KX47UAUCRfJSJR4BFtMEvdJE/view" target="_blank">103/80 </a> (Convenio y plan de Carrera)
+							<button onclick="previewDocument('1rNflHgw3KX47UAUCRfJSJR4BFtMEvdJE')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1g3M5PUesjG_UspUaDt4nQFabRLGorlxL/view" target="_blank">4339/16</a>
+							<button onclick="previewDocument('1g3M5PUesjG_UspUaDt4nQFabRLGorlxL')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1PHtkw44SRhIjqMWeEPHN0ohtDWWeQxKn/view" target="_blank">1018/21</a>
+							<button onclick="previewDocument('1PHtkw44SRhIjqMWeEPHN0ohtDWWeQxKn')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Explotación de Yacimientos - Rama Ingeniería de Reservorio</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1SnHgdApwI-0AKU35X-I7GbIrG1SrDwFW/view" target="_blank">4549/12</a>
+							<button onclick="previewDocument('1SnHgdApwI-0AKU35X-I7GbIrG1SrDwFW')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1XURL5sc2Bck0VOLBM38TWGzSU95QL5uD/view" target="_blank">1675/18</a>
+							<button onclick="previewDocument('1XURL5sc2Bck0VOLBM38TWGzSU95QL5uD')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería en Petróleo y Gas Natural</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1ZoITlzz63V13UsAgpqv3TmYFXAKFBSqw/view" target="_blank">6714/97</a>
+							<button onclick="previewDocument('1ZoITlzz63V13UsAgpqv3TmYFXAKFBSqw')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="optoelectronica" onclick="showMessage('optoelectronica')">Optoelectrónica</font></h2>
-	</div>
-	<div id="optoelectronica-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:bciocci@fi.uba.ar">bciocci@fi.uba.ar</a>
-			</li>
-			<li>
-				<strong>Director:</strong>
-				<a href="mailto:psorich@fi.uba.ar">psorich@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Ingeniería Optoelectrónica</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1-q9CutNDlir7VK_Tn3Jbywq1Wxx7ZZYq/view" target="_blank">3943/11</a>
-				<button onclick="previewDocument('1-q9CutNDlir7VK_Tn3Jbywq1Wxx7ZZYq')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1dXUrixvgd2-nIpWOEaOjuw91cOZ6Qhac/view" target="_blank">2553/15</a>
-				<button onclick="previewDocument('1dXUrixvgd2-nIpWOEaOjuw91cOZ6Qhac')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Optoelectrónica</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1oc4uArzGr2fw-lt8FgBthhWXKAmYhmoy/view" target="_blank">6697/01</a>
-				<button onclick="previewDocument('1oc4uArzGr2fw-lt8FgBthhWXKAmYhmoy')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1sLu2WgdyRJK6cdXujoO_M8mDCLPhD8Ot/view" target="_blank">3603/11</a>
-				<button onclick="previewDocument('1sLu2WgdyRJK6cdXujoO_M8mDCLPhD8Ot')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ingeniería Optoelectrónica y Fotónica</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/10OWnyj6KYTe-8r3YA_4v4Ixgkzp8fCdB/view" target="_blank">6041/16</a>
-				<button onclick="previewDocument('10OWnyj6KYTe-8r3YA_4v4Ixgkzp8fCdB')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1T-kC6Jm4lMyUV7TREvVOa7yN-cIgXDil/view" target="_blank">6042/16</a>
-				<button onclick="previewDocument('1T-kC6Jm4lMyUV7TREvVOa7yN-cIgXDil')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="sanitaria" onclick="showMessage('sanitaria')">Instituto de Ingeniería Sanitaria</font></h2>
-	</div>
-	<div id="sanitaria-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">ingsanitam@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Ingeniería Sanitaria y Ambiental</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1PzQzZO3Ref8msVnaINFLrXs_smYfgRxd/view" target="_blank">5277/97</a>
-				<button onclick="previewDocument('1PzQzZO3Ref8msVnaINFLrXs_smYfgRxd')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1hbusQXddO5OeLbywCOgHcdQQujgFIvYX/view" target="_blank">6071/09</a>
-				<button onclick="previewDocument('1hbusQXddO5OeLbywCOgHcdQQujgFIvYX')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1tnIacBZVfQC2tlAuajufCdXQmefFdsH-/view" target="_blank">3071/11</a>
-				<button onclick="previewDocument('1tnIacBZVfQC2tlAuajufCdXQmefFdsH-')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1dDVVtR7Z1niOkk8T3MzUJ8bwXWgKeg1g/view" target="_blank">5783/12</a>
-				<button onclick="previewDocument('1dDVVtR7Z1niOkk8T3MzUJ8bwXWgKeg1g')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Especialización en Ingeniería Sanitaria</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1x0HCdHW8dKKKI7W13_GOjlhpM4A22T4f/view" target="_blank">6448/13</a>
-				<button onclick="previewDocument('1x0HCdHW8dKKKI7W13_GOjlhpM4A22T4f')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ingeniería Sanitaria y Ciencias del Ambiente</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1c9CQ3ly1zuSDqGMsx83HujHVP5GRqrhq/view" target="_blank">5278/97</a>
-				<button onclick="previewDocument('1c9CQ3ly1zuSDqGMsx83HujHVP5GRqrhq')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ingeniería Sanitaria y Ambiental</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1micx4g3Gbp8os0mK1d8V4NwRaLZHBo-_/view" target="_blank">7893/10</a>
-				<button onclick="previewDocument('1micx4g3Gbp8os0mK1d8V4NwRaLZHBo-_')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1xyjbsuQ4IA5conZa1dPGPU4ZM0UaZa6_/view" target="_blank">3072/11</a>
-				<button onclick="previewDocument('1xyjbsuQ4IA5conZa1dPGPU4ZM0UaZa6_')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-		<h3>Maestría en Ingeniería Sanitaria</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1ovMyEAarfZksahIAr8SYw-HdxW9GOA1l/view" target="_blank">6840/13</a>
-				<button onclick="previewDocument('1ovMyEAarfZksahIAr8SYw-HdxW9GOA1l')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1Mgaw6LjRZOzqOMx-Rbc3wwyo7kKKU1cV/view" target="_blank">2902/15</a>
-				<button onclick="previewDocument('1Mgaw6LjRZOzqOMx-Rbc3wwyo7kKKU1cV')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-	</section>	
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="transporte" onclick="showMessage('transporte')"><font size="5">Departamento de Transporte</font></h2>
+				</div>
+				<div id="transporte-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Administrativo:</strong>
+							<a href="mailto:lpitton@fi.uba.ar">lpitton@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Maestría en Ingeniería del Transporte ­- Orientación Vial:</strong>
+							<a href="mailto:mtr.vial@fi.uba.ar">mtr.vial@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:mscasserra@fi.uba.ar">mscasserra@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Ingeniería Portuaria</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1tDisIRPs5tuFtituBUkW6YgBkqOSvdMA/view" target="_blank">6677/01</a>
+							<button onclick="previewDocument('1tDisIRPs5tuFtituBUkW6YgBkqOSvdMA')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1c7AyeRQ94VZ6fShaIaLFwkxJT4jIGW26/view" target="_blank">3210/11</a>
+							<button onclick="previewDocument('1c7AyeRQ94VZ6fShaIaLFwkxJT4jIGW26')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1hAbOjPDpuDihsvNWOVD6uVgcKvITga_Q/view" target="_blank">2772/15</a>
+							<button onclick="previewDocument('1hAbOjPDpuDihsvNWOVD6uVgcKvITga_Q')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Planificación y Gestión del Transporte</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1wgNgaIcErVSzrvN2cgUfGbZ7FLdElvVI/view" target="_blank">7413/13</a>
+							<button onclick="previewDocument('1wgNgaIcErVSzrvN2cgUfGbZ7FLdElvVI')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1TWr_IVPoOCH8h37YeeJTN13NE7seBhL_/view" target="_blank">6391/16</a>
+							<button onclick="previewDocument('1TWr_IVPoOCH8h37YeeJTN13NE7seBhL_')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería del Transporte ­- Orientación Vial</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1kL7CrEQYde-JDWFbHwXXRZXLv80bl30Y/view" target="_blank">3038/04</a>
+							<button onclick="previewDocument('1kL7CrEQYde-JDWFbHwXXRZXLv80bl30Y')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1By9v6kgICZrvxIxkPpHsepgyepT77Zka/view" target="_blank">1362/06</a>
+							<button onclick="previewDocument('1By9v6kgICZrvxIxkPpHsepgyepT77Zka')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>	
-	<div class="container">
-	<div class="box box-h3">
-    	<h2 id="balseiro" onclick="showMessage('balseiro')">Instituto Balseiro</font></h2>
-	</div>
-	<div id="balseiro-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:marcela.margutti@ib.edu.ar">marcela.margutti@ib.edu.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Especialización en Aplicaciones Tecnológicas de la Energía Nuclear</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1eef0TLTphka8sctsNo4gKdWOzurbEMC5/view" target="_blank">4116/96</a>
-				<button onclick="previewDocument('1eef0TLTphka8sctsNo4gKdWOzurbEMC5')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1QwMH75WcJqpjXG4rvsErgxweG-g4vKdX/view" target="_blank">683/22</a>
-				<button onclick="previewDocument('1QwMH75WcJqpjXG4rvsErgxweG-g4vKdX')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="cpic" onclick="showMessage('cpic')">Consejo Profesional de lngenieria Civil (CPIC)</font></h2>
-	</div>
-	<div id="cpic-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:maestria@cpic.org.ar">maestria@cpic.org.ar</a>
-			</li>
-			<li>
-				<strong>Coordinador:</strong>
-				<a href="mailto:atolosa@cpic.org.ar">atolosa@cpic.org.ar</a>
-			</li>
-			<li>
-				<strong>Coordinadora:</strong>
-				<a href="mailto:cvazquez@cpic.org.ar">cvazquez@cpic.org.ar</a>
-			</li>
-		</ul>
-	</div>
-    	<div class="box">
-    	<h3>Maestría en Planificación y Gestión de la Ingeniería Urbana</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1SIL2YWB1wlkbav_JzXvAt8l-cRN3sJZj/view" target="_blank">3946/09</a>
-				<button onclick="previewDocument('1SIL2YWB1wlkbav_JzXvAt8l-cRN3sJZj')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1WsSU-Fhp80hCaZ6R_ufx907b-DyDbELI/view" target="_blank">3616/11</a> (Convenio marco)
-				<button onclick="previewDocument('1WsSU-Fhp80hCaZ6R_ufx907b-DyDbELI')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1PgM4tSiW391_2x6vwjc2t9ukPTvku0ki/view" target="_blank">3617/11</a> (Convenio específico)
-				<button onclick="previewDocument('1PgM4tSiW391_2x6vwjc2t9ukPTvku0ki')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1zpqAUV9ZZk7caFTTa0gcusKVd-CUzDRN/view" target="_blank">6943/13</a>
-				<button onclick="previewDocument('1zpqAUV9ZZk7caFTTa0gcusKVd-CUzDRN')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1dvW02r6_omm3eI1JGXMhZFZR9Srb_lB-/view" target="_blank">3559/15</a>
-				<button onclick="previewDocument('1dvW02r6_omm3eI1JGXMhZFZR9Srb_lB-')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="estabilidad" onclick="showMessage('estabilidad')"><font size="5">Estabilidad</font></h2>
+				</div>
+				<div id="estabilidad-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Coordinador:</strong>
+							<a href="mailto:flopez@fi.uba.ar">flopez@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Maestría en Ciencias de la Ingeniería:</strong>
+							<a href="mailto:mtr.ci@fi.uba.ar">mtr.ci@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Director:</strong>
+							<a href="mailto:rbertero@fi.uba.ar">rbertero@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Ingeniería Geotécnica</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1AkZs8nYgInKcO41V9ngBGQokwr1J4z2d/view" target="_blank">193/21</a>
+							<button onclick="previewDocument('1AkZs8nYgInKcO41V9ngBGQokwr1J4z2d')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ciencias de la Ingeniería</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1m_wHiQslCYOjFh1CR-BMnPq8W1HfjCwZ/view" target="_blank">6938/13</a>
+							<button onclick="previewDocument('1m_wHiQslCYOjFh1CR-BMnPq8W1HfjCwZ')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1UqFLMQyk3LOc263N2pZKJV9TMg9XtK-V/view" target="_blank">286/18</a>
+							<button onclick="previewDocument('1UqFLMQyk3LOc263N2pZKJV9TMg9XtK-V')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="matematica" onclick="showMessage('matematica')">Departamento de Matemática</font></h2>
-	</div>
-	<div id="matematica-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingenieriamatematicauba@gmail.com">ingenieriamatematicauba@gmail.com</a>
-			</li>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:sgigola@fi.uba.ar">sgigola@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    	<div class="box">
-    	<h3>Maestría en Ingeniería Matemática</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1NZMYWtYxiltUa2WyiMQm5Yc0FDUl2yTQ/view" target="_blank">3910/08</a>
-				<button onclick="previewDocument('1NZMYWtYxiltUa2WyiMQm5Yc0FDUl2yTQ')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1c1xc8sWD3c02wKX6_dM8yOm3lQktAWYb/view" target="_blank">2771/15</a>
-				<button onclick="previewDocument('1c1xc8sWD3c02wKX6_dM8yOm3lQktAWYb')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1VlxKCaB-ki4Z99YYR38_aaKYP0EJQMKD/view" target="_blank">801/18</a>
-				<button onclick="previewDocument('1VlxKCaB-ki4Z99YYR38_aaKYP0EJQMKD')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="secid" onclick="showMessage('secid')">Secretaría de Investigación y Doctorado (SECID)</font></h2>
-	</div>
-	<div id="secid-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:secid@fi.uba.ar">secid@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-    <div class="box">
-    	<h3>Maestría en Simulación Númerica y Control</h3>
-    	<ul>
-			<li>
-				<a href="https://drive.google.com/file/d/1GTTAo23toJlV7JvIRi_4joV6yulknaQn/view" target="_blank">3098/95</a>
-				<button onclick="previewDocument('1GTTAo23toJlV7JvIRi_4joV6yulknaQn')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1jDIO-GGrYe5JjcdwubMkPSWDPpSci8wF/view" target="_blank">1068/98</a>
-				<button onclick="previewDocument('1jDIO-GGrYe5JjcdwubMkPSWDPpSci8wF')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1_CrS6D84yTzfZ5An6ybevDkSIg2Q573j/view" target="_blank">2299/99</a>
-				<button onclick="previewDocument('1_CrS6D84yTzfZ5An6ybevDkSIg2Q573j')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1LJKRk6gNLWQpPXf1qfIksSrJAexaHEyY/view" target="_blank">4139/00</a>
-				<button onclick="previewDocument('1LJKRk6gNLWQpPXf1qfIksSrJAexaHEyY')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1SKwHty_vWXnkDSQbUIPkqvU2PZUAk-VL/view" target="_blank">4694/00</a>
-				<button onclick="previewDocument('1SKwHty_vWXnkDSQbUIPkqvU2PZUAk-VL')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1A86uKveII-viQUiUyyiHg8yJ6UzMdw76/view" target="_blank">6106/01</a>
-				<button onclick="previewDocument('1A86uKveII-viQUiUyyiHg8yJ6UzMdw76')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1WioBkcGw4NB2-WbFI7Ld1DSwJHx2JHKI/view" target="_blank">6574/01</a>
-				<button onclick="previewDocument('1WioBkcGw4NB2-WbFI7Ld1DSwJHx2JHKI')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1-D7eziRfMK-55h6C0hEUxubIVd39Jjph/view" target="_blank">5996/01</a>
-				<button onclick="previewDocument('1-D7eziRfMK-55h6C0hEUxubIVd39Jjph')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1Oosr5GboGn4-X0lecT0LHEg08JlJisPE/view" target="_blank">5997/01</a>
-				<button onclick="previewDocument('1Oosr5GboGn4-X0lecT0LHEg08JlJisPE')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1Anrsp2GJDhvB2Tq0KFLTi8fOdQLXNVkK/view" target="_blank">5420/01</a>
-				<button onclick="previewDocument('1Anrsp2GJDhvB2Tq0KFLTi8fOdQLXNVkK')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1ZXVPJG86TjEW7g_YxI6fcc0HiY4ShVia/view" target="_blank">5421/01</a>
-				<button onclick="previewDocument('1ZXVPJG86TjEW7g_YxI6fcc0HiY4ShVia')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>    
-			<li>
-				<a href="https://drive.google.com/file/d/18HW_sLnAu61V3gPIDknbXhls4l_eMrMY/view" target="_blank">4502/05</a>
-				<button onclick="previewDocument('18HW_sLnAu61V3gPIDknbXhls4l_eMrMY')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1yr9_MHA2nwSYQn7jcylsdn4cO0p5oJv7/view" target="_blank">4503/05</a>
-				<button onclick="previewDocument('1yr9_MHA2nwSYQn7jcylsdn4cO0p5oJv7')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1OKlo-NIgGV4gPsjOXta8zXi32mtNE6Tw/view" target="_blank">5032/05</a>
-				<button onclick="previewDocument('1OKlo-NIgGV4gPsjOXta8zXi32mtNE6Tw')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1J-PLqjBFVymw4NMciYRWfQ-rSX4mVmn7/view" target="_blank">890/06</a>
-				<button onclick="previewDocument('1J-PLqjBFVymw4NMciYRWfQ-rSX4mVmn7')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1OTqaJolMg9uHnzyYLvQszT3Ije68UmWT/view" target="_blank">2137/07</a>
-				<button onclick="previewDocument('1OTqaJolMg9uHnzyYLvQszT3Ije68UmWT')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1EvsV3nPbaSs947ExML-fftcA7e1zY05p/view" target="_blank">2545/07</a>
-				<button onclick="previewDocument('1EvsV3nPbaSs947ExML-fftcA7e1zY05p')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1Lq4myVcIoHIv7JL6ICUzKrl6inJAY-o9/view" target="_blank">7740/13</a>
-				<button onclick="previewDocument('1Lq4myVcIoHIv7JL6ICUzKrl6inJAY-o9')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1D5stvnI2Lcyf_g6nlaS780uYtlLDfjUv/view" target="_blank">3724/15</a>
-				<button onclick="previewDocument('1D5stvnI2Lcyf_g6nlaS780uYtlLDfjUv')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1SOIgiiyBulF84WtOFC9mDVCprdULQRcX/view" target="_blank">710/21</a>
-				<button onclick="previewDocument('1SOIgiiyBulF84WtOFC9mDVCprdULQRcX')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-	</div>
-    </section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="energia" onclick="showMessage('energia')"><font size="5">Departamento de Energía</font></h2>
+				</div>
+				<div id="energia-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en "Estudios de Tecnologías Urbanas Sostenibles"</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1BtkgBETFhcD66Nq4-5MvBjmy_yfwc1dA/view" target="_blank">2513/11</a>
+							<button onclick="previewDocument('1BtkgBETFhcD66Nq4-5MvBjmy_yfwc1dA')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/10ZUGniA_0ni5VGH8FbuxKpUNPUunsgN5/view" target="_blank">5494/12</a>
+							<button onclick="previewDocument('10ZUGniA_0ni5VGH8FbuxKpUNPUunsgN5')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Tecnologías Urbanas Sostenibles</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1SKtvmddgDiSDFoAojpEDi7pDK4YDMfgb/view" target="_blank">460/14</a>
+							<button onclick="previewDocument('1SKtvmddgDiSDFoAojpEDi7pDK4YDMfgb')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Tecnologías Urbanas Sostenibles</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1kRHZEpZsJqCYlZCX2Wjxl4tAx3CB7Elp/view" target="_blank">457/14</a>
+							<button onclick="previewDocument('1kRHZEpZsJqCYlZCX2Wjxl4tAx3CB7Elp')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC/view" target="_blank">5223/16</a>
+							<button onclick="previewDocument('1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
+		<hr>
 
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="compartidas" onclick="showMessage('compartidas')">Compartidas</font></h2>
-	</div>
-	<div id="compartidas-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Emperador:</strong>
-				<a href="mailto:tadrover@fi.uba.ar">tadrover@fi.uba.ar</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-		<h3>Maestría en Planificación y Movilidad Urbana</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/11medpFEASqSLtSUS45AUJVxX_7Djucft/view" target="_blank">275/14</a>
-				<button onclick="previewDocument('11medpFEASqSLtSUS45AUJVxX_7Djucft')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-		<h3>Especialización en Explotación de Datos y Descubrimiento de Conocimiento (Data Mining & Knowledge Discovery)</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1aKSJvu0XI__tHtqezJw5aQ_1OmVBgzPB/view" target="_blank">988/02</a>
-				<button onclick="previewDocument('1aKSJvu0XI__tHtqezJw5aQ_1OmVBgzPB')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1e3s--ZKfcTIwiRAhIfKLfG0ejaAxcNAB/view" target="_blank">8218/13</a>
-				<button onclick="previewDocument('1e3s--ZKfcTIwiRAhIfKLfG0ejaAxcNAB')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-		<h3>Especialización en Seguridad Informática</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1laGx3-9I3lI0E6zUVNhSqY-_ZM6EFXUp/view" target="_blank">4852/08</a>
-				<button onclick="previewDocument('1laGx3-9I3lI0E6zUVNhSqY-_ZM6EFXUp')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-	</div>
-	</div>
-    </section>
-		
-	<hr>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="egide" onclick="showMessage('egide')"><font size="5">Escuela de Graduados en Ingeniería en Dirección Empresaria (EGIDE)</font></h2>
+				</div>
+				<div id="egide-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:egide@fi.uba.ar">egide@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Gestión de Servicios</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1hkI65Ihgap4uPbaE0PmFaNAPFiK2toKR/view" target="_blank">5393/12</a>
+							<button onclick="previewDocument('1hkI65Ihgap4uPbaE0PmFaNAPFiK2toKR')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Gestión del Parque de Equipos en Empresas Constructoras</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1LQlaVkuXnuskKLS2sAxNysuY_S0XSWQ7/view" target="_blank">460/20</a>
+							<button onclick="previewDocument('1LQlaVkuXnuskKLS2sAxNysuY_S0XSWQ7')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Dirección Industrial</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/19dwGjj-eyPefUEj-JNxwDJH2n5tnC52g/view" target="_blank">3845/04</a>
+							<button onclick="previewDocument('19dwGjj-eyPefUEj-JNxwDJH2n5tnC52g')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC/view" target="_blank">5821/16</a>
+							<button onclick="previewDocument('1_07QwFBpa4NADVkOaZA-OzL7GS5uWnLC')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="itpn" onclick="showMessage('itpn')">Instituto de Tecnología en Polímeros y Nanotecnología (ITPN)</font></h2>
-	</div>
-	<div id="itpn-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-		<div class="box">
-		<h3>Maestría en Tecnologías e Industrias de Biorrecursos</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1C_TwMuxjMSl9cGXd2BXhfC5hCfjMLeSt/view" target="_blank">1859/23</a>
-				<button onclick="previewDocument('1C_TwMuxjMSl9cGXd2BXhfC5hCfjMLeSt')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-		<h3>Maestría en Ingeniería de Materiales Compuestos</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1kirDVzWb856LvKRn_9NHlnd3OkMDgZLt/view" target="_blank">6837/13</a>
-				<button onclick="previewDocument('1kirDVzWb856LvKRn_9NHlnd3OkMDgZLt')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-    	</ul>
-	</div>
-    </section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="construcciones" onclick="showMessage('construcciones')">Construcciones</font></h2>
-	</div>
-	<div id="construcciones-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-		<h3>Maestría en Construcción y Diseño Estructural</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/12Xsxg_l3MDz8aE1x9SUiUwHcxFXVlZ1I/view" target="_blank">669/19</a>
-				<button onclick="previewDocument('12Xsxg_l3MDz8aE1x9SUiUwHcxFXVlZ1I')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1O0UfVzk512P9MqdUVt1J6G0PQYxd4epJ/view" target="_blank">525/22</a>
-				<button onclick="previewDocument('1O0UfVzk512P9MqdUVt1J6G0PQYxd4epJ')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-	</div>
-	</div>
-    </section>
-		
-	<hr>	
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="decanato" onclick="showMessage('decanato')">Decanato</font></h2>
-	</div>
-	<div id="decanato-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Administrativa:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-		<h3>Especialización en Industrias y Sistemas Aeroespaciales</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/170EXh62U9BTo84aoKlY444Xtw0zV-yeM/view" target="_blank">890/22</a>
-				<button onclick="previewDocument('170EXh62U9BTo84aoKlY444Xtw0zV-yeM')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1GQo8dyiarMZztQuEpDo8Ue_7UarTza0f/view" target="_blank">22/24</a>
-				<button onclick="previewDocument('1GQo8dyiarMZztQuEpDo8Ue_7UarTza0f')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-	</div>
-	</div>
-	</section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="arn" onclick="showMessage('arn')"><font size="5">Autoridad Regulatoria Nuclear (ARN)</font></h2>
+				</div>
+				<div id="arn-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:xmartinez@arn.gob.ar">xmartinez@arn.gob.ar</a>
+						</li>
+						<li>
+							<strong>Directora:</strong>
+							<a href="mailto:cmatteo@fi.uba.ar">cmatteo@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Protección Radiológica y Seguridad de las Fuentes de Radiación</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1KdQB_QgZMfDG4RU8-JBwp62908Wge8W-/view" target="_blank">4915/11</a>
+							<button onclick="previewDocument('1KdQB_QgZMfDG4RU8-JBwp62908Wge8W-')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1_tyqc_GObF9v8ekV0HWO8fjRBvfUplT-/view" target="_blank">709/21</a>
+							<button onclick="previewDocument('1_tyqc_GObF9v8ekV0HWO8fjRBvfUplT-')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Seguridad Nuclear</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1dIU7UAFLJaMSZz75e78EzmaEVFfD3mU4/view" target="_blank">8028/13</a>
+							<button onclick="previewDocument('1dIU7UAFLJaMSZz75e78EzmaEVFfD3mU4')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1mSO9X6wu4JYTf91sF1ETP4Mi_ZRny_Z6/view" target="_blank">631/21</a>
+							<button onclick="previewDocument('11mSO9X6wu4JYTf91sF1ETP4Mi_ZRny_Z6')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="metalurgica" onclick="showMessage('metalurgica')">Escuela de Graduados de Ingeniería Metalúrgica</font></h2>
-	</div>
-	<div id="metalurgica-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-		<h3>Especializacion en Siderurgia</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1ds5mRG0PPUBJzqURapKrz0mGPtAXv1ym/view" target="_blank">6784/01</a>
-				<button onclick="previewDocument('1ds5mRG0PPUBJzqURapKrz0mGPtAXv1ym')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/17IOx9UgYj6xRJkYdVat00yNc0_xCZF3_/view" target="_blank">6144/12</a>
-				<button onclick="previewDocument('17IOx9UgYj6xRJkYdVat00yNc0_xCZF3_')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-		<h3>Maestría en Siderurgia</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/10wTqBcAI0llfKd5ADMrP3H4WMrajiHMP/view" target="_blank">3438/99</a>
-				<button onclick="previewDocument('10wTqBcAI0llfKd5ADMrP3H4WMrajiHMP')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        	<li>
-				<a href="https://drive.google.com/file/d/1LjNNkmIYcwDKZS88mTnwTqEJRK-Yk1b-/view" target="_blank">7059/02</a>
-				<button onclick="previewDocument('1LjNNkmIYcwDKZS88mTnwTqEJRK-Yk1b-')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-			<li>
-				<a href="https://drive.google.com/file/d/1ZRscs4ace51H1aHiuU5eIp3j6QofIm5u/view" target="_blank">6327/13</a>
-				<button onclick="previewDocument('1ZRscs4ace51H1aHiuU5eIp3j6QofIm5u')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-	</div>
-	</div>
-	</section>
+		<hr>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="agrimensura" onclick="showMessage('agrimensura')">Agrimensura</font></h2>
-	</div>
-	<div id="agrimensura-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-		<h3>Ingeniero Geodesta-Geofísico</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1eJT6eLfZUO-Okobjyptv_4E31BIiRClz/view" target="_blank">395/58</a>
-				<button onclick="previewDocument('1eJT6eLfZUO-Okobjyptv_4E31BIiRClz')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-	</div>
-	</div>
-	</section>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="caminos" onclick="showMessage('caminos')"><font size="5">Escuela de Graduados en Ingeniería de Caminos</font></h2>
+				</div>
+				<div id="caminos-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en "Ingeniería de Caminos - Orientación Construcciones y Proyectos"</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1Fs_0TIFIaOYSCNE40DaAOuGTvsoPvUSf/view" target="_blank">3211/11</a>
+							<button onclick="previewDocument('1Fs_0TIFIaOYSCNE40DaAOuGTvsoPvUSf')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1aOhVcU_LmBxBhclfb2gqVJkUnVItg8I2/view" target="_blank">6735/13</a>
+							<button onclick="previewDocument('1aOhVcU_LmBxBhclfb2gqVJkUnVItg8I2')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Ingeniería de Caminos Orientación Planeamiento y Proyecto</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1xDXDKZIPYfnwoejm7wM-8j2sfwCx7ori/view" target="_blank">7845/13</a>
+							<button onclick="previewDocument('1xDXDKZIPYfnwoejm7wM-8j2sfwCx7ori')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-	<hr>
-		
-	<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2 id="industrial" onclick="showMessage('industrial')">Departamento de Ingeniería Industrial</font></h2>
-	</div>
-	<div id="industrial-message" class="message-box">
-		<ul>
-			<li>
-				<strong>Ente:</strong>
-				<a href="mailto:ingsanitam@fi.uba.ar">???</a>
-			</li>
-		</ul>
-	</div>
-	<div class="box">
-		<h3>Especialización en Diagnóstico y Evaluación Ambiental</h3>
-    	<ul>
-        	<li>
-				<a href="https://drive.google.com/file/d/1jg-ZlDvDzwrb6hukMSLqsgHdUmEKJN5s/view" target="_blank">5335/97</a>
-				<button onclick="previewDocument('1jg-ZlDvDzwrb6hukMSLqsgHdUmEKJN5s')" style="border:none; background:none; cursor:pointer;">
-				<i class="fas fa-eye"></i>
-				</button>
-			</li>
-        </ul>
-	</div>
-	</div>
-	</section>
-		
-	<hr>
-<section>
-	<div class="container">
-    <div class="box box-h3">
-		<h2>Momento de distensión</font></h2>
-	</div>
-	
-	<div class="box">
-		<h3>Tetris</h3>
-    	<ul>
-        	<li>
-				<a href="a.html" target="_blank">Tetris</a>
-		</li>	
-		</ul>
-		<h3>Galaga</h3>
-    	<ul>
-        	<li>
-				<a href="b.html" target="_blank">Galaga</a>
-				
-		</li>
-     
-	</ul>
-		<h3>Arkanoid</h3>
-    	<ul>
-        	<li>
-				<a href="arkanoid.html" target="_blank">Arkanoid</a>
-				
-		</li>
-     
-	</ul>
-	</div>
-	</section>
-		
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="hidraulica" onclick="showMessage('hidraulica')"><font size="5">Escuela de Graduados de Ingeniería Hidráulica</font></h2>
+				</div>
+				<div id="hidraulica-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Hidráulica Urbana</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1px66ctjZseawRXIx85EPzst2OBczgMEG/view" target="_blank">5666/09</a>
+							<button onclick="previewDocument('1px66ctjZseawRXIx85EPzst2OBczgMEG')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería de la Hidráulica Urbana</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1Q-T_D_nIk5C2zUtcjpPLIY94pYDb55iQ/view" target="_blank">392/10</a>
+							<button onclick="previewDocument('1Q-T_D_nIk5C2zUtcjpPLIY94pYDb55iQ')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="optoelectronica" onclick="showMessage('optoelectronica')"><font size="5">Optoelectrónica</font></h2>
+				</div>
+				<div id="optoelectronica-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:bciocci@fi.uba.ar">bciocci@fi.uba.ar</a>
+						</li>
+						<li>
+							<strong>Director:</strong>
+							<a href="mailto:psorich@fi.uba.ar">psorich@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Ingeniería Optoelectrónica</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1-q9CutNDlir7VK_Tn3Jbywq1Wxx7ZZYq/view" target="_blank">3943/11</a>
+							<button onclick="previewDocument('1-q9CutNDlir7VK_Tn3Jbywq1Wxx7ZZYq')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1dXUrixvgd2-nIpWOEaOjuw91cOZ6Qhac/view" target="_blank">2553/15</a>
+							<button onclick="previewDocument('1dXUrixvgd2-nIpWOEaOjuw91cOZ6Qhac')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Optoelectrónica</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1oc4uArzGr2fw-lt8FgBthhWXKAmYhmoy/view" target="_blank">6697/01</a>
+							<button onclick="previewDocument('1oc4uArzGr2fw-lt8FgBthhWXKAmYhmoy')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1sLu2WgdyRJK6cdXujoO_M8mDCLPhD8Ot/view" target="_blank">3603/11</a>
+							<button onclick="previewDocument('1sLu2WgdyRJK6cdXujoO_M8mDCLPhD8Ot')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería Optoelectrónica y Fotónica</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/10OWnyj6KYTe-8r3YA_4v4Ixgkzp8fCdB/view" target="_blank">6041/16</a>
+							<button onclick="previewDocument('10OWnyj6KYTe-8r3YA_4v4Ixgkzp8fCdB')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1T-kC6Jm4lMyUV7TREvVOa7yN-cIgXDil/view" target="_blank">6042/16</a>
+							<button onclick="previewDocument('1T-kC6Jm4lMyUV7TREvVOa7yN-cIgXDil')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="sanitaria" onclick="showMessage('sanitaria')"><font size="5">Instituto de Ingeniería Sanitaria</font></h2>
+				</div>
+				<div id="sanitaria-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">ingsanitam@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Ingeniería Sanitaria y Ambiental</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1PzQzZO3Ref8msVnaINFLrXs_smYfgRxd/view" target="_blank">5277/97</a>
+							<button onclick="previewDocument('1PzQzZO3Ref8msVnaINFLrXs_smYfgRxd')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1hbusQXddO5OeLbywCOgHcdQQujgFIvYX/view" target="_blank">6071/09</a>
+							<button onclick="previewDocument('1hbusQXddO5OeLbywCOgHcdQQujgFIvYX')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1tnIacBZVfQC2tlAuajufCdXQmefFdsH-/view" target="_blank">3071/11</a>
+							<button onclick="previewDocument('1tnIacBZVfQC2tlAuajufCdXQmefFdsH-')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1dDVVtR7Z1niOkk8T3MzUJ8bwXWgKeg1g/view" target="_blank">5783/12</a>
+							<button onclick="previewDocument('1dDVVtR7Z1niOkk8T3MzUJ8bwXWgKeg1g')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Ingeniería Sanitaria</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1x0HCdHW8dKKKI7W13_GOjlhpM4A22T4f/view" target="_blank">6448/13</a>
+							<button onclick="previewDocument('1x0HCdHW8dKKKI7W13_GOjlhpM4A22T4f')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería Sanitaria y Ciencias del Ambiente</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1c9CQ3ly1zuSDqGMsx83HujHVP5GRqrhq/view" target="_blank">5278/97</a>
+							<button onclick="previewDocument('1c9CQ3ly1zuSDqGMsx83HujHVP5GRqrhq')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería Sanitaria y Ambiental</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1micx4g3Gbp8os0mK1d8V4NwRaLZHBo-_/view" target="_blank">7893/10</a>
+							<button onclick="previewDocument('1micx4g3Gbp8os0mK1d8V4NwRaLZHBo-_')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1xyjbsuQ4IA5conZa1dPGPU4ZM0UaZa6_/view" target="_blank">3072/11</a>
+							<button onclick="previewDocument('1xyjbsuQ4IA5conZa1dPGPU4ZM0UaZa6_')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería Sanitaria</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1ovMyEAarfZksahIAr8SYw-HdxW9GOA1l/view" target="_blank">6840/13</a>
+							<button onclick="previewDocument('1ovMyEAarfZksahIAr8SYw-HdxW9GOA1l')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1Mgaw6LjRZOzqOMx-Rbc3wwyo7kKKU1cV/view" target="_blank">2902/15</a>
+							<button onclick="previewDocument('1Mgaw6LjRZOzqOMx-Rbc3wwyo7kKKU1cV')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="balseiro" onclick="showMessage('balseiro')"><font size="5">Instituto Balseiro</font></h2>
+				</div>
+				<div id="balseiro-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:marcela.margutti@ib.edu.ar">marcela.margutti@ib.edu.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Aplicaciones Tecnológicas de la Energía Nuclear</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1eef0TLTphka8sctsNo4gKdWOzurbEMC5/view" target="_blank">4116/96</a>
+							<button onclick="previewDocument('1eef0TLTphka8sctsNo4gKdWOzurbEMC5')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1QwMH75WcJqpjXG4rvsErgxweG-g4vKdX/view" target="_blank">683/22</a>
+							<button onclick="previewDocument('1QwMH75WcJqpjXG4rvsErgxweG-g4vKdX')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="cpic" onclick="showMessage('cpic')"><font size="5">Consejo Profesional de lngenieria Civil (CPIC)</font></h2>
+				</div>
+				<div id="cpic-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:maestria@cpic.org.ar">maestria@cpic.org.ar</a>
+						</li>
+						<li>
+							<strong>Coordinador:</strong>
+							<a href="mailto:atolosa@cpic.org.ar">atolosa@cpic.org.ar</a>
+						</li>
+						<li>
+							<strong>Coordinadora:</strong>
+							<a href="mailto:cvazquez@cpic.org.ar">cvazquez@cpic.org.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Maestría en Planificación y Gestión de la Ingeniería Urbana</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1SIL2YWB1wlkbav_JzXvAt8l-cRN3sJZj/view" target="_blank">3946/09</a>
+							<button onclick="previewDocument('1SIL2YWB1wlkbav_JzXvAt8l-cRN3sJZj')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1WsSU-Fhp80hCaZ6R_ufx907b-DyDbELI/view" target="_blank">3616/11</a> (Convenio marco)
+							<button onclick="previewDocument('1WsSU-Fhp80hCaZ6R_ufx907b-DyDbELI')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1PgM4tSiW391_2x6vwjc2t9ukPTvku0ki/view" target="_blank">3617/11</a> (Convenio específico)
+							<button onclick="previewDocument('1PgM4tSiW391_2x6vwjc2t9ukPTvku0ki')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1zpqAUV9ZZk7caFTTa0gcusKVd-CUzDRN/view" target="_blank">6943/13</a>
+							<button onclick="previewDocument('1zpqAUV9ZZk7caFTTa0gcusKVd-CUzDRN')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1dvW02r6_omm3eI1JGXMhZFZR9Srb_lB-/view" target="_blank">3559/15</a>
+							<button onclick="previewDocument('1dvW02r6_omm3eI1JGXMhZFZR9Srb_lB-')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="matematica" onclick="showMessage('matematica')"><font size="5">Departamento de Matemática</font></h2>
+				</div>
+				<div id="matematica-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingenieriamatematicauba@gmail.com">ingenieriamatematicauba@gmail.com</a>
+						</li>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:sgigola@fi.uba.ar">sgigola@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Maestría en Ingeniería Matemática</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1NZMYWtYxiltUa2WyiMQm5Yc0FDUl2yTQ/view" target="_blank">3910/08</a>
+							<button onclick="previewDocument('1NZMYWtYxiltUa2WyiMQm5Yc0FDUl2yTQ')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1c1xc8sWD3c02wKX6_dM8yOm3lQktAWYb/view" target="_blank">2771/15</a>
+							<button onclick="previewDocument('1c1xc8sWD3c02wKX6_dM8yOm3lQktAWYb')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1VlxKCaB-ki4Z99YYR38_aaKYP0EJQMKD/view" target="_blank">801/18</a>
+							<button onclick="previewDocument('1VlxKCaB-ki4Z99YYR38_aaKYP0EJQMKD')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="secid" onclick="showMessage('secid')"><font size="5">Secretaría de Investigación y Doctorado (SECID)</font></h2>
+				</div>
+				<div id="secid-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:secid@fi.uba.ar">secid@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Maestría en Simulación Númerica y Control</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1GTTAo23toJlV7JvIRi_4joV6yulknaQn/view" target="_blank">3098/95</a>
+							<button onclick="previewDocument('1GTTAo23toJlV7JvIRi_4joV6yulknaQn')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1jDIO-GGrYe5JjcdwubMkPSWDPpSci8wF/view" target="_blank">1068/98</a>
+							<button onclick="previewDocument('1jDIO-GGrYe5JjcdwubMkPSWDPpSci8wF')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1_CrS6D84yTzfZ5An6ybevDkSIg2Q573j/view" target="_blank">2299/99</a>
+							<button onclick="previewDocument('1_CrS6D84yTzfZ5An6ybevDkSIg2Q573j')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1LJKRk6gNLWQpPXf1qfIksSrJAexaHEyY/view" target="_blank">4139/00</a>
+							<button onclick="previewDocument('1LJKRk6gNLWQpPXf1qfIksSrJAexaHEyY')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1SKwHty_vWXnkDSQbUIPkqvU2PZUAk-VL/view" target="_blank">4694/00</a>
+							<button onclick="previewDocument('1SKwHty_vWXnkDSQbUIPkqvU2PZUAk-VL')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1A86uKveII-viQUiUyyiHg8yJ6UzMdw76/view" target="_blank">6106/01</a>
+							<button onclick="previewDocument('1A86uKveII-viQUiUyyiHg8yJ6UzMdw76')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1WioBkcGw4NB2-WbFI7Ld1DSwJHx2JHKI/view" target="_blank">6574/01</a>
+							<button onclick="previewDocument('1WioBkcGw4NB2-WbFI7Ld1DSwJHx2JHKI')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1-D7eziRfMK-55h6C0hEUxubIVd39Jjph/view" target="_blank">5996/01</a>
+							<button onclick="previewDocument('1-D7eziRfMK-55h6C0hEUxubIVd39Jjph')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1Oosr5GboGn4-X0lecT0LHEg08JlJisPE/view" target="_blank">5997/01</a>
+							<button onclick="previewDocument('1Oosr5GboGn4-X0lecT0LHEg08JlJisPE')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1Anrsp2GJDhvB2Tq0KFLTi8fOdQLXNVkK/view" target="_blank">5420/01</a>
+							<button onclick="previewDocument('1Anrsp2GJDhvB2Tq0KFLTi8fOdQLXNVkK')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1ZXVPJG86TjEW7g_YxI6fcc0HiY4ShVia/view" target="_blank">5421/01</a>
+							<button onclick="previewDocument('1ZXVPJG86TjEW7g_YxI6fcc0HiY4ShVia')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/18HW_sLnAu61V3gPIDknbXhls4l_eMrMY/view" target="_blank">4502/05</a>
+							<button onclick="previewDocument('18HW_sLnAu61V3gPIDknbXhls4l_eMrMY')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1yr9_MHA2nwSYQn7jcylsdn4cO0p5oJv7/view" target="_blank">4503/05</a>
+							<button onclick="previewDocument('1yr9_MHA2nwSYQn7jcylsdn4cO0p5oJv7')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1OKlo-NIgGV4gPsjOXta8zXi32mtNE6Tw/view" target="_blank">5032/05</a>
+							<button onclick="previewDocument('1OKlo-NIgGV4gPsjOXta8zXi32mtNE6Tw')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1J-PLqjBFVymw4NMciYRWfQ-rSX4mVmn7/view" target="_blank">890/06</a>
+							<button onclick="previewDocument('1J-PLqjBFVymw4NMciYRWfQ-rSX4mVmn7')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1OTqaJolMg9uHnzyYLvQszT3Ije68UmWT/view" target="_blank">2137/07</a>
+							<button onclick="previewDocument('1OTqaJolMg9uHnzyYLvQszT3Ije68UmWT')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1EvsV3nPbaSs947ExML-fftcA7e1zY05p/view" target="_blank">2545/07</a>
+							<button onclick="previewDocument('1EvsV3nPbaSs947ExML-fftcA7e1zY05p')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1Lq4myVcIoHIv7JL6ICUzKrl6inJAY-o9/view" target="_blank">7740/13</a>
+							<button onclick="previewDocument('1Lq4myVcIoHIv7JL6ICUzKrl6inJAY-o9')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1D5stvnI2Lcyf_g6nlaS780uYtlLDfjUv/view" target="_blank">3724/15</a>
+							<button onclick="previewDocument('1D5stvnI2Lcyf_g6nlaS780uYtlLDfjUv')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1SOIgiiyBulF84WtOFC9mDVCprdULQRcX/view" target="_blank">710/21</a>
+							<button onclick="previewDocument('1SOIgiiyBulF84WtOFC9mDVCprdULQRcX')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="compartidas" onclick="showMessage('compartidas')"><font size="5">Compartidas</font></h2>
+				</div>
+				<div id="compartidas-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Emperador:</strong>
+							<a href="mailto:tadrover@fi.uba.ar">tadrover@fi.uba.ar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Maestría en Planificación y Movilidad Urbana</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/11medpFEASqSLtSUS45AUJVxX_7Djucft/view" target="_blank">275/14</a>
+							<button onclick="previewDocument('11medpFEASqSLtSUS45AUJVxX_7Djucft')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Explotación de Datos y Descubrimiento de Conocimiento (Data Mining & Knowledge Discovery)</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1aKSJvu0XI__tHtqezJw5aQ_1OmVBgzPB/view" target="_blank">988/02</a>
+							<button onclick="previewDocument('1aKSJvu0XI__tHtqezJw5aQ_1OmVBgzPB')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1e3s--ZKfcTIwiRAhIfKLfG0ejaAxcNAB/view" target="_blank">8218/13</a>
+							<button onclick="previewDocument('1e3s--ZKfcTIwiRAhIfKLfG0ejaAxcNAB')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Especialización en Seguridad Informática</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1laGx3-9I3lI0E6zUVNhSqY-_ZM6EFXUp/view" target="_blank">4852/08</a>
+							<button onclick="previewDocument('1laGx3-9I3lI0E6zUVNhSqY-_ZM6EFXUp')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="itpn" onclick="showMessage('itpn')"><font size="5">Instituto de Tecnología en Polímeros y Nanotecnología (ITPN)</font>
+					</h2>
+				</div>
+				<div id="itpn-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Maestría en Tecnologías e Industrias de Biorrecursos</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1C_TwMuxjMSl9cGXd2BXhfC5hCfjMLeSt/view" target="_blank">1859/23</a>
+							<button onclick="previewDocument('1C_TwMuxjMSl9cGXd2BXhfC5hCfjMLeSt')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Ingeniería de Materiales Compuestos</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1kirDVzWb856LvKRn_9NHlnd3OkMDgZLt/view" target="_blank">6837/13</a>
+							<button onclick="previewDocument('1kirDVzWb856LvKRn_9NHlnd3OkMDgZLt')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="construcciones" onclick="showMessage('construcciones')"><font size="5">Construcciones</font></h2>
+				</div>
+				<div id="construcciones-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Maestría en Construcción y Diseño Estructural</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/12Xsxg_l3MDz8aE1x9SUiUwHcxFXVlZ1I/view" target="_blank">669/19</a>
+							<button onclick="previewDocument('12Xsxg_l3MDz8aE1x9SUiUwHcxFXVlZ1I')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1O0UfVzk512P9MqdUVt1J6G0PQYxd4epJ/view" target="_blank">525/22</a>
+							<button onclick="previewDocument('1O0UfVzk512P9MqdUVt1J6G0PQYxd4epJ')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="decanato" onclick="showMessage('decanato')"><font size="5">Decanato</font></h2>
+				</div>
+				<div id="decanato-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Administrativa:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Industrias y Sistemas Aeroespaciales</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/170EXh62U9BTo84aoKlY444Xtw0zV-yeM/view" target="_blank">890/22</a>
+							<button onclick="previewDocument('170EXh62U9BTo84aoKlY444Xtw0zV-yeM')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1GQo8dyiarMZztQuEpDo8Ue_7UarTza0f/view" target="_blank">22/24</a>
+							<button onclick="previewDocument('1GQo8dyiarMZztQuEpDo8Ue_7UarTza0f')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="metalurgica" onclick="showMessage('metalurgica')"><font size="5">Escuela de Graduados de Ingeniería Metalúrgica</font></h2>
+				</div>
+				<div id="metalurgica-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especializacion en Siderurgia</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1ds5mRG0PPUBJzqURapKrz0mGPtAXv1ym/view" target="_blank">6784/01</a>
+							<button onclick="previewDocument('1ds5mRG0PPUBJzqURapKrz0mGPtAXv1ym')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/17IOx9UgYj6xRJkYdVat00yNc0_xCZF3_/view" target="_blank">6144/12</a>
+							<button onclick="previewDocument('17IOx9UgYj6xRJkYdVat00yNc0_xCZF3_')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+					<h3>Maestría en Siderurgia</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/10wTqBcAI0llfKd5ADMrP3H4WMrajiHMP/view" target="_blank">3438/99</a>
+							<button onclick="previewDocument('10wTqBcAI0llfKd5ADMrP3H4WMrajiHMP')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1LjNNkmIYcwDKZS88mTnwTqEJRK-Yk1b-/view" target="_blank">7059/02</a>
+							<button onclick="previewDocument('1LjNNkmIYcwDKZS88mTnwTqEJRK-Yk1b-')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+						<li>
+							<a href="https://drive.google.com/file/d/1ZRscs4ace51H1aHiuU5eIp3j6QofIm5u/view" target="_blank">6327/13</a>
+							<button onclick="previewDocument('1ZRscs4ace51H1aHiuU5eIp3j6QofIm5u')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="agrimensura" onclick="showMessage('agrimensura')"><font size="5">Agrimensura</font></h2>
+				</div>
+				<div id="agrimensura-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Ingeniero Geodesta-Geofísico</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1eJT6eLfZUO-Okobjyptv_4E31BIiRClz/view" target="_blank">395/58</a>
+							<button onclick="previewDocument('1eJT6eLfZUO-Okobjyptv_4E31BIiRClz')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2 id="industrial" onclick="showMessage('industrial')"><font size="5">Departamento de Ingeniería Industrial</font>
+					</h2>
+				</div>
+				<div id="industrial-message" class="message-box">
+					<ul>
+						<li>
+							<strong>Ente:</strong>
+							<a href="mailto:ingsanitam@fi.uba.ar">???</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3>Especialización en Diagnóstico y Evaluación Ambiental</h3>
+					<ul>
+						<li>
+							<a href="https://drive.google.com/file/d/1jg-ZlDvDzwrb6hukMSLqsgHdUmEKJN5s/view" target="_blank">5335/97</a>
+							<button onclick="previewDocument('1jg-ZlDvDzwrb6hukMSLqsgHdUmEKJN5s')" style="border:none; background:none; cursor:pointer;">
+								<i class="fas fa-eye"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+		<section>
+			<div class="container">
+				<div class="box box-h3">
+					<h2>Momento de distensión</font></h2>
+				</div>
+
+				<div class="box">
+					<h3>Tetris</h3>
+					<ul>
+						<li>
+							<a href="a.html" target="_blank">Tetris</a>
+						</li>
+					</ul>
+					<h3>Galaga</h3>
+					<ul>
+						<li>
+							<a href="b.html" target="_blank">Galaga</a>
+						</li>
+					</ul>
+					<h3>Arkanoid</h3>
+					<ul>
+						<li>
+							<a href="arkanoid.html" target="_blank">Arkanoid</a>
+						</li>
+					</ul>
+				</div>
+		</section>
+
 	</div>
 	<button onclick="scrollToTop()" id="scrollBtn" title="Ir hacia arriba.">↑</button>
-    <script src="script.js"></script>
+	<script src="script.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z988QYX9W"></script>
 	</div>
 </body>
